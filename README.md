@@ -5,24 +5,26 @@
 ## 目录
 
 - [javaScript](#javaScript)
-- [开发者工具]()
-- [版本控制]()
+- [版本控制](#版本控制)
+- [Markdown](#Markdown)
+- [开发者工具](#开发者工具)
 
 
 ## javaScript
 - javaScript基础
-  - JavaScript对象 —— Data(日期和时间)
-  - JavaScript对象 —— 全局对象
-- javaScript实用与H5
-  - 文件上传 
+- [JavaScript中this的机制](./Marklist/NO.1)
+- [JavaScript对象 —— Data(日期和时间)](./Marklist/NO.2)
+- [JavaScript原型和闭包 —— 继承](./Marklist/NO.3)
 - javaScript插件
-  -  JavaScript模块化 —— require.js 
+-  JavaScript模块化 —— require.js
 
+## 版本控制
+- [git](./Marklist/NO.5)
+
+## Markdown
+- [Markdown语法](./Marklist/NO.4)
 
 ## 开发者工具
 - sublime
-
-
-## 版本控制
 
   
