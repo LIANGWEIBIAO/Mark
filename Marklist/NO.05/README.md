@@ -9,7 +9,7 @@ git reset --hard 3628164dskfidsjflkdsflksd
 ```
 
 ####线上覆盖本地
-*线上覆盖本地文件方法，要慎重用*
+> 线上覆盖本地文件方法，要慎重用
 ```
 git fetch --all
 git reset --hard origin/master
