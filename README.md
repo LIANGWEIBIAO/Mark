@@ -12,7 +12,7 @@
 
 
 ## javaScript
-- javaScript基础
+- javaScript - 基础
   - [JavaScript对象 —— Data(日期和时间)](./Marklist/NO.01)
   - [javascript中的this机制](./Marklist/NO.02/list-1)
   - [Javascript 面向对象编程（一）：封装](./Marklist/NO.02/list-5)
@@ -20,8 +20,10 @@
   - [Javascript 面向对象编程（三）： 原型链](./Marklist/NO.02/list-3)
   - [Javascript 面向对象编程（四）： 原型prototype](./Marklist/NO.02/list-6 )
   - [Javascript - call，apply 和 bind 函数](./Marklist/NO.02/list-4)
-- javaScript插件
+- javaScript - 插件
   -  JavaScript模块化 —— require.js 
+- javaScript - demo
+  - [jQuery手机触屏滑动切换 + 选项卡代码](https://liangweibiao.github.io/Mark/Marklist/NO.07/list-1/index.html) 
   
 
 ## 版本控制
