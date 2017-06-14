@@ -112,7 +112,8 @@ Javascript规定，每一个构造函数都有一个prototype属性，指向另�
 alert(cat1.eat == cat2.eat); //true
 ```
 #### 六、 Prototype模式的验证方法
-为了配合prototype属性，Javascript定义了一些辅助方法，帮助我们使用它。，
+为了配合prototype属性，Javascript定义了一些辅助方法，帮助我们使用它
+
 6.1 isPrototypeOf()
 这个方法用来判断，某个proptotype对象和某个实例之间的关系。
 ```
