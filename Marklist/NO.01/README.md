@@ -1,68 +1,39 @@
-# javascript中的this机制
+# JavaScript对象 —— Data(日期和时间)
 
-### this机制的四种规则
+#### Data 对象方法
 
-- 1.默认绑定全局变量
+- Date() 方法可返回当天的日期和时间。
 
-  最常见的情况，当函数被单独定义和调用的时候，this绑定全局变量,this就是window。
-
-  ``` javascript
-  function fn() {
-    console.log( this.a );
-  }
-  var a = 2;
-  fn(); // 2 -- fn单独调用，this引用window
+  ```JavaScript
+  let data = new Date()
+  console.log(data)
+  // 输出结果 (笔记记于2017年3月17日)
+  // Fri Mar 17 2017 16:13:41 GMT+0800 (中国标准时间)
   ```
 
-- 2.隐式绑定
+- getDate() 方法可返回月份的某一天。
 
-  隐式调用的意思是，函数调用时拥有一个上下文对象。
+- getDay() 方法可返回表示星期的某一天的数字。
 
-  需要注意的是，最后一个调用该函数的对象是传到函数的上下文对象。
+- getMonth() 方法可返回表示月份的数字。(1月从0开始)
 
-  例如obj1.obj2.fn(),此时this指向obj2。
+- getFullYear() 方法可返回一个表示年份的 4 位数字。
 
-  ``` javascript
-  function fn() {
-    console.log( this.a );
-  }
-  var obj = {
-    a: 2,
-    fn: fn
-  };
-  obj.fn(); // 2 -- this引用obj。
+- getTime() 方法可返回距 1970 年 1 月 1 日之间的毫秒数。
+
+  ```JavaScript
+  var d = new Date()
+  console.log('日:' + d.getDate())
+  console.log('月:' + ( d.getMonth() + 1 ))
+  console.log('年:' + d.getFullYear())
+  console.log('星期:' + d.getDay())
+  console.log('time:' + d.getTime())
+  // 输出结果 (笔记记于2017年3月17日)
+  日:17
+  月:3
+  年:2017
+  星期:5
+  time:1489840239015
   ```
 
-- 3.显示绑定
-
-  `bind()` `apply()` `call()`，这三个函数接收的第一个参数(上下文对象)并将其赋给this。
-
-  ``` javascript
-  function fn() {
-    console.log( this.a );
-  }
-  var obj = {
-    a: 2
-  };
-  fn.call( obj ); // 2
-  ```
-
-  如果传入空值，即：
-
-  ``` javascript
-  fn.call(null)
-  ```
-
-  此时this又再次指向全局对象window。
-
-- 4.new新对象绑定
-
-  如果是一个构造函数，那么用new来调用，那么绑定的将是新创建的对象。
-
-  ``` javascript
-  function Fn(a) {
-    this.a = a;
-  }
-  var bar = new Fn( 2 );
-  console.log( bar.a );// 2
-  ```
+- parse() 方法可解析一个日期时间字符串，并返回 1970/1/1 午夜距离该日期时间的毫秒数。
