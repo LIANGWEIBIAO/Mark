@@ -89,4 +89,4 @@ Github的Markdown语法支持添加emoji表情，输入不同的符号码（两�
 
 比如`:blush:`，可以显示:blush:。
 
-附带:[表情字符大全](http://www.oicqzone.com/tool/emoji/)
+附带:[表情字符大全](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
