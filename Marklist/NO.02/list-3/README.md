@@ -11,7 +11,7 @@ Object对象是Function对象的一个实例,所以Object的`__proto__`属性指
 console.log(Objdect.__proto__ === Function.prototype)
 //所有构造函数都是函数的实例,所有都带有一个属性__proto__指向函数的原型
 ```
-![22][1]
+
 
 
   
@@ -35,6 +35,5 @@ Date.__proto__ === Function.prototype    // true
   ![此处输入图片的描述][3]
 
 
-  [1]: https://ooo.0o0.ooo/2017/06/14/59402b379bb63.png
   [2]: https://ooo.0o0.ooo/2017/06/14/59402b379bb63.png
   [3]: https://ooo.0o0.ooo/2017/06/14/59402d0ad64d4.png
