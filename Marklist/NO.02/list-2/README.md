@@ -28,7 +28,7 @@ function Cat(name,color){
 　　}
 　　var cat1 = new Cat("大毛","黄色");
 　　alert(cat1.species); // 动物
-```
+``` 
 #### 二、 prototype模式
 
 第二种方法更常见，使用prototype属性。

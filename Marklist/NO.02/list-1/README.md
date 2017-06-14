@@ -1,7 +1,7 @@
 # javascript中的this机制
 
 ### this机制的四种规则
-
+ 
 - 1.默认绑定全局变量
 
   最常见的情况，当函数被单独定义和调用的时候，this绑定全局变量,this就是window。

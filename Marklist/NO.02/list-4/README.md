@@ -3,7 +3,7 @@
  call和apply是为了动态改变this而出现的，当一个object没有某个方法，但是其他的有，我们可以借助call或apply用其它对象的方法来操作。
 
 call, apply都属于Function.prototype的一个方法,它是JavaScript引擎内在实现的,因为属于Function.prototype,所以每个Function对象实例,也就是每个方法都有call, apply属性.既然作为方法的属性,那它们的使用就当然是针对方法的了.这两个方法是容易混淆的,因为它们的作用一样,只是使用方式不同.
-从上面可以得出 call, apply 是给方法使用的,为了改变调用该方法的 this指针
+从上面可以得出 call, apply 是给方法使用的,为了改变调用该方法的 this指针 
 
 #### 一、call和apply简单例子：
 - call

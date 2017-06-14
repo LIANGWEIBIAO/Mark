@@ -27,7 +27,7 @@ Error.__proto__ === Function.prototype   // true
 Date.__proto__ === Function.prototype    // true
 ```
 #### 三、原型链图
-> 所有的对象不管是内置，还是自定义都是继承自object - 万物都继承自object.prototype
+> 所有的对象不管是内置，还是自定义都是继承自object - 万物都继承自object.prototype 
 ![此处输入图片的描述][2]
   
 
