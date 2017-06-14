@@ -2,7 +2,7 @@
 ####  prototype属性
 　　只要创建了一个函数，就会为该函数创建一个prototype属性，指向该函数的原型对象。实例对象是不会拥有该属性的。
 　　默认情况下，该原型对象也会获得一个constructor属性，该属性包含一个指针，指向prototype属性所在的函数。
-```
+``` javascript
 Person.prototype.constructor===Person
 ```
 
@@ -23,7 +23,7 @@ Person.prototype.constructor===Person
  - 3.如果还没有找到,再根据这个对象的`__proto__`去找;
  - 4.一直找到object.prototype;
  
-```
+``` javascript
     function student (name,age){
         this.name = name;
         this.age = age;

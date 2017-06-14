@@ -3,13 +3,13 @@
 > 对象之间的"继承"的五种方法。
 
 比如，现在有一个"动物"对象的构造函数。
-```
+``` javascript
 　function Animal(){
 　　　　this.species = "动物";
 　　}
 ```
 还有一个"猫"对象的构造函数。
-```
+``` javascript
 function Cat(name,color){
 　　　　this.name = name;
 　　　　this.color = color;
@@ -20,7 +20,7 @@ function Cat(name,color){
 #### 一、 构造函数绑定
 
 第一种方法也是最简单的方法，使用call或apply方法，将父对象的构造函数绑定在子对象上，即在子对象构造函数中加一行：
-```
+``` javascript
 　function Cat(name,color){
 　　　　Animal.apply(this, arguments);
 　　　　this.name = name;
@@ -35,14 +35,14 @@ function Cat(name,color){
 
 如果"猫"的prototype对象，指向一个Animal的实例，那么所有"猫"的实例，就能继承Animal了。
 
-```
+``` javascript
 　　Cat.prototype = new Animal();
 　　var cat1 = new Cat("大毛","黄色");
 　　alert(cat1.species); // 动物
 ```
 代码的第一行，我们将Cat的prototype对象指向一个Animal的实例。
 它相当于完全删除了prototype 对象原先的值，然后赋予一个新值。
-```
+``` javascript
 　　Cat.prototype = new Animal();
 ```
 　

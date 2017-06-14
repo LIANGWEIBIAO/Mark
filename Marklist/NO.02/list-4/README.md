@@ -7,7 +7,7 @@ call, apply都属于Function.prototype的一个方法,它是JavaScript引擎内�
 
 #### 一、call和apply简单例子：
 - call
-```
+``` javascript
 function A() {
     this.getName = function (xx) {
         return xx;
@@ -29,7 +29,7 @@ console.log( a.getName.call(b,'i am B') );  // i am B
 
 可以 再理解一下这句话 -- 我们可以借助call或apply调用其它对象的方法来操作，call和apply是为了动态改变this而出现的 ，本来 `a.getName()` 的 this 指向 a, call 动态的 把 this 指向了 b ，变成了 `b.getName()`其实就是把函数里面的this指向了对象,操作函数里面的this等于操作对象;就这么简单;
 
-```
+``` javascript
      // 定义一个伪数组对象
         var argus = {
             0: 10,
@@ -45,7 +45,7 @@ console.log( a.getName.call(b,'i am B') );  // i am B
 - apply
 > apply 与 call 只是参数的使用不同而已
 
-```
+``` javascript
 function A() {
     this.sun = function (a ,b) {
         return a+b;
@@ -67,7 +67,7 @@ console.log( a.sun.apply(b,[3, 3]) );  //6
 
 #### 二、call和apply一般使用情况：
 
-```
+``` javascript
 function cat(){
 }
 
@@ -89,7 +89,7 @@ var blackCat = new cat;blackCat.say();
 
 #### 三、bind()方法
 在讨论bind()方法之前我们先来看一道题目：
-```
+``` javascript
 var altwrite = document.write;
 altwrite("hello");
 //1.以上代码有什么问题
@@ -97,17 +97,17 @@ altwrite("hello");
 //3.bind()方法怎么实现
 ```
 对于上面这道题目，答案并不是太难，主要考点就是this指向的问题，altwrite()函数改变this的指向global或window对象，导致执行时提示非法调用异常，正确的方案就是使用bind()方法：
-```
+``` javascript
 altwrite.bind(document)("hello")
 ```
 当然也可以使用call()方法：
-```
+``` javascript
 altwrite.call(document, "hello")
 ```
 - 绑定函数
   `bind()`最简单的用法是创建一个函数，使这个函数不论怎么调用都有同样的this值。常见的错误就像上面的例子一样，将方法从对象中拿出来，然后调用，并且希望this指向原来的对象。如果不做特殊处理，一般会丢失原来的对象。使用bind()方法能够很漂亮的解决这个问题：
 
-```
+``` javascript
 this.num = 9; 
 var mymodule = {
   num: 81,
@@ -125,7 +125,7 @@ boundGetNum(); // 81
 ```
 
 - 和setTimeout一起使用
-```
+``` javascript
 function Bloomer() {
   this.petalCount = Math.ceil(Math.random() * 12) + 1;
 }

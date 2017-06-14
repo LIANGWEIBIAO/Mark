@@ -7,7 +7,7 @@
 　　
 #### 二、Object对象
 Object对象是Function对象的一个实例,所以Object的`__proto__`属性指向Function对象的原型；
-```
+``` javascript
 console.log(Objdect.__proto__ === Function.prototype)
 //所有构造函数都是函数的实例,所有都带有一个属性__proto__指向函数的原型
 ```
@@ -16,7 +16,7 @@ console.log(Objdect.__proto__ === Function.prototype)
 
   
 不光Object,所有内置对象都是Function对象的实例
-```
+``` javascript
 Boolean.__proto__ === Function.prototype // true
 String.__proto__ === Function.prototype  // true
 Object.__proto__ === Function.prototype  // true
