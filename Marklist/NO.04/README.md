@@ -1,6 +1,6 @@
-# 使用Markdown语法书写Github-README.md
+# 使用Markdown语法书写Github-README.md 
 
-`GitHub` 的 `markdown` 语法在标准的 `markdown` 语法基础上做了扩充，称之为 `GitHub Flavored Markdown` 。简称 `GFM` ， `GFM` 在 `GitHub` 上有广泛应用，除了 `README.md` 文件外， `issues` 和 `wiki` 均支持 `markdown` 语法。
+`GitHub` 的 `markdown` 语法在标准的 `markdown` 语法基础上做了扩充，称之为 `GitHub Flavored Markdown` 。简称 `GFM` ， `GFM` 在 `GitHub` 上有广泛应用，除了 `README.md` 文件外， `issues` 和 `wiki` 均支持 `markdown` 语法。 
 
 ***
 
