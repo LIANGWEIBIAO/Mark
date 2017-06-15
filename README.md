@@ -14,6 +14,8 @@
 ## javaScript
 - javaScript - 基础
   - [JavaScript对象 —— Data(日期和时间)](./Marklist/NO.01)
+  - [JavaScript对象 —— String(字符串)](./Marklist/NO.09)
+  - [JavaScript对象 —— RegExp(正则)](./Marklist/NO.10)
   - [javascript中的this机制](./Marklist/NO.02/list-1)
   - [Javascript 面向对象编程（一）：封装](./Marklist/NO.02/list-5)
   - [Javascript 面向对象编程（二）：继承](./Marklist/NO.02/list-2)
@@ -34,6 +36,7 @@
   - [Markdown语法](./Marklist/NO.04)
 
 ## 面试
+ - [前端知识点](./Marklist/NO.10/list-1)
 
 ## 开发者工具
 - [webstorm —— The Smartest JavaScript IDE](./Marklist/NO.08)
