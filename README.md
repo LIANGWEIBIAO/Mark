@@ -18,6 +18,7 @@
   - [Javascript 面向对象编程（二）：继承](./Marklist/NO.02/list-2)
   - [Javascript 面向对象编程（三）： 原型链](./Marklist/NO.02/list-3)
   - [Javascript 面向对象编程（四）： 原型prototype](./Marklist/NO.02/list-6 )
+  - [Javascript 面向对象编程（五）： 编程插件写法](./Marklist/NO.02/list-8 )
   - [Javascript —— call，apply 和 bind 函数](./Marklist/NO.02/list-4)
   - [JavaScript —— Data(日期和时间)](./Marklist/NO.01)
   - [JavaScript —— String(字符串)](./Marklist/NO.09)
