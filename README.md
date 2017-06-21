@@ -33,6 +33,7 @@
   - [JavaScript模块化 —— require.js ](./Marklist/NO.06/list-1)  
 - javaScript - demo
   - [jQuery手机触屏滑动切换 + 选项卡代码](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-1/index.html) 
+  - [jQuery进度条](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-2/index.html) 
   
 ## vue
    - [vue-项目收集](./Marklist/NO.12/list-1)

@@ -82,6 +82,22 @@ $(':file').on('change',function(){
     $img.src = url;
 });
 ```
+###  三、实现图片预览效果
+``` javaScript
+var fr = new FileReader(),
+    file = document.getElementById("file"),
+    img = document.createElement("img");
+file.onchange = function(e){
+    fr.onload = function(e){
+        var res = this.result;
+        img.src = res;
+        document.body.appendChild(img);//显示
+    };
+    
+    fr.readAsDataURL(file.files[0]);//读取文件
+};
+```
+
 
 ### 文件上传参考文章
   - [用canvas的toDataURL()将图片转为dataURL(base64)](http://www.jianshu.com/p/17d7e5ddf10a)
