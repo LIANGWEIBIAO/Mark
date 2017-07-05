@@ -2,13 +2,13 @@
 
 - input file
 input file上传按钮的美化思路是，先把之前的按钮透明度opacity设置为0,然后，外层用div包裹，就实现了美化功能。
-```
+``` css
 <a href="javascript:;" class="a-upload">
     <input type="file" name="" id="">点击这里上传文件
 </a>
 ```
 - input框focus时的美化效果
-```
+``` css
  input:focus {
     outline: none;
     border-color: #9ecaed;
@@ -24,7 +24,7 @@ input file上传按钮的美化思路是，先把之前的按钮透明度opacity
 
 - 单选框和多选框美化
 css
-```
+``` css
  input[type="radio"] {
         display: none;
     }
@@ -39,7 +39,7 @@ css
     }
 ```
 html
-```
+``` html
 <label>
     <input type="checkbox">
     <i>✓</i>
