@@ -40,6 +40,7 @@
 - css - 基础
   - [常用的CSS水平垂直居中方法大全](https://liangweibiao.github.io/v-mark/Marklist/NO.14/list-3)
   - [ html css、css3常用的收集](https://liangweibiao.github.io/v-mark/Marklist/NO.14/list-1)
+  - [css input和输入框美化](https://liangweibiao.github.io/v-mark/Marklist/NO.14/list-4)
 -   css - demo
     - [按钮 - CSS3鼠标滑过彩色动画](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-3/index.html)
     - [按钮 - Hover动力悬停于链接](http://ianlunn.github.io/Hover/)
