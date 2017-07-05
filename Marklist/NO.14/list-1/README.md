@@ -3,7 +3,7 @@
 > css有些属性容易忘记，半天不写就要去查api，有时候api还不好使，于是还是记下来以后方便用，后续会慢慢补充进来的。
 
 #### css3水平垂直居中
-```
+``` CSS
 
 .box{ 
     display: flex;
@@ -16,11 +16,11 @@
     align-items:center;
 }
 
-```
+``` 
 
 #### css实现不换行、自动换行、强制换行
 
-```
+``` CSS
 //不换行
 white-space:nowrap;
 
@@ -33,12 +33,12 @@ word-break:break-all;
 ```
 
 #### 合并表格边框border-collapse:collapse
-```
+``` CSS
 table{border-collapse:collapse;}
 ```
 
 #### box-shadow
-```
+``` CSS
 .box{box-shadow:4px 4px 2px #333333;}
 ```
 属性值依次：水平方向位移（支持负值）、垂直方向位移（支持负值）、模糊半径、阴影颜色
@@ -46,7 +46,7 @@ table{border-collapse:collapse;}
 ## 根据input的type来控制css样式
 
 1.用css中的type选择器
-```
+``` CSS
 input[type="text"]{ background-color:#FFC;}
 ```
 
@@ -71,28 +71,28 @@ input[type="text"]{ background-color:#FFC;}
 
 #### CSS美化Placeholder提示信息的样式兼容
 
-```
+``` CSS
 input::-webkit-input-placeholder{color:#AAAAAA;}
 input:focus::-webkit-input-placeholder{color:#EEEEEE;}
 ```
 
 
 #### 开启硬件加速
-```
+``` CSS
 .css {
    -webkit-transform: translate3d(0, 0, 0);
    -moz-transform: translate3d(0, 0, 0);
    -ms-transform: translate3d(0, 0, 0);
    transform: translate3d(0, 0, 0);
 }
-```
+``` 
 
 #### 为移动端页面中滑动滚动条的时候，添加惯性效果的方法
-```
+``` CSS
 body{-webkit-overflow-scrolling:touch;}
 ```
 有的同学添加了这一条属性后遇到了向下滑动后页面变成空白的问题，实际上可以通过一条 CSS 属性把页面加载到内存来解决：
-```
+``` CSS
 body{-webkit-transform:translate3d(0,0,0);}
 ```
 
