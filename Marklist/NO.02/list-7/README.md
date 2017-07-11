@@ -13,7 +13,7 @@
     ```
 
 
-  -  offsetWidht 和 offsetHeight
+  -  offsetLeft 和 offsetTop
 
    > 找距离定位父级（relative或absolute）左边或右边的距离，没有定位则找body。
    
