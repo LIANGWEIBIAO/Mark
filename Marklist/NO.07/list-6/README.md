@@ -1,9 +1,8 @@
-#CSS3中的transition属性详解
+# CSS3中的transition属性详解
 
 ### 一、语法
 transition: property duration timing-function delay 
-
-transition属性是个复合属性，她包括以下几个子属性：
+> transition属性是个复合属性，她包括以下几个子属性：
 
 - transition-property ：规定设置过渡效果的css属性名称
 - transition-duration ：规定完成过渡效果需要多少秒或毫秒
