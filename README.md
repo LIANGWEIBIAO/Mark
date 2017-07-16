@@ -43,7 +43,7 @@
   - [input和输入框美化](./Marklist/NO.14/list-4)
 -   css3 - 动画
     - [深入理解CSS3 Animation帧动画](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-5)
-    - 使用transtion显示的动画如丝般顺滑
+    - [使用transtion显示的动画如丝般顺滑](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-6)
 -   css - demo
     - [按钮 - CSS3鼠标滑过彩色动画](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-3/index.html)
     - [按钮 - Hover动力悬停于链接](http://ianlunn.github.io/Hover/)
