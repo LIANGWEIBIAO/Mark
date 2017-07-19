@@ -39,6 +39,7 @@
 ## css
 - css - 基础
   - [常用的CSS水平垂直居中方法大全](./Marklist/NO.14/list-3)
+  - [ css3画三角形的原理 ](./Marklist/NO.07/list-7)
   - [ html、css、css3常用的收集](./Marklist/NO.14/list-1)
   - [input和输入框美化](./Marklist/NO.14/list-4)
 -   css3 - 动画
