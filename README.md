@@ -29,7 +29,9 @@
 
 - javaScript - 实用
   -  [javascript ——  函数节流](./Marklist/NO.13/list-1)  
-  -  [javascript ——  实现文件的上传与压缩](./Marklist/NO.13/list-2)  
+  -  [javascript ——  实现文件的上传与压缩](./Marklist/NO.13/list-2) 
+  -  [Ajax使用FormData对象上传文件](./Marklist/NO.14/list-5)  
+  -  [FileReader获取图片变成base64](./Marklist/NO.14/list-6)
 - javaScript - 插件
   - [JavaScript模块化 —— require.js ](./Marklist/NO.06/list-1)  
 - javaScript - demo
