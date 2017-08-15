@@ -1,0 +1,95 @@
+.register .content .tabs .list_4 .input_basic_data {
+    padding: 53px 0 58px;
+    font-size: 20px;
+    color: #02B78C;
+    text-align: center;
+}
+
+.register .content .tabs .list_4 .basic_data {
+    position: relative;
+    height: 760px;
+    background: #fff;
+}
+
+.register .content .tabs .list_4 .basic_data .submitBtn {
+    width: 226px;
+    height: 44px;
+    line-height: 44px;
+    background: #02B78C;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    margin-left: -113px;
+    margin-top: 46px;
+    cursor: pointer;
+}
+
+.register .content .tabs .list_4 .basic_data .row {
+  position: relative;
+    height: 44px;
+    line-height: 44px;
+    width: 465px;
+    margin: 0 auto 20px;
+}
+
+.register .content .tabs .list_4 .basic_data .row span {
+    float: left;
+}
+
+.register .content .tabs .list_4 .basic_data .row input {
+    float: left;
+    margin-left: 15px;
+    height: 100%;
+    border: 1px solid #d9d9d9;
+    background: #fafafa;
+    padding-left: 17px;
+    width: 374px;
+    border-radius: 3px;
+}
+
+.register .content .tabs .list_4 .basic_data .row .codeTextInput {
+    width: 228px !important;
+    margin-left: 29px !important;
+}
+
+.register .content .tabs .list_4 .basic_data .row .code {
+    width: 130px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background: #ffffff;
+    margin-left: 16px;
+    cursor: pointer;
+    border: 1px solid #d9d9d9;
+}
+
+.s-sn-footer {
+    height: 116px;
+    background: #e5e5e5;
+    text-align: center;
+    padding-top: 32px;
+}
+
+.s-sn-footer span {
+    font-size: 15px;
+    color: #999999;
+}
+
+
+.register .content .tabs .list_4 .basic_data .row input.error {
+    border: 1px solid #f04848;
+}
+
+.register .content .tabs .list_4 .basic_data .row label.error {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform:translateX(105%);
+    padding-left: 16px;
+    padding-bottom: 2px;
+    font-weight: bold;
+    color: #f04848;
+}
+
+label.checked {}
