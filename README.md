@@ -37,7 +37,7 @@
 - javaScript - demo
   - [jQuery手机触屏滑动切换 + 选项卡代码](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-1/index.html)
   - [jQuery进度条](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-2/index.html)
-  - [validate-注册验证](https://liangweibiao.github.io/v-mark/Marklist/NO.14/list-7/index.html)
+  - [页面触底自动加载数据](./Marklist/NO.14/list-8)  
 
 ## css
 - css - 基础
