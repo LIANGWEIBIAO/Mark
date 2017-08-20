@@ -32,12 +32,14 @@
   -  [javascript ——  实现文件的上传与压缩](./Marklist/NO.13/list-2) 
   -  [Ajax使用FormData对象上传文件](./Marklist/NO.14/list-5)  
   -  [FileReader获取图片变成base64](./Marklist/NO.14/list-6)
+  - [页面触底自动加载数据](./Marklist/NO.14/list-8)  
 - javaScript - 插件
   - [JavaScript模块化 —— require.js ](./Marklist/NO.06/list-1)  
 - javaScript - demo
   - [jQuery手机触屏滑动切换 + 选项卡代码](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-1/index.html)
   - [jQuery进度条](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-2/index.html)
-  - [页面触底自动加载数据](./Marklist/NO.14/list-8)  
+  - [validate-表单验证](https://liangweibiao.github.io/v-mark/Marklist/NO.14/list-7/index.html)
+ 
 
 ## css
 - css - 基础
