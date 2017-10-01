@@ -21,24 +21,24 @@
   - [Javascript 面向对象编程（四）： 原型prototype](./Marklist/NO.02/list-6 )
   - [Javascript 面向对象编程（五）： 编程插件写法](./Marklist/NO.02/list-8 )
   - [Javascript —— call，apply 和 bind 函数](./Marklist/NO.02/list-4)
-  - [JavaScript —— Data(日期和时间)](./Marklist/NO.01)
-  - [JavaScript —— String(字符串的操作)](./Marklist/NO.09)
-  - [JavaScript —— RegExp(正则)](./Marklist/NO.10)
+  - [JavaScript —— Data(日期和时间)](./Marklist/NO.02/list-9)
+  - [JavaScript —— String(字符串的操作)](./Marklist/NO.02/list-11)
+  - [JavaScript —— RegExp(正则)](./Marklist/NO.02/list-10)
   - [javascript —— This机制](./Marklist/NO.02/list-1)
   - [javascript —— 理解js各种宽高](./Marklist/NO.02/list-7)
 
 - javaScript - 实用
-  -  [javascript ——  函数节流](./Marklist/NO.13/list-1)  
-  -  [javascript ——  实现文件的上传与压缩](./Marklist/NO.13/list-2) 
-  -  [Ajax使用FormData对象上传文件](./Marklist/NO.14/list-5)  
-  -  [FileReader获取图片变成base64](./Marklist/NO.14/list-6)
-  - [页面触底自动加载数据](./Marklist/NO.14/list-8)  
+  -  [javascript ——  函数节流](./Marklist/NO.02/list-12)  
+  -  [javascript ——  实现文件的上传与压缩](./Marklist/NO.02/list-13) 
+  -  [Ajax使用FormData对象上传文件](./Marklist/NO.02/list-14)  
+  -  [FileReader获取图片变成base64](./Marklist/NO.02/list-15)
+  -  [页面触底自动加载数据](./Marklist/NO.02/list-16)  
 - javaScript - 插件
-  - [JavaScript模块化 —— require.js ](./Marklist/NO.06/list-1)  
+  - [JavaScript模块化 —— require.js ](./Marklist/NO.02/list-17)  
 - javaScript - demo
-  - [jQuery手机触屏滑动切换 + 选项卡代码](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-1/index.html)
-  - [jQuery进度条](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-2/index.html)
-  - [validate-表单验证](https://liangweibiao.github.io/v-mark/Marklist/NO.14/list-7/index.html)
+  - [jQuery手机触屏滑动切换 + 选项卡代码](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-18/index.html)
+  - [jQuery进度条](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-19/index.html)
+  - [validate-表单验证](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-20/index.html)
  
 
 ## css
