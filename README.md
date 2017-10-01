@@ -7,7 +7,6 @@
 - [javaScript](#javaScript)
 - [css](#css)
 - [版本控制](#版本控制)
-- [Markdown](#Markdown)
 - [vue](#vue)
 - [面试](#面试)
 - [开发者工具](#开发者工具)
@@ -43,29 +42,26 @@
 
 ## css
 - css - 基础
-  - [常用的CSS水平垂直居中方法大全](./Marklist/NO.14/list-3)
-  - [ css3画三角形的原理 ](./Marklist/NO.07/list-7)
-  - [ html、css、css3常用的收集](./Marklist/NO.14/list-1)
-  - [input和输入框美化](./Marklist/NO.14/list-4)
+  - [常用的CSS水平垂直居中方法大全](./Marklist/NO.01/list-1)
+  - [ css3画三角形的原理 ](./Marklist/NO.01/list-2)
+  - [ html、css、css3常用的收集](./Marklist/NO.01/list-3)
+  - [input和输入框美化](./Marklist/NO.01/list-4)
 -   css3 - 动画
-    - [深入理解CSS3 Animation帧动画](./Marklist/NO.07/list-5)
-    - [使用transtion显示的动画如丝般顺滑](./Marklist/NO.07/list-6)
+    - [深入理解CSS3 Animation帧动画](./Marklist/NO.01/list-5)
+    - [使用transtion显示的动画如丝般顺滑](./Marklist/NO.01/list-6)
 -   css - demo
-    - [按钮 - CSS3鼠标滑过彩色动画](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-3/index.html)
+    - [按钮 - CSS3鼠标滑过彩色动画](https://liangweibiao.github.io/v-mark/Marklist/NO.01/list-8/index.html)
     - [按钮 - Hover动力悬停于链接](http://ianlunn.github.io/Hover/)
-    - [移动端 - 1px问题](https://liangweibiao.github.io/v-mark/Marklist/NO.07/list-4/index.html)
+    - [移动端 - 1px问题](https://liangweibiao.github.io/v-mark/Marklist/NO.01/list-9/index.html)
+
 ## vue
-   - [vue-项目demo](./Marklist/NO.12/list-1)
    - [vue-收藏集](https://segmentfault.com/a/1190000009392936)
+
 ## 版本控制
-   - [GIT的使用](./Marklist/NO.05)
-
-
-## Markdown
-  - [Markdown语法](./Marklist/NO.04)
+   - [GIT的使用](./Marklist/NO.05/list-1)
 
 ## 面试
- - [前端知识点](./Marklist/NO.11/list-1)
+ - [前端知识点](./Marklist/NO.06/list-1)
 
 ## 开发者工具
-- [webstorm —— The Smartest JavaScript IDE](./Marklist/NO.08)
+- [webstorm —— The Smartest JavaScript IDE](./Marklist/NO.07/list-1)
