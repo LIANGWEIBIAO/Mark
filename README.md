@@ -27,7 +27,8 @@
   - [javascript —— 理解js各种宽高](./Marklist/NO.02/list-7)
 
 - javaScript - 实用
-  -  [javascript ——  函数节流](./Marklist/NO.02/list-12)  
+  -  [javascript ——  函数节流](./Marklist/NO.02/list-12) 
+  -  [JS实现最简单的图片懒加载](./Marklist/NO.02/list-21) 
   -  [javascript ——  实现文件的上传与压缩](./Marklist/NO.02/list-13) 
   -  [Ajax使用FormData对象上传文件](./Marklist/NO.02/list-14)  
   -  [FileReader获取图片变成base64](./Marklist/NO.02/list-15)
@@ -36,6 +37,7 @@
   - [JavaScript模块化 —— require.js ](./Marklist/NO.02/list-17)  
 - javaScript - demo
   - [jQuery手机触屏滑动切换 + 选项卡代码](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-18/index.html)
+  - [JS分页效果](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-22/index.html)
   - [jQuery进度条](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-19/index.html)
   - [validate-表单验证](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-20/index.html)
  
