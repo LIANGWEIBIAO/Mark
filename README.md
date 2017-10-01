@@ -7,7 +7,6 @@
 - [javaScript](#javaScript)
 - [css](#css)
 - [版本控制](#版本控制)
-- [vue](#vue)
 - [面试](#面试)
 - [开发者工具](#开发者工具)
 
@@ -56,8 +55,7 @@
     - [按钮 - Hover动力悬停于链接](http://ianlunn.github.io/Hover/)
     - [移动端 - 1px问题](https://liangweibiao.github.io/v-mark/Marklist/NO.01/list-9/index.html)
 
-## vue
-   - [vue-收藏集](https://segmentfault.com/a/1190000009392936)
+
 
 ## 版本控制
    - [GIT的使用](./Marklist/NO.05/list-1)
