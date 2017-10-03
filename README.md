@@ -6,6 +6,8 @@
 
 - [javaScript](#javaScript)
 - [css](#css)
+- [vue](#vue)
+- [webpack](#webpack)
 - [版本控制](#版本控制)
 - [面试](#面试)
 - [开发者工具](#开发者工具)
@@ -55,7 +57,11 @@
     - [按钮 - Hover动力悬停于链接](http://ianlunn.github.io/Hover/)
     - [移动端 - 1px问题](https://liangweibiao.github.io/v-mark/Marklist/NO.01/list-9/index.html)
 
-
+### vue
+   - [vue笔记](https://github.com/LIANGWEIBIAO/VUE)
+   
+### webpack
+   - [webpack笔记](https://github.com/LIANGWEIBIAO/webpack)
 
 ## 版本控制
    - [GIT的使用](./Marklist/NO.05/list-1)
