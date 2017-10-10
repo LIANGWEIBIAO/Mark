@@ -35,6 +35,7 @@
   -  [FileReader获取图片变成base64](./Marklist/NO.02/list-15)
   -  [页面触底自动加载数据](./Marklist/NO.02/list-16)  
   -  [拖拽的原理](./Marklist/NO.02/list-23/list-1) 
+  -  [拖拽进度条](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-23/list-2/index.html)
 - javaScript - 插件
   - [JavaScript模块化 —— require.js ](./Marklist/NO.02/list-17)  
 - javaScript - demo
