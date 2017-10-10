@@ -1,7 +1,7 @@
 # 拖拽原理
 
 ------
-[demo](./index.html)
+[demo](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-23/list-1/index.html)
 #### 拖拽原理图
 
 ![](http://ouyzoz9zy.bkt.clouddn.com/17-10-10/38763052.jpg)
