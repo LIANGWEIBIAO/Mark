@@ -57,30 +57,22 @@ function handleUpload() {
 　　canvas的toDataUrl方法可以将内容导出为base64编码格式的图片，采用base64编码将比源文件大1/3，但是该方法可以指定导出图片质量，所以前端可实现上传图片的压缩。先通过fileApi拿到本地图片地址，然后新建一个Img元素，图片绘制到canvas中后再将其导出（压缩）。例如：
 　　
 ```javascript
-$(':file').on('change',function(){
     var file = this.files[0];
     var url = webkitURL.createObjectURL(file);//图片预览
  
     //生成图片
     var $img = new Image();
+    $img.src = $('.select-img').attr('src');
     $img.onload = function() {
-
+        
         var canvas = document.createElement("canvas"), //创建canvas元素
                 width=$img.width, //确保canvas的尺寸和图片一样
                 height=$img.height;
             canvas.width=width;
             canvas.height=height;
-            canvas.getContext("2d").drawImage(Img,0,0,width,height); //将图片绘制到canvas中
+            canvas.getContext("2d").drawImage($img,0,0,width,height); //将图片绘制到canvas中
             dataURL=canvas.toDataURL('image/jpeg'); //转换图片为dataURL
-
-        //发送到服务端
-        $.post('upload.php',{formFile : dataURL.substr(22) },function(data){
-            $('#php').html(data);
-        });
- 
     }
-    $img.src = url;
-});
 ```
 ###  三、实现图片预览效果
 ``` javaScript

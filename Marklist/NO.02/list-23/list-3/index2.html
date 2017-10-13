@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GulpDeom</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/app.css">
+    <script src="./js/app.js"></script>
+    <script src="./js/jquery.js"></script>
+    <style>
+    body {
+        background: #333;
+    }
+
+    .contain {
+        position: absolute;
+        left: 200px;
+        top: 100px;
+        width: 360px;
+        height: 360px;
+    }
+
+    .v-cut-con {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .select-img {
+        display: none;
+    }
+
+    .v-cut-con .bg-pic {
+        position: absolute;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .v-cut-con .cut-preview {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        clip: rect(0, 200px, 200px, 0);
+    }
+
+    .v-point-bar {
+        position: absolute;
+        border: 1px solid white;
+        opacity: 0.5;
+        /* left: 50%; */
+        /* top: 50%; */
+        /* transform: translate(-50%, -50%); */
+    }
+
+    .little-point {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: white;
+        background-color: #333333;
+        border: 1px #eeeeee solid;
+        font-size: 1px;
+        z-index: 356;
+    }
+
+    .left-up {
+        left: -4px;
+        top: -4px;
+        cursor: nw-resize;
+    }
+
+    .up {
+        left: 50%;
+        margin-left: -4px;
+        top: -4px;
+        cursor: n-resize;
+    }
+
+    .right-up {
+        right: -4px;
+        top: -4px;
+        cursor: ne-resize;
+    }
+
+    .right {
+        top: 50%;
+        margin-top: -4px;
+        right: -4px;
+        cursor: e-resize;
+    }
+
+    .right-down {
+        bottom: -4px;
+        right: -4px;
+        cursor: se-resize;
+    }
+
+    .left {
+        top: 50%;
+        left: -4px;
+        margin-top: -4px;
+        cursor: w-resize;
+    }
+
+    .left-down {
+        bottom: -4px;
+        left: -4px;
+        cursor: sw-resize;
+    }
+
+    .down {
+        left: 50%;
+        margin-left: -4px;
+        bottom: -4px;
+        cursor: s-resize;
+    }
+
+    .mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+
+    .cut-contain {
+        width: 460px;
+        height: 460px;
+        background: red;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <img class="select-img" src="./images/3.jpg" alt="">
+    </div>
+    <input type="text" class="haha" style="color: #fff;margin: 50px;" value="点击获取图片坐标">
+</body>
+
+</html>
+<script>
+function cutPic(opts) {
+    this.$container = $(opts.contain);
+    this.coordinate = {};
+    this.scale = opts.scale || false;
+    this.aspectWidht = opts.aspectWidht || 200;
+    this.aspectHeight = opts.aspectHeight || 200;
+    this.minWidht = opts.minWidht || 16;
+    this.minHeight = opts.minHeight || 16;
+    this.init();
+};
+cutPic.prototype = {
+    init: function() {
+        // 创建元素
+        this.createEl();
+        // 初始化样式
+        this.initStyle();
+        // 事件绑定
+        this.bind();
+    },
+    createEl: function() {
+        var html = '';
+        var src = this.$container.find('img').attr('src');
+        html = '<div class="v-cut-con">' +
+            '<img class="bg-pic" src=' + src + ' alt="">' +
+            '<img class="cut-preview" src=' + src + ' alt="">' +
+            '<div class="v-point-bar">' +
+            '<div class="little-point left-up"></div>' +
+            '<div class="little-point left-down"></div>' +
+            '<div class="little-point right-up"></div>' +
+            '<div class="little-point right-down"></div>' +
+            '<div class="little-point right"></div>' +
+            '<div class="little-point left"></div>' +
+            '<div class="little-point up"></div>' +
+            '<div class="little-point down"></div>' +
+            '</div>' +
+            '</div>';
+        this.$container.append(html);
+        if (this.scale) {
+            this.$container.find('.little-point').hide();
+        }
+        this.coordinate = util.getCoordinate(this.$container.find('.v-point-bar')[0]);
+    },
+    bind: function() {
+        var _this = this;
+        // this.$cancelBtn.on("click", this.onCancelBtnClick.bind(this));
+        // this.$confirmBtn.on("click", this.onConfirmBtnClick.bind(this));
+        var $pointBar = this.$container.find('.v-point-bar');
+        var $cutPreview = this.$container.find('.cut-preview');
+        var $rightPoint = this.$container.find('.right');
+        var $upPoint = this.$container.find('.up');
+        var $downPoint = this.$container.find('.down');
+        var $leftPoint = this.$container.find('.left');
+        var $leftUpPoint = this.$container.find('.left-up');
+        var $rightUpPoint = this.$container.find('.right-up');
+        var $rightDownPoint = this.$container.find('.right-down');
+        var $leftDownPoint = this.$container.find('.left-down');
+
+        var ifKeyDown = false; //鼠标按下状态
+        var contact = ""; //表示被按下的触点
+        var mainDiv = $pointBar[0];
+        //鼠标按下
+        $rightPoint[0].onmousedown = function(e) {
+            e.stopPropagation();
+            ifKeyDown = true;
+            contact = 'right';
+            mouseEvent()
+        }
+        $upPoint[0].onmousedown = function(e) {
+            e.stopPropagation();
+            ifKeyDown = true;
+            contact = 'up';
+            mouseEvent()
+        }
+        $leftPoint[0].onmousedown = function(e) {
+            e.stopPropagation();
+            ifKeyDown = true;
+            contact = 'left';
+            mouseEvent()
+        }
+        $downPoint[0].onmousedown = function(e) {
+            e.stopPropagation();
+            ifKeyDown = true;
+            contact = 'down';
+            mouseEvent()
+        }
+        $leftUpPoint[0].onmousedown = function(e) {
+            e.stopPropagation();
+            ifKeyDown = true;
+            contact = 'left-up';
+            mouseEvent()
+        }
+        $leftDownPoint[0].onmousedown = function(e) {
+            e.stopPropagation();
+            ifKeyDown = true;
+            contact = 'left-down';
+            mouseEvent()
+        }
+        $rightDownPoint[0].onmousedown = function(e) {
+            e.stopPropagation();
+            ifKeyDown = true;
+            contact = 'right-down';
+            mouseEvent()
+        }
+        $rightUpPoint[0].onmousedown = function(e) {
+            e.stopPropagation();
+            ifKeyDown = true;
+            contact = 'right-up';
+            mouseEvent()
+        }
+        //鼠标移动事件
+        function mouseEvent() {
+            document.onmousemove = function(e) {
+                if (contact == 'right') {
+                    _this.rightMove(e, mainDiv)
+                } else if (contact == 'up') {
+                    _this.upMove(e, mainDiv)
+                } else if (contact == 'left') {
+                    _this.leftMove(e, mainDiv)
+                } else if (contact == 'down') {
+                    _this.downMove(e, mainDiv)
+                } else if (contact == 'left-up') {
+                    _this.leftMove(e, mainDiv)
+                    _this.upMove(e, mainDiv)
+                } else if (contact == 'right-up') {
+                    _this.rightMove(e, mainDiv)
+                    _this.upMove(e, mainDiv)
+                } else if (contact == 'left-down') {
+                    _this.leftMove(e, mainDiv)
+                    _this.downMove(e, mainDiv)
+                } else if (contact == 'right-down') {
+                    _this.rightMove(e, mainDiv)
+                    _this.downMove(e, mainDiv)
+                }
+                util.setChoice(mainDiv);
+                _this.coordinate = util.getCoordinate(mainDiv);
+                document.onmouseup = function() {
+                    document.onmousemove = null;
+                }
+            }
+
+        }
+        util.draggie($pointBar, this)
+    },
+    initStyle: function() {
+        var mainDiv = this.$container.find('.v-point-bar');
+        var cutPreview = this.$container.find('.cut-preview');
+        mainDiv.css({ 'width': this.aspectWidht, height: this.aspectHeight });
+
+        var left = (this.$container.outerWidth() - mainDiv.outerWidth()) / 2
+        var top = (this.$container.outerHeight() - mainDiv.outerHeight()) / 2
+        mainDiv.css({ 'left': left, top: top });
+        util.setChoice(mainDiv[0]);
+    },
+    //right移动
+    rightMove: function(e, mainDiv) {
+        var x = e.clientX; //鼠标x坐标
+        var widthBefore = mainDiv.offsetWidth; //选取框变化前的宽度
+        var addWidth = x - mainDiv.getBoundingClientRect().left - widthBefore; //鼠标移动后增加的宽度
+        var parentWidth = mainDiv.parentNode.offsetWidth;
+        var widthAfter = addWidth + widthBefore;
+        if (widthAfter <= this.minWidht) {
+            return;
+        }
+        if (mainDiv.getBoundingClientRect().right >= mainDiv.parentNode.getBoundingClientRect().right && addWidth >= 0) {
+            widthAfter = mainDiv.parentNode.getBoundingClientRect().right - mainDiv.getBoundingClientRect().left
+            mainDiv.style.width = widthAfter + "px";
+        } else {
+            mainDiv.style.width = widthAfter + "px";
+        }
+    },
+    //up移动
+    upMove: function(e, mainDiv) {
+        var y = e.clientY; //鼠标纵坐标
+        var mainY = mainDiv.getBoundingClientRect().top; //选取框相对于屏幕上边的距离
+        var addHeight = mainY - y + 2; //增加的高度
+        var heightBefore = mainDiv.offsetHeight; //原来的高度
+        var heightAfter = heightBefore + addHeight;
+
+        if (heightAfter <= this.minHeight) {
+            return;
+        }
+        if (mainDiv.getBoundingClientRect().top <= mainDiv.parentNode.getBoundingClientRect().top && addHeight >= 0) {
+            heightAfter = mainDiv.parentNode.offsetHeight - (mainDiv.parentNode.getBoundingClientRect().bottom - mainDiv.getBoundingClientRect().bottom)
+
+            mainDiv.style.top = 0 + "px";
+            mainDiv.style.height = heightAfter + "px";
+        } else {
+            mainDiv.style.top = mainDiv.offsetTop - addHeight + "px";
+            mainDiv.style.height = heightAfter + "px";
+        }
+    },
+    //left移动
+    leftMove: function(e, mainDiv) {
+        var x = e.clientX; //鼠标横坐标
+
+        var mainX = mainDiv.getBoundingClientRect().left;
+        var addWidth = mainX - x + 2; //增加的宽度
+        var widthBefore = mainDiv.offsetWidth; //原来的宽度
+        var widthAfter = widthBefore + addWidth;
+        if (widthAfter <= this.minWidht) {
+            return;
+        }
+
+        if (mainDiv.getBoundingClientRect().left <= mainDiv.parentNode.getBoundingClientRect().left && addWidth >= 0) {
+            widthAfter = mainDiv.parentNode.offsetWidth - (mainDiv.parentNode.getBoundingClientRect().right - mainDiv.getBoundingClientRect().right)
+
+            mainDiv.style.width = widthAfter + "px";
+            mainDiv.style.left = 0 + "px";
+        } else {
+            mainDiv.style.left = mainDiv.offsetLeft - addWidth + "px";
+            mainDiv.style.width = widthAfter + "px";
+        }
+    },
+    //down移动
+    downMove: function(e, mainDiv) {
+        var y = e.clientY; //鼠标纵坐标
+        var heightBefore = mainDiv.offsetHeight //原来的高度
+        var mainY = mainDiv.getBoundingClientRect().top;
+        var addHeight = y - heightBefore - mainY; //增加的高度
+        var heightAfter = addHeight + heightBefore; //之后的高度
+        if (heightAfter <= this.minHeight) {
+            return;
+        }
+        if (mainDiv.getBoundingClientRect().bottom >= mainDiv.parentNode.getBoundingClientRect().bottom && addHeight >= 0) {
+            heightAfter = mainDiv.parentNode.getBoundingClientRect().bottom - mainDiv.getBoundingClientRect().top
+            mainDiv.style.height = heightAfter + "px";
+        } else {
+            mainDiv.style.height = heightAfter + "px";
+        }
+
+    }
+}
+var util = {
+    //设置选取区域高亮可见
+    setChoice: function(mainDiv) {
+        var cutPreview = $(mainDiv).siblings('.cut-preview');
+        var top = mainDiv.offsetTop;
+        var right = mainDiv.offsetLeft + mainDiv.offsetWidth;
+        var bottom = mainDiv.offsetTop + mainDiv.offsetHeight;
+        var left = mainDiv.offsetLeft;
+        cutPreview[0].style.clip = "rect(" + top + "px," + right + "px," + bottom + "px," + left + "px)";
+        return { 'top': top, 'left': left, 'right': right, 'bottom': bottom }
+    },
+    draggie: function(oDiv, cutPic) {
+        var tLeft, tTop; //鼠标按下时相对盒子的位移
+        oDiv = oDiv[0];
+        oDiv.onmousedown = function(e) {
+            var _this = this;
+            //鼠标按下时和选中元素的坐标偏移:x坐标
+            tLeft = e.clientX - _this.getBoundingClientRect().left;
+            tTop = e.clientY - _this.getBoundingClientRect().top;
+            document.onmousemove = function(e) {
+                var pleft = _this.parentNode.getBoundingClientRect().left;
+                var pTop = _this.parentNode.getBoundingClientRect().top;
+                var moveX = e.clientX - tLeft - pleft,
+                    moveY = e.clientY - tTop - pTop;
+                if (moveX < 0) {
+                    moveX = 0;
+                } else if (moveX > _this.parentNode.offsetWidth - _this.offsetWidth) {
+                    moveX = _this.parentNode.offsetWidth - _this.offsetWidth;
+                }
+                if (moveY < 0) {
+                    moveY = 0;
+                } else if (moveY > _this.parentNode.offsetHeight - _this.offsetHeight) {
+                    moveY = _this.parentNode.offsetHeight - _this.offsetHeight;
+                }
+
+                _this.style.left = moveX + 'px';
+                _this.style.top = moveY + 'px';
+                var top = oDiv.offsetTop;
+                var right = oDiv.offsetLeft + oDiv.offsetWidth;
+                var bottom = oDiv.offsetTop + oDiv.offsetHeight;
+                var left = oDiv.offsetLeft;
+                var cutPreview = $(oDiv).siblings('.cut-preview');
+                cutPreview[0].style.clip = "rect(" + top + "px," + right + "px," + bottom + "px," + left + "px)";
+                cutPic.coordinate = { 'top': top, 'left': left, 'right': right, 'bottom': bottom };
+            }
+            document.onmouseup = function() {
+                document.onmousemove = null;
+            }
+        };
+    },
+    getCoordinate: function(oDiv) {
+        var top = oDiv.offsetTop;
+        var right = oDiv.offsetLeft + oDiv.offsetWidth;
+        var bottom = oDiv.offsetTop + oDiv.offsetHeight;
+        var left = oDiv.offsetLeft;
+        return { 'top': top, 'left': left, 'right': right, 'bottom': bottom };
+    }
+}
+
+
+var cutPicObj = new cutPic({
+    contain: '.contain'
+});
+$(".haha").on("click", function() {
+    // alert(JSON.stringify(cutPicObj.coordinate))
+
+    var top = cutPicObj.coordinate.top;
+    var left = cutPicObj.coordinate.left;
+    var right = cutPicObj.coordinate.right;
+    var bottom = cutPicObj.coordinate.bottom;
+  
+
+    //生成图片
+    var $img = new Image();
+    $img.src = $('.select-img').attr('src');
+    $img.onload = function() {
+        
+      var canvas = document.createElement("canvas"), //创建canvas元素
+            width = $img.width, //确保canvas的尺寸和图片一样
+            height = 580;
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage($img, 0,0,580,580);
+
+        canvas.width = width/360*200;
+        canvas.height = height/360*200;
+
+        var w =  200*width/360 ; 
+        var h = 200*height/360 ;
+
+         var y = height*top/360 ; 
+        var x = width*left/360 ;
+
+        ctx.drawImage($img, x,y,w,h,0,0,w,h); //将图片绘制到canvas中
+        dataURL = canvas.toDataURL('image/jpeg'); //转换图片为dataURL
+        console.log(dataURL)
+    }
+
+
+})
+
+    //   var canvas = document.createElement("canvas"), //创建canvas元素
+    //         width = $img.width, //确保canvas的尺寸和图片一样
+    //         height = $img.height;
+    //     canvas.width = width/360*200;
+    //     canvas.height = height/360*200;
+    //     var w =  200*width/360 ; 
+    //     var h = 200*height/360 ;
+    //     console.log(w,h) 
+
+    //      var y = height*top/360 ; 
+    //     var x = width*left/360 ;
+
+    //     canvas.getContext("2d").drawImage($img, x,y,w,h,0,0,w,h); //将图片绘制到canvas中
+    //     dataURL = canvas.toDataURL('image/jpeg'); //转换图片为dataURL
+    //     console.log(dataURL)
+    // }
+
+</script>
