@@ -20,6 +20,7 @@
   - [Javascript 面向对象编程（三）： 原型链](./Marklist/NO.02/list-3)
   - [Javascript 面向对象编程（四）： 原型prototype](./Marklist/NO.02/list-6 )
   - [Javascript 面向对象编程（五）： 编程插件写法](./Marklist/NO.02/list-8 )
+  - [new运算符的工作原理](./Marklist/NO.02/list-25)
   - [Javascript —— call，apply 和 bind 函数](./Marklist/NO.02/list-4)
   - [JavaScript —— Data(日期和时间)](./Marklist/NO.02/list-9)
   - [JavaScript —— String(字符串的操作)](./Marklist/NO.02/list-11)
