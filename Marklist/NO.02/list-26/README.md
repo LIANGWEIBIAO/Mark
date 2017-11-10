@@ -1,6 +1,6 @@
 # 原型，构造函数，实例，原型链关系图
 
-![](http://ouyzoz9zy.bkt.clouddn.com/17-11-10/92053377.jpg)
+![](http://ouyzoz9zy.bkt.clouddn.com/17-11-10/12277787.jpg)
 
 
 ``` javascript
