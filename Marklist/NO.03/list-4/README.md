@@ -1,0 +1,59 @@
+### promise
+#### 基本用法
+ES6规定，Promise对象是一个构造函数，用来生成Promise实例。
+
+下面代码创造了一个Promise实例。
+``` javascript
+var promise = new Promise(function(resolve, reject) {
+  // ... some code
+
+  if (/* 异步操作成功 */){
+    resolve(value);
+  } else {
+    reject(error);
+  }
+});
+```
+Promise实例生成以后，可以用then方法分别指定Resolved状态和Reject状态的回调函数。
+``` javascript
+promise.then(function(value) {
+  // success
+}, function(error) {
+  // failure
+});
+```
+
+#### Promise 简单例子
+
+``` javascript
+//定时器
+function timeout(ms) {
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, ms, 'done');
+  });
+}
+
+timeout(100).then((value) => {
+  console.log(value);
+});
+```
+``` javascript
+//Ajax
+oBtn.onclick = function (){
+  let p1 = new promise(function(resolve,reject){
+    ajax('a.txt',function(str){
+        resolve(str);  //成功
+      },function(){
+        reject(str)    //失败
+      })
+  })
+    
+    //ajax请求数据后把数据传递出来。
+    p1.then(function(str){
+      oBox.innerHTML = str;
+    },function(str){
+      oBox.innerHTML = str;
+    })
+}
+
+```

@@ -5,6 +5,7 @@
 ## 目录
 
 - [javaScript](#javaScript)
+- [ES6](#ES6)
 - [css](#css)
 - [vue](#vue)
 - [webpack](#webpack)
@@ -13,7 +14,7 @@
 - [开发者工具](#开发者工具)
 
 
-## javaScript
+### javaScript
 - javaScript - 基础
   - [Javascript 面向对象编程（一）：封装](./Marklist/NO.02/list-5)
   - [Javascript 面向对象编程（二）：继承](./Marklist/NO.02/list-2)
@@ -49,7 +50,7 @@
   - [validate-表单验证](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-20/index.html)
  
 
-## css
+### css
 - css - 基础
   - [常用的CSS水平垂直居中方法大全](./Marklist/NO.01/list-1)
   - [ css3画三角形的原理 ](./Marklist/NO.01/list-2)
@@ -63,17 +64,19 @@
     - [按钮 - Hover动力悬停于链接](http://ianlunn.github.io/Hover/)
     - [移动端 - 1px问题](https://liangweibiao.github.io/v-mark/Marklist/NO.01/list-9/index.html)
 
+### ES6
+   - [ES6](./Marklist/NO.03)
 ### vue
    - [vue笔记](https://github.com/LIANGWEIBIAO/VUE)
    
 ### webpack
    - [webpack笔记](https://github.com/LIANGWEIBIAO/webpack)
 
-## 版本控制
+### 版本控制
    - [GIT的使用](./Marklist/NO.05/list-1)
 
-## 面试
+### 面试
  - [前端知识点](./Marklist/NO.06/list-1)
 
-## 开发者工具
+### 开发者工具
 - [webstorm —— The Smartest JavaScript IDE](./Marklist/NO.07/list-1)
