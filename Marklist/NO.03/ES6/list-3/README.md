@@ -1,4 +1,4 @@
-class类
+### class类
 JavaScript语言的传统方法是通过构造函数，定义并生成新对象。下面是一个例子。
 ``` javascript
 function Point(x, y) {
