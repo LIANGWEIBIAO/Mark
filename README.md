@@ -65,7 +65,8 @@
     - [移动端 - 1px问题](https://liangweibiao.github.io/v-mark/Marklist/NO.01/list-9/index.html)
 
 ### ES6
-   - [ES6](./Marklist/NO.03)
+   - [ES6](./Marklist/NO.03/ES6)
+
 ### vue
    - [vue笔记](https://github.com/LIANGWEIBIAO/VUE)
    
