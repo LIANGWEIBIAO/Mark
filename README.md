@@ -74,7 +74,7 @@
 ### webpack
    - [webpack笔记](https://github.com/LIANGWEIBIAO/webpack)
 
-### webpack
+### 移动端适配
    - [移动端适配](./Marklist/NO.05/list-2)   
 
 ### 版本控制
