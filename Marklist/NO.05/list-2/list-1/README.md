@@ -8,9 +8,10 @@
 - 逻辑像素（独立像素）：CSS像素转换为物理像素的媒介，CSS像素对应的实际上是逻辑像素，比如CSS中写个width:375px,是可以铺满横向的iphone6; iphone6的逻辑像素为375*667。
 
 - 像素比：物理像素/设备独立像素，iphone6的像素比为2,iphone6 plus则是3。
-位图像素：
 
 图片以iphone为例作为理解：
+
+
 ![Alt text](https://file.digitaling.com/eImg/image/20141024/20141024155045_87144.jpg "optional title")
 
 ## 为什么需要两倍图？
