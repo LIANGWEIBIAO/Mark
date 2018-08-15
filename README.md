@@ -85,3 +85,4 @@
 
 ### 开发者工具
 - [webstorm —— The Smartest JavaScript IDE](./Marklist/NO.07/list-1)
+- [Sublime Text 3](./Marklist/NO.07/list-2)
