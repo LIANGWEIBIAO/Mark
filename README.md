@@ -70,7 +70,7 @@
    - [ES6](./Marklist/NO.03)
 
 ### vue
-   - [vue笔记](https://github.com/LIANGWEIBIAO/VUE)
+   - [vue笔记](./Marklist/NO.08)
    
 ### webpack
    - [webpack笔记](https://github.com/LIANGWEIBIAO/webpack)
