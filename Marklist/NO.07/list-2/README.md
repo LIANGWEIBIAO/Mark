@@ -32,13 +32,21 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 - CSS Extended Completions：
   关联CSS文件，智能提示css文件中的类名，非常好用
 
+
 - AutoFileName:
   提供了文件路径提示功能，比如你要选择images文件夹下的一个图片，输入images/后会提示出图片列表给你选择
+
+- vue-syntax-highlight 
+  vue高亮代码。
 
 - 格式化vue代码:
   我的在tools->HTML/CSS/JS Prettify-> `set node path`里面的在`"allowed_file_extensions"`: `["htm", "html", "xhtml", "shtml", "xml", "svg","vue"] `加上vue就好了
 
 - 主題
-AfterGlow
+  AfterGlow
+
+- 设置浏览器打开
+  首选项菜单（preferences）下找到“按键-用户”（key bindings user）选项（新版也可能是“快捷键设置”选项），在用户（user）配置文件里添加如下一行并保存：{ "keys": ["ctrl+shift+c"], "command": "open_in_browser" }
+
 
 
