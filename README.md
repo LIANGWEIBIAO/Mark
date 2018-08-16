@@ -17,22 +17,9 @@
 
 ### javaScript
 
-- [javaScript - 常用代码封装 ](./Marklist/NO.09)
+- [javaScript - 原生基础](./Marklist/NO.02)
 
-- javaScript - 原生基础
-  - [Javascript 面向对象编程（一）：封装](./Marklist/NO.02/list-5)
-  - [Javascript 面向对象编程（二）：继承](./Marklist/NO.02/list-2)
-  - [Javascript 面向对象编程（三）： 原型链](./Marklist/NO.02/list-3)
-  - [Javascript 面向对象编程（四）： 原型prototype](./Marklist/NO.02/list-6 )
-  - [原型，构造函数，实例，原型链关系图](./Marklist/NO.02/list-26 )
-  - [编程插件写法](./Marklist/NO.02/list-8 )
-  - [new运算符的工作原理](./Marklist/NO.02/list-25)
-  - [Javascript —— call，apply 和 bind 函数](./Marklist/NO.02/list-4)
-  - [JavaScript —— Data(日期和时间)](./Marklist/NO.02/list-9)
-  - [JavaScript —— String(字符串的操作)](./Marklist/NO.02/list-11)
-  - [JavaScript —— RegExp(正则)](./Marklist/NO.02/list-10)
-  - [javascript —— This机制](./Marklist/NO.02/list-1)
-  - [javascript —— 理解js各种宽高](./Marklist/NO.02/list-7)
+- [javaScript - 常用代码封装 ](./Marklist/NO.09)
 
 - javaScript - 实用
   -  [jsonp跨域请求原理](./Marklist/NO.02/list-24)
