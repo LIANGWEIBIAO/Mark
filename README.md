@@ -16,7 +16,10 @@
 
 
 ### javaScript
-- javaScript - 基础
+
+- [javaScript - 常用代码封装 ](./Marklist/NO.09)
+
+- javaScript - 原生基础
   - [Javascript 面向对象编程（一）：封装](./Marklist/NO.02/list-5)
   - [Javascript 面向对象编程（二）：继承](./Marklist/NO.02/list-2)
   - [Javascript 面向对象编程（三）： 原型链](./Marklist/NO.02/list-3)
@@ -42,13 +45,15 @@
   -  [拖拽的原理](./Marklist/NO.02/list-23/list-1) 
   -  [拖拽进度条](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-23/list-2/index.html)
   -  [图片裁剪](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-23/list-3/index.html)
-- javaScript - 插件
-  - [JavaScript模块化 —— require.js ](./Marklist/NO.02/list-17)  
+  -  [JavaScript模块化 —— require.js ](./Marklist/NO.02/list-17)
+
+    
 - javaScript - demo
   - [jQuery手机触屏滑动切换 + 选项卡代码](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-18/index.html)
   - [JS分页效果](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-22/index.html)
   - [jQuery进度条](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-19/index.html)
   - [validate-表单验证](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-20/index.html)
+
  
 
 ### css
