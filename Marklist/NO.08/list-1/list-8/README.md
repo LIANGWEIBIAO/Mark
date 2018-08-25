@@ -9,4 +9,4 @@ static/ 目录下的文件并不会被 Webpack 处理：它们会直接被复制
 
 任何放在 static/ 中文件需要以绝对路径的形式引用：/static/[filename]。如果更改 assetSubDirectory 的值为 assets，那么路径需改为 /assets/[filename]。
 
-这里给`static`赋予了一个地址，那么在程序中引入路径的时候`~static`就直接可以代替路径`../static`，亲测，这里就算多层嵌套也可以成功找到路径。
+这里给`static`赋予了一个地址，那么在程序中引入路径的时候`~static`就直接可以代替路径`../static`，亲测，这里就算多层嵌套也可以成功找到路径.
