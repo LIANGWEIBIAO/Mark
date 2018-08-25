@@ -2,7 +2,7 @@
 
 -------------------------------------------
 
-Vue.js 是当下很火的一个 JavaScript MVVM 库，它以数据驱动和组件化的思想构建。不管你是 Angular 的忠实粉，还是 React 的迷恋者，有机会多了解一个框架也没什么坏处，更何况 Vue 上手难度还是比较低的 。
+Vue.js 是当下很火的一个 JavaScript MVVM 库，它以数据驱动和组件化的思想构建。不管你是 Angular 的忠实粉，还是 React 的迷恋者，有机会多了解一个框架也没什么坏处，更何况 Vue 上手难度还是比较低的。
 
 
 ### vue学习笔记
@@ -12,7 +12,7 @@ Vue.js 是当下很火的一个 JavaScript MVVM 库，它以数据驱动和组�
 - [vue-router](./list-1/list-3)
 - [VUX](./list-1/list-4)
 - [VUE过渡效果](./list-1/list-5)
-- [assets和static文件夹的区别](./list-1/list-8)
+- [assets和static文件夹的区别](./list-1/list-8) 
 
 ### VUE登录权限
 - [vue 路由权限拦截](./list-3/list-1)
