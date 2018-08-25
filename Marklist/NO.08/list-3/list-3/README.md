@@ -54,6 +54,7 @@ export function fetch(url,params={}){
 import axios from 'axios'
 import {post,fetch,patch,put} from './utils/http'
 //定义全局变量
+Vue.prototype.funcName = function (){}
 Vue.prototype.$post=post;
 Vue.prototype.$fetch=fetch;
 Vue.prototype.$patch=patch;

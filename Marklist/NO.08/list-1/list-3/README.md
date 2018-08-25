@@ -142,4 +142,18 @@ let router = new Router({
 })
 ```
 
-
+``` javascript
+ {
+    path: '/',
+    component: Home,
+    name: '信息管理',
+    menuShow: true,
+    iconCls: 'iconfont icon-books',
+    children: [
+      {path: '/sellbill',   component: sellbill,   name: '卖票信息', menuShow: true, meta:{requireAuth: true }},
+      {path: '/buybill',    component: buybill,    name: '买票信息', menuShow: true, meta:{requireAuth: true }},
+      {path: '/changebill', component: changebill, name: '换票信息', menuShow: true, meta:{requireAuth: true }},
+      {path: '/bill/editsellbill', component: editsellbill, name: '编辑卖票信息', menuShow: false, meta:{requireAuth: true}}
+    ]
+  }
+  ```

@@ -57,3 +57,21 @@ oBtn.onclick = function (){
 }
 
 ```
+
+### 什么是async、await？
+await得到Promise对象之后就等待Promise接下来的resolve或者reject。
+来看一段简单的代码：
+``` javascript
+async function testSync() {
+     const response = await new Promise(resolve => {
+         setTimeout(() => {
+             resolve("async await test...");
+          }, 1000);
+     });
+     console.log(response);
+}
+testSync();//async await test...
+
+``` 
+
+就这样一个简单的async、await异步就完成了。使用async、await完成异步操作代码可读与写法上更像是同步的，也更容易让人理解。

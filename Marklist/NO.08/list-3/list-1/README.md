@@ -5,34 +5,36 @@
 
 
 ``` javascript
-const routes = [
-    {
-        path: '/',
-        name: '/',
-        component: Index
-    },
-    {
-        path: '/repository',
-        name: 'repository',
-        meta: {
-            requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
+const router = new Router({
+      routes :[
+        {
+            path: '/',
+            name: '/',
+            component: Index
         },
-        component: Repository
-    },
-    {
-        path: '/login',
-        name: 'login',
-        component: Login
-    }
-];
+        {
+            path: '/repository',
+            name: 'repository',
+            meta: {
+                requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
+            },
+            component: Repository
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: Login
+        }
+    ]
+)}
 ```
 
 定义完路由后，我们主要是利用vue-router提供的钩子函数beforeEach()对路由进行判断。
 ``` javascript
 router.beforeEach((to, from, next) => {
     if (to.meta.requireAuth) {  // 判断该路由是否需要登录权限
-        if (store.state.token) {  // 通过vuex state获取当前的token是否存在
-        //sessionStorage.getItem('token')
+        if (sessionStorage.getItem('token')) {  // 通过vuex state获取当前的token是否存在
+        //store.state.token
             next();
         }
         else {
@@ -46,6 +48,8 @@ router.beforeEach((to, from, next) => {
         next();
     }
 })
+
+export default router
 ```
 
 每个钩子方法接收三个参数： 
