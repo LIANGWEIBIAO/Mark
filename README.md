@@ -9,7 +9,7 @@
 - [css](#css)
 - [vue](#vue)
 - [webpack](#webpack)
-- [Node.js](#Node)
+- [Node.js](#node)
 - [移动端适配](#移动端适配)
 - [版本控制](#版本控制)
 - [面试](#面试)
