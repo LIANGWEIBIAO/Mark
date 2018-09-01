@@ -26,7 +26,7 @@ http.createServer(function(req, res){
 ```
 
 ## 获取POST请求内容
-相比较GET请求，POST请求比较复杂。因为NODE。js认为，使用POST请求时 ,数据量会表较多，为了效率，它将数据拆分成为了从多的数据块(chunk)，然后通过特定的事件，将这些小数据块有序传递给回调函数。
+相比较GET请求，POST请求比较复杂。因为NODE.js认为，使用POST请求时 ,数据量会表较多，为了效率，它将数据拆分成为了从多的数据块(chunk)，然后通过特定的事件，将这些小数据块有序传递给回调函数。
 ``` javascript
 var http = require('http');
 var querystring = require('querystring');
