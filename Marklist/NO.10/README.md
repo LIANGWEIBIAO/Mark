@@ -4,6 +4,7 @@ Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引�
 
 ## Nodejs基础
 - [创建一个服务](./Marklist/list-1);
+- [node操作文件](./Mraklist/list-1/list-1)
 - [URL模块](./Marklist/list-2);
 - [GET/POST请求](./Marklist/list-3);
 - [EJS模板渲染](./Marklist/list-4);
