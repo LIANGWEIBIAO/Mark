@@ -33,9 +33,12 @@ var querystring = require('querystring');
  
 http.createServer(function (req, res) {
   var body = "";
+  //on 每接收一段触发一次回调
   req.on('data', function (chunk) {
     body += chunk;
   });
+
+  //data数据全部接收完(一次)
   req.on('end', function () {
     // 解析参数
     body = querystring.parse(body);
@@ -59,3 +62,4 @@ return:
 { name: 'whitemu', sex: [ 'man', 'women' ] }
 
 ```
+

@@ -10,6 +10,7 @@
 - [vue](#vue)
 - [webpack](#webpack)
 - [Node.js](#node)
+- [微信小程序](#微信小程序)
 - [移动端适配](#移动端适配)
 - [版本控制](#版本控制)
 - [面试](#面试)
@@ -45,15 +46,18 @@
  
 
 ### css
+-   css3 - 动画
+    - [弹性盒子布局](./Marklist/NO.01/list-11)
+    - [深入理解CSS3 Animation帧动画](./Marklist/NO.01/list-5)
+    - [使用transtion显示的动画如丝般顺滑](./Marklist/NO.01/list-6)
+
 - css - 基础
   - [常用的CSS水平垂直居中方法大全](./Marklist/NO.01/list-1)
   - [ css3画三角形的原理 ](./Marklist/NO.01/list-2)
   - [ html、css、css3常用的收集](./Marklist/NO.01/list-3)
   - [input和输入框美化](./Marklist/NO.01/list-4)
   - [input框focus时的美化效果](https://liangweibiao.github.io/v-mark/Marklist/NO.01/list-10/index.html)
--   css3 - 动画
-    - [深入理解CSS3 Animation帧动画](./Marklist/NO.01/list-5)
-    - [使用transtion显示的动画如丝般顺滑](./Marklist/NO.01/list-6)
+  
 -   css - demo
     - [按钮 - CSS3鼠标滑过彩色动画](https://liangweibiao.github.io/v-mark/Marklist/NO.01/list-8/index.html)
     - [按钮 - Hover动力悬停于链接](http://ianlunn.github.io/Hover/)
@@ -69,6 +73,10 @@
    - [webpack笔记](https://github.com/LIANGWEIBIAO/webpack)
 ### Node
    - [NODEJS](./Marklist/NO.10)
+   
+### 微信小程序
+   - [微信小程序](./Marklist/NO.11)  
+
 ### 移动端适配
    - [移动端适配](./Marklist/NO.05/list-2)   
 
