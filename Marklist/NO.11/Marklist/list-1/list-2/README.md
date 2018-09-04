@@ -1,6 +1,7 @@
 # 小程序HTTP请求封装
 ``` javascript
-iport {config} from "/config.js"
+import {config} from "/config.js"
+
 function request(params){
    if(!params.method){
       params.method = "GET"
