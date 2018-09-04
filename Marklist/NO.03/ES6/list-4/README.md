@@ -25,18 +25,22 @@ promise.then(function(value) {
 
 #### Promise 简单例子
 
+示例一
 ``` javascript
-//定时器
-function timeout(ms) {
-  return new Promise((resolve, reject) => {
-    setTimeout(resolve, ms, 'done');
-  });
-}
+let promise = new Promise((resolve,reject){
+    wx.request({
+       url."http://www.lxj.com/v1/Classic/latest",
+       success:(res)=>{
+             resolve(res)
+       }
+    })
+})
+promise.then((res)=>{
+    console.log(res)
+})
 
-timeout(100).then((value) => {
-  console.log(value);
-});
 ```
+示例二
 ``` javascript
 //Ajax
 oBtn.onclick = function (){
@@ -49,11 +53,9 @@ oBtn.onclick = function (){
   })
     
     //ajax请求数据后把数据传递出来。
-    p1.then(function(str){
-      oBox.innerHTML = str;
-    },function(str){
-      oBox.innerHTML = str;
-    })
+  p1.then((str)=>{
+    oBox.innerHTML = str;
+  })
 }
 
 ```
