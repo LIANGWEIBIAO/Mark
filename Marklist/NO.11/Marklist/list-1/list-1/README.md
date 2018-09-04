@@ -9,6 +9,8 @@ index.wxml
 index.wxss
 ```
 ### 组件数据绑定
+小程序每次更新和绑定数据都需要`this.setData({})`方法，不能直接使用
+`this.data.count`更改数据
 index.wxml
 ``` html
 <view bind:tap="onLike" class="container">
