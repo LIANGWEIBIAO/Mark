@@ -54,6 +54,7 @@ app.listen(3000);
 ```
 
 浏览器访问请求:
+
 ![image](https://files.jb51.net/file_images/article/201711/201711141022454.png) 
 
 每个路由文件通过生成一个 express.Router 实例 router 并导出，通过 app.use 挂载到不同的路径。
