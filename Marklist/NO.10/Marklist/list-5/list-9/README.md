@@ -29,14 +29,23 @@ SELECT * FROM banner_table WHERE `rider_name`='测试'  ;
 
 子句：
 WHERE 条件
+
 WHERE name='blu e'
+
 WHERE age>18
+
 WHERE age<=18
+
 WHERE age>=18 AND score<60
+
 WHERE cach>100 OR score>10000
 
+
 ORDER 排序
+
 ORDER BY age ASC/DESC
-  ASC-升序(从小到大)
-  DESC-降序(从大到小)
+
+ASC-升序(从小到大)
+
+DESC-降序(从大到小)
   
