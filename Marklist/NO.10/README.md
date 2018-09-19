@@ -21,3 +21,6 @@ Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引�
 - [使用Express.Router方法管理路由](./Marklist/list-5/list-6);
 - [Express 托管静态文件](./Marklist/list-5/list-3);
 - [Express 中使用模板引擎](./Marklist/list-5/list-4);
+
+## 数据库
+- [mySql四大基本语句的使用](./Marklist/list-5/list-9);
