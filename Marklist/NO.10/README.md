@@ -33,3 +33,4 @@ Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引�
 ## mongoose
 - [Mongoose快速入门](./Marklist/list-7/list-1);
 - [Mongoose增删改查](./Marklist/list-7/list-2);
+- [Mongoose模块化](./Marklist/list-7/list-3);
