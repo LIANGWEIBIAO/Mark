@@ -26,8 +26,9 @@ Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引�
 - [mySql四大基本语句的使用](./Marklist/list-5/list-9);
 
 ## MongoDB
-
+- [安装与数据库开机，环境变量等设置](https://blog.csdn.net/muguli2008/article/details/80591256)
 - [nodejs连接mongodb数据](./Marklist/list-6/list-1);
+- [MongoDB增删查改分页DAO封装](./Marklist/list-6/list-2);
 
 ## mongoose
 - [Mongoose快速入门](./Marklist/list-7/list-1);

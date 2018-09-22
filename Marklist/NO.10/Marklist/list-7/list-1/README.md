@@ -50,6 +50,7 @@ db.connection.on("open", function () {
 	//创建model,在内存中创建结构为TestSchema名为test1的集合
 
 	var TestModel = db.model("test1", TestSchema );
+    // var TestModel = db.model("test1", TestSchema ,'test'); 第三个参数操作test表而不是test1,一个映射关系。
 
 	//插入数据到内存中的test1集合
 
