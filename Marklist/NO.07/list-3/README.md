@@ -15,7 +15,7 @@ Setting Sync 快捷键：
 `Shift + Alt + D` 在弹窗里输入你的gist值，稍后片刻便可同步成功
 
 ``` javascript
-key：5572ec1fed476bc85606ff5a3845fe615c5f91ed
-id：19ff768ac6c2b79278aaa863e8100173
+token:914c7afaf10ce496b46e058c608198839df2b349
+Sync : 上传完成. GIST ID : bede60b5114dc0e2ff29e1ee168829eb .请在其他计算机上复制并使用此ID以下载设置.
 ```
 

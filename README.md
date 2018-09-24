@@ -87,6 +87,8 @@
  - [前端知识点](./Marklist/NO.06/list-1)
 
 ### 开发者工具
-- [webstorm —— The Smartest JavaScript IDE](./Marklist/NO.07/list-1)
+- [vscode](./Marklist/NO.07/list-3)
 - [Sublime Text 3](./Marklist/NO.07/list-2)
-- [Sublime Text 3](./Marklist/NO.07/list-3)
+- [webstorm —— The Smartest JavaScript IDE](./Marklist/NO.07/list-1)
+
+
