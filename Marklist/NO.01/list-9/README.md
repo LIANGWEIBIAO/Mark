@@ -3,25 +3,51 @@
 
 
 
+# 利用less解决1px边框
 
-``` css
-@media only screen and(-webkit-device-pixel-ratio:2)
-  .trans{
-         transform:scaley(0.5);
+``` html
+//使用
+<ul>
+   <li class='border-1px'></li>
+<ul>
+
+ul li{
+  .border-1px(#f938ab);
+}
+
+
+```
+
+
+``` less
+.border-1px (@color) {
+  position: relative;
+  &::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid @color;
   }
-
-@media only screen and(-webkit-device-pixel-tatio:3){
-   .trans{
-         transform:scaley(0.33333)
+}
+@media(-webkit-min-device-pixel-ratio:2),(min-device-pixel-ratio:2){
+  .border-1px{
+    &:after{
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
     }
+  }
+}
+@media(-webkit-min-device-pixel-ratio:3),(min-device-pixel-ratio:3){
+  .border-1px{
+    &:after{
+      -webkit-transform: scaleY(0.3333);
+      transform: scaleY(0.3333);
+    }
+  }
 }
 
-使用
-.box {
-   width:100%;
-   border:1px solid red;
-}
-<div  class="box   trans"><div>
 
 ```
 
