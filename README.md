@@ -26,7 +26,7 @@
 - javaScript - 实用
   -  [jsonp跨域请求原理](./Marklist/NO.02/list-24)
   -  [javascript ——  函数节流](./Marklist/NO.02/list-12) 
-  -  [art-template](./Marklist/NO.02/list-25)
+  -  [art-template模板](./Marklist/NO.02/list-25)
   -  [JS实现最简单的图片懒加载](./Marklist/NO.02/list-21) 
   -  [javascript ——  实现文件的上传与压缩](./Marklist/NO.02/list-13) 
   -  [Ajax使用FormData对象上传文件](./Marklist/NO.02/list-14)  
