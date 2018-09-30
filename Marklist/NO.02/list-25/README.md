@@ -71,3 +71,42 @@ document.getElementById('content').innerHTML = html;
     document.getElementById("app").innerHTML = html;
 </script>
 ```
+
+### 嵌套循环
+
+要展示的数据格式
+
+``` javascript
+list:[ {
+        "name" : "",
+            "age" : 24,
+            "scoreList" : [ {
+                "sname" : "java",
+                "score" : 100
+            }, {
+                "sname" : "c++",
+                "score" : 100
+            } ]
+        } ]
+
+```
+
+模板代码
+
+``` javascript
+<script id="testTemplate" type="text/html">
+    {{each list}}
+        <span>{{$value.name}}</span>
+        <span>{{$value.age}}</span>
+        {{include 'scoreTemplate' $value}} <!--引入子模板-->
+    {{/each}}
+</script>
+
+<script id="scoreTemplate" type="text/html">
+    {{each scoreList}}
+        <span>{{$value.name}}</span>
+        <span>{{$value.score}}</span>
+    {{/each}}
+</script>
+
+```
