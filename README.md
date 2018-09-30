@@ -21,7 +21,7 @@
 
 - [javaScript - 原生基础](./Marklist/NO.02)
 
-- [javaScript - 常用代码封装util工具 ](./Marklist/NO.09/list-2/util.js)
+- [javaScript - 常用代码封装util工具 ](./Marklist/NO.09/Marklist/list-2/util.js)
 
 - javaScript - 实用
   -  [jsonp跨域请求原理](./Marklist/NO.02/list-24)
