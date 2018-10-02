@@ -1,0 +1,40 @@
+ /*提示层开始*/
+//  .v-toast-wrap{
+//     position: fixed;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 999;
+// }
+.v-toast {
+    top: 50%;
+    left: 50%;
+    line-height: 1.2;
+    max-width: 50%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 17px;
+    z-index: 2;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    text-align: center;
+    transform: translateX(-50%);
+    animation: vshow 300ms;
+}
+
+@keyframes vshow {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+/*提示层结束*/
