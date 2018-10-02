@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="../css/toast.css">
+    <script src="../js/toast.js"></script>
+    <script src="../js/util.js"></script>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_859983_v5b5pfks2se.css">
+<link href="../css/index.css" rel="stylesheet">
+<!-- <script src="../assets/jquery-3.1.1.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+</head>
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+    <div class="left">
+        <a class='iconfont icon-iconset0419' href="./index.html"></a>
+    </div>
+    <div class="center">表单验证</div>
+    <div class="right"></div>
+</header>
+        <main class="main">
+            <div class="content">
+                <div class="js-validate">
+                    <div class="validata-line">
+                        <div class="validata-label">用户名:</div>
+                        <input class="user-name-text user-name" data-validate="user" type="text" value="" placeholder="请输入用户吗">
+                    </div>
+                    <div class="validata-line">
+                        <div class="validata-label">手机号码:</div>
+                        <input data-validate="phone" class="user-name-text user-phone" type="text" value="" placeholder="请输入手机号码">
+                    </div>
+                    <div class="validata-line">
+                        <div class="validata-label">验证码:</div>
+                        <input class="user-name-text codeInput" type="text" value="" placeholder="请输入验证码">
+                        <div class="validata-code">
+                            <input type="button" value="获取验证码">
+                        </div>
+                    </div>
+                    <input type="button" class="btn" value="提交">
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
+<script>
+    var getCodeBtn = $(".validata-code input")
+    getCodeBtn.click("clcik", function () {
+        util.getCode(getCodeBtn, "haha")
+    })
+
+
+    $(".btn").on("click", function () {
+        var phoneTrue = util.cheackPhone($(".user-phone"))
+        var NameTrue = util.cheackUser($(".user-name"))
+        var codeTrue = util.empty($(".codeInput"), "请输入验证码")
+
+        console.log(phoneTrue, NameTrue, codeTrue);
+        if (!phoneTrue || !NameTrue || !codeTrue) {
+            return false
+        }
+        alert("正在发送ajax请求;")
+    })
+</script>

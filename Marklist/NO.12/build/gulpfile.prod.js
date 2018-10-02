@@ -29,18 +29,27 @@ function prod() {
      * CSS样式处理 
      */
     gulp.task('css', function () {
-        return gulp.src(Config.css.src).pipe(autoprefixer('last 2 version')).pipe(gulp.dest(Config.css.dist)).pipe(rename({
-            suffix: '.min'
-        })).pipe(cssnano()) //执行压缩  
+        return gulp.src(Config.css.src).pipe(autoprefixer({
+                browsers: ['last 5 versions', 'Android >= 4.0'],
+                cascade: false, //是否美化属性值 默认：true 像这样：
+                remove: true //是否去掉不必要的前缀 默认：true 
+            }))
+            .pipe(gulp.dest(Config.css.dist)).pipe(rename({
+                suffix: '.min'
+            })).pipe(cssnano()) //执行压缩  
             .pipe(gulp.dest(Config.css.dist));
     });
     /** 
      * less样式处理 
      */
     gulp.task('less', function () {
-        return gulp.src(Config.less.src).pipe(autoprefixer('last 2 version')).pipe(less()).pipe(gulp.dest(Config.less.dist)).pipe(rename({
-            suffix: '.min'
-        })) //rename压缩后的文件名  
+        return gulp.src(Config.less.src).pipe(autoprefixer({
+                browsers: ['last 5 versions', 'Android >= 4.0'],
+                cascade: false, //是否美化属性值 默认：true 像这样：
+                remove: true //是否去掉不必要的前缀 默认：true 
+            })).pipe(less()).pipe(gulp.dest(Config.less.dist)).pipe(rename({
+                suffix: '.min'
+            })) //rename压缩后的文件名  
             .pipe(cssnano()) //执行压缩  
             .pipe(gulp.dest(Config.less.dist));
     });
@@ -65,9 +74,9 @@ function prod() {
      */
     gulp.task('images', function () {
         return gulp.src(Config.img.src).pipe(imagemin({
-            optimizationLevel: 3
-            , progressive: true
-            , interlaced: true
+            optimizationLevel: 3,
+            progressive: true,
+            interlaced: true
         })).pipe(gulp.dest(Config.img.dist));
     });
     gulp.task('build', ['html', 'css', 'less', 'js', 'assets', 'images']);

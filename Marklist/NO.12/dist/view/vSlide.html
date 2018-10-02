@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vSlide</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="../css/vslide.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_859983_v5b5pfks2se.css">
+<link href="../css/index.css" rel="stylesheet">
+<!-- <script src="../assets/jquery-3.1.1.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+</head>
+
+    <script src="../js/vSlide.js"></script>
+</head>
+
+<body>
+    <div class="container ">
+        <header class="header">
+    <div class="left">
+        <a class='iconfont icon-iconset0419' href="./index.html"></a>
+    </div>
+    <div class="center">slide</div>
+    <div class="right"></div>
+</header>
+        <div class="main">
+            <h2 class="v-title">轮播图</h2>
+            <div class="v-slide v-slide1">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <img src="../images/banner-1.jpg" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="../images/banner-2.jpg" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="../images/banner-3.jpg" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="../images/banner-4.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="v-slide v-slide2">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <img src="../images/banner-4.jpg" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="../images/banner-1.jpg" alt="">
+                    </li>
+
+                    <li class="swiper-slide">
+                        <img src="../images/banner-3.jpg" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="../images/banner-2.jpg" alt="">
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    new vSlider(".v-slide1",{loopTime:4000})
+    new vSlider(".v-slide2 ",{loop:false})
+</script>

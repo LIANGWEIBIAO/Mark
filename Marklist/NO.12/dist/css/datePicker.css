@@ -1,0 +1,67 @@
+.v-date-picker {
+  width: 240px;
+  box-shadow: 2px 2px 8px 2px rgba(128, 128, 128, 0.3);
+  position: absolute;
+  top: 150px;
+  display: none;
+}
+.v-date-picker.active {
+  display: block;
+}
+.date-picker-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+.date-picker-header .date-btn {
+  font-family: serif;
+  font-size: 20px;
+  width: 20px;
+  height: 50px;
+  line-height: 50px;
+  color: #1abc9c;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.date-picker-header .date-head-mind {
+  font-size: 16px;
+  color: #666;
+}
+.v-date-picker .v-date-body table {
+  width: 100%;
+  border-collapse: collapse;
+  /*为表格设置合并边框模型*/
+}
+.v-date-picker .v-date-body table th,
+.v-date-picker .v-date-body table td {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.v-date-picker .v-date-body table th {
+  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
+}
+.v-date-picker .v-date-body table td {
+  border: 1px solid #f0f0f0;
+  font-size: 10px;
+  width: 14%;
+  cursor: pointer;
+  font-weight: bold;
+}
+.v-date-picker td.not {
+  color: #ccc;
+  font-weight: normal;
+}

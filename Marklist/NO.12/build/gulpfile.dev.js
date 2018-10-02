@@ -40,6 +40,11 @@ function dev() {
     gulp.task('css:dev', function () {
         return gulp.src(Config.css.src)
             .pipe(plumber())
+            .pipe(autoprefixer({
+                browsers: ['last 5 versions', 'Android >= 4.0'],
+                cascade: false, //是否美化属性值 默认：true 像这样：
+                remove: true //是否去掉不必要的前缀 默认：true 
+            }))
             .pipe(gulp.dest(Config.css.dist))
             .pipe(connect.reload())
     });
@@ -50,6 +55,11 @@ function dev() {
         return gulp.src(Config.less.src)
             .pipe(plumber())
             .pipe(less())
+            .pipe(autoprefixer({
+                browsers: ['last 5 versions', 'Android >= 4.0'],
+                cascade: false, //是否美化属性值 默认：true 像这样：
+                remove: true //是否去掉不必要的前缀 默认：true 
+            }))
             .pipe(gulp.dest(Config.less.dist))
             .pipe(connect.reload())
     });
