@@ -52,11 +52,10 @@
 -   css3 - 动画
     - [弹性盒子布局](./Marklist/NO.01/list-11)
     - [深入理解CSS3 Animation帧动画](./Marklist/NO.01/list-5)
-    - [使用transtion显示的动画如丝般顺滑](./Marklist/NO.01/list-6)
+    - [transtion](./Marklist/NO.01/list-6)
 
 - css - 基础
   - [常用的CSS水平垂直居中方法大全](./Marklist/NO.01/list-1)
-  - [ css3画三角形的原理 ](./Marklist/NO.01/list-2)
   - [ html、css、css3常用的收集](./Marklist/NO.01/list-3)
   - [input和输入框美化](./Marklist/NO.01/list-4)
   - [input框focus时的美化效果](https://liangweibiao.github.io/v-mark/Marklist/NO.01/list-10/index.html)
