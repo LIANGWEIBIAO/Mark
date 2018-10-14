@@ -7,17 +7,6 @@ input file上传按钮的美化思路是，先把之前的按钮透明度opacity
     <input type="file" name="" id="">点击这里上传文件
 </a>
 ```
-- input框focus时的美化效果
-``` css
- input:focus {
-    outline: none;
-    border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
-}
-```
-
-![Alt text](https://ws1.sinaimg.cn/large/7ae924b5gy1fh8uv5tb2pj20fi0biq30.jpg)
-
 
 
 - 单选框和多选框美化
@@ -25,16 +14,15 @@ css
 ``` css
  input[type="radio"] {
         display: none;
-    }
+}
     
-    input[type="radio"] + i {
-        border-radius: 7px;
-    }
-    
+input[type="radio"] + i {
+    border-radius: 7px;
+}
 
-    input[type="radio"]:checked + i {
-        background: #2489c5;
-    }
+input[type="radio"]:checked + i {
+    background: #2489c5;
+}
 ```
 html
 ``` html
