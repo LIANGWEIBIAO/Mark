@@ -26,6 +26,7 @@
 - [vui-封装日常使用组件](https://liangweibiao.github.io/v-mark/Marklist/NO.12/dist/view/index.html)
 
 - javaScript - 笔记
+  -  [最简单的AJAX](./Marklist/NO.02/list-25) 
   -  [Ajax搭配Promise的简单封装](./Marklist/NO.02/list-26) 
   -  [Ajax使用FormData对象上传文件](./Marklist/NO.02/list-14) 
   -  [jsonp跨域请求原理](./Marklist/NO.02/list-24)
