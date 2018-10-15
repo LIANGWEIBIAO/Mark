@@ -1,12 +1,12 @@
 # PHP环境搭建
 
-- LAMP
+- LAMP  
 Linux+Apache+MySQL+PHP
 
-- LNMP
+- LNMP  
 Linux+Nginx+MySQL+PHP
 
-- LNMPA
+- LNMPA  
 Linux+Nginx+MySQL+PHP+Apache
 
 - WAMP
