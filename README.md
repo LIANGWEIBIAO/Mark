@@ -77,9 +77,9 @@
    - [webpack笔记](https://github.com/LIANGWEIBIAO/webpack)
 ### Node
    - [NODEJS](./Marklist/NO.10)
-   
-### php
-   - [NODEJS](./Marklist/NO.13)
+
+### PHP
+   - [PHP](./Marklist/NO.13)
 
 ### 微信小程序
    - [微信小程序](./Marklist/NO.11)  

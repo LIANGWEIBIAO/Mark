@@ -10,7 +10,7 @@ Linux+Nginx+MySQL+PHP
 Linux+Nginx+MySQL+PHP+Apache
 
 - WAMP
-Window+Apache+MySQL+PHP
+Window+Apache+MySQL+PHP  
 集成环境工具:phpstudy
 
 
