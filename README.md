@@ -22,7 +22,7 @@
 
 - [javaScript - 原生基础](./Marklist/NO.02)
 
-- [javaScript - 常用代码封装util工具 ](./Marklist/NO.09/Marklist/list-2/util.js)
+- [javaScript - 常用代码封装util工具 ](./Marklist/NO.14/project/src/js/util.js)
 
 - [vui-封装日常使用组件](https://liangweibiao.github.io/v-mark/Marklist/NO.12/dist/view/index.html)
 
