@@ -97,7 +97,7 @@ function dev() {
         // });
 
         connect.server({
-            port: 3006,
+            port: 3007,
             root: Config.dist,
             livereload: true,
             // open: true,
