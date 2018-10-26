@@ -13,32 +13,31 @@
 
 <body>
     <div class="wrap">
-        <div class="drag_container">
-            <div class="conent wrapper">
-                <ul class="scroller">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
-                    <li>11</li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
-                    <li>16</li>
-                    <li>17</li>
-                    <li>18</li>
-                    <li>19</li>
-                </ul>
-            </div>
-            <div class="bar_wrap">
-                <div class="bar"></div>
+        <div class="v_scrollView">
+            <ul class="v_scrollContent">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+            </ul>
+            <div class="v_scrollBar">
+                <div class="v_sliderBtn"></div>
             </div>
         </div>
     </div>
@@ -47,27 +46,113 @@
 </html>
 <script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.js'></script>;
 <script>
-    var wrapper = $('.wrapper')[0];
-    var elBox = $('.scroller')[0];
-    elBox.onmousedown = function (e) {
+    var scrollView = $('.v_scrollView')[0];
+    var scrollContent = $('.v_scrollContent')[0];
+
+    var scrollBar = $('.v_scrollBar')[0];
+    var sliderBtn= $('.v_sliderBtn')[0];
+
+
+    //设置滑块的高度
+    if (scrollView.offsetHeight <= scrollContent.offsetHeight) {
+        var haha = scrollBar.offsetHeight / scrollContent.offsetHeight * scrollBar.offsetHeight;
+        sliderBtn.style.height = haha + 'px'
+    } else {
+        sliderBtn.style.height = 0 + 'px'
+        scrollBar.style.display = 'none';
+    }
+
+    //内容拖拽
+    scrollContent.onmousedown = function (e) {
         e.preventDefault();
+        e.stopPropagation();
 
-        //记录下鼠标的x和y坐标  
-        var mouseDownX = e.clientY
-        //记录下元素的x和y坐标
-        var initX = this.offsetLeft;  
-
+        var distanceY = e.clientY - this.offsetTop;
         document.onmousemove = function (ev) {
             //移动元素y = 现在鼠标y - 原来鼠标y + 原来元素y  
-            var t = ev.clientY - mouseDownX + initX;
+            var t = ev.clientY - distanceY;
+            var maxY = -(scrollContent.offsetHeight - scrollView.offsetHeight)
+            if(scrollView.offsetHeight >= scrollContent.offsetHeight) return;
+            if (t < maxY) {
+                t = maxY;
+            } else if (t > 0) {
+                t = 0;
+            }
 
-            elBox.style.top = t + "px";
+            var sliderBtnDistance = sliderBtn.offsetHeight / scrollBar.offsetHeight * t
+            scrollContent.style.top = t + "px";
+            sliderBtn.style.top = Math.abs(sliderBtnDistance) + "px";
 
         }
-        
+
         document.onmouseup = function () {
             document.onmousemove = null;
             document.onmouseup = null;
         };;
     };
+
+    //滑块拖拽
+    sliderBtn.onmousedown = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var distanceY = e.clientY - this.offsetTop;
+
+        document.onmousemove = function (ev) {
+            //移动元素y = 现在鼠标y - 原来鼠标y + 原来元素y  
+            var t = ev.clientY - distanceY;
+            //设置最大滚动范围
+            var maxY = scrollBar.offsetHeight - sliderBtn.offsetHeight
+
+            if (t <= 0) {
+                t = 0;
+            } else if (t >= maxY) {
+                t = maxY;
+            }
+            //拉动sliderBar,设置conent滚动距离
+            var conentDistance = -scrollContent.offsetHeight / scrollView.offsetHeight * t
+            sliderBtn.style.top = t + "px";
+            scrollContent.style.top = conentDistance + "px";
+
+        }
+
+        document.onmouseup = function () {
+            document.onmousemove = null;
+            document.onmouseup = null;
+        };;
+    };
+
+    //滑轮滚动事件
+    $(scrollContent).on("mousewheel DOMMouseScroll", function (e) {
+        e.preventDefault();
+        var delta = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) || // chrome & ie
+            (e.originalEvent.detail && (e.originalEvent.detail > 0 ? -1 : 1)); //detail是firefox的属性
+        //计算滚动比例,设置sliderBtn滚动距离
+        var sliderBtnDistance = sliderBtn.offsetHeight / scrollBar.offsetHeight * t
+        
+        if (delta < 0) { //向下滚动滑轮
+            var t = scrollContent.offsetTop - 20;
+            var maxY = -(scrollContent.offsetHeight - scrollView.offsetHeight)
+
+            if (t <= maxY) {
+                t = maxY
+            }
+            sliderBtn.style.top = Math.abs(sliderBtnDistance) + "px";
+            
+            //设置Content滚动距离
+            scrollContent.style.top = t + "px";
+
+        } else if (delta > 0) { //向上滚动滑轮
+            var t = scrollContent.offsetTop + 20;
+
+            if (t >= 0) {
+                t = 0
+            }
+
+            sliderBtn.style.top = Math.abs(sliderBtnDistance) + "px";
+            scrollContent.style.top = t + "px";
+
+        }
+        return false;
+    })
 </script>

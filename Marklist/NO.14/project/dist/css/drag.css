@@ -11,38 +11,39 @@
   -ms-flex-align: center;
   align-items: center;
 }
-.wrap .drag_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.wrap .v_scrollView {
+  position: relative;
   width: 400px;
   height: 400px;
+  overflow: hidden;
 }
-.wrap .drag_container .conent {
-  width: 370px;
-  position: relative;
-}
-.wrap .drag_container .conent ul {
+.wrap .v_scrollView ul {
   cursor: pointer;
   width: 100%;
 }
-.wrap .drag_container .conent ul li {
+.wrap .v_scrollView ul li {
   width: 100%;
   height: 30px;
   background: #cf4797;
 }
-.wrap .drag_container .conent ul li:nth-of-type(even) {
+.wrap .v_scrollView ul li:nth-of-type(even) {
   background: #ffcc00;
 }
-.wrap .drag_container .scroller {
+.wrap .v_scrollContent {
   position: absolute;
 }
-.wrap .drag_container .bar_wrap {
+.wrap .v_scrollBar {
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 30px;
   height: 100%;
   background: blueviolet;
 }
-.wrap .drag_container .bar_wrap .bar {
+.wrap .v_scrollBar .v_sliderBtn {
+  position: absolute;
+  left: 0;
+  top: 0;
   cursor: pointer;
   width: 100%;
   height: 30px;
