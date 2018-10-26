@@ -20,9 +20,11 @@
 }
 .wrap .drag_container .conent {
   width: 370px;
+  position: relative;
 }
 .wrap .drag_container .conent ul {
   cursor: pointer;
+  width: 100%;
 }
 .wrap .drag_container .conent ul li {
   width: 100%;
@@ -31,6 +33,9 @@
 }
 .wrap .drag_container .conent ul li:nth-of-type(even) {
   background: #ffcc00;
+}
+.wrap .drag_container .scroller {
+  position: absolute;
 }
 .wrap .drag_container .bar_wrap {
   width: 30px;

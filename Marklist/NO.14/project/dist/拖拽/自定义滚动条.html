@@ -48,14 +48,21 @@
 <script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.js'></script>;
 <script>
     var wrapper = $('.wrapper')[0];
-    var scroller = $('.scroller')[0];
-    scroller.onmousedown = function (e) {
-        e.stopPropagation();
+    var elBox = $('.scroller')[0];
+    elBox.onmousedown = function (e) {
         e.preventDefault();
-        var distanceX = e.clientY - scroller.offsetLeft;
-        
+
+        //记录下鼠标的x和y坐标  
+        var mouseDownX = e.clientY
+        //记录下元素的x和y坐标
+        var initX = this.offsetLeft;  
+
         document.onmousemove = function (ev) {
-            console.log("132");
+            //移动元素y = 现在鼠标y - 原来鼠标y + 原来元素y  
+            var t = ev.clientY - mouseDownX + initX;
+
+            elBox.style.top = t + "px";
+
         }
         
         document.onmouseup = function () {

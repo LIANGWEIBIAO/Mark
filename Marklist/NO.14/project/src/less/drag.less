@@ -12,8 +12,10 @@
         height: 400px;
         .conent{
             width: 370px;
+            position: relative;
             ul{
                 cursor: pointer;
+                width: 100%;
                 li{
                     width: 100%;
                     height: 30px;
@@ -21,6 +23,9 @@
                 }
                 li:nth-of-type(even){ background:#ffcc00;}
             }
+        }
+        .scroller{
+            position: absolute;
         }
         .bar_wrap{
             width: 30px;

@@ -1,79 +1,45 @@
 # 拖拽原理
+![](http://ouyzoz9zy.bkt.clouddn.com/18-10-26/57683543.jpg)
 
-------
-[demo](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-23/list-1/index.html)
-#### 拖拽原理图
+1.按下鼠标的时候，x2-x1即可确定。
+2.移动鼠标，鼠标当前的位置即x4减去x2-x1就可以得到`方块现在的位置`。
 
-![](http://ouyzoz9zy.bkt.clouddn.com/17-10-10/38763052.jpg)
-
-#### 代码实现
+基本思路如下：
 
 ``` javascript
-function draggie(oDiv) {
-    var tLeft, tTop; //鼠标按下时相对盒子的位移
-    oDiv = document.querySelector(oDiv);
-    oDiv.onmousedown = function(e) {
-        var _this = this;
-        //鼠标按下时和选中元素的坐标偏移:x坐标
-        K = e.clientX - _this.getBoundingClientRect().left; 
-        document.onmousemove = function(e) {
-            var J = _this.parentNode.getBoundingClientRect().left;
-            var moveX = e.clientX - K - J,
-            _this.style.left = moveX + 'px';
-
-        }
-        document.onmouseup = function() {
-            document.onmousemove = null;
-        }
-    };
+拖拽状态 = 0鼠标在元素上按下的时候{    
+    记录下鼠标的x和y坐标    
+    记录下元素的x和y坐标    
+        
+   } 
+ 鼠标在元素上移动的时候{    
+    元素y = 现在鼠标y - 原来鼠标y + 原来元素y    
+    元素x = 现在鼠标x - 原来鼠标x + 原来元素x    
+    }     
+ 鼠标在任何时候放开的时候{    
+    解除事件
 }
+```
 
+代码：
+``` javascript
+elBox.onmousedown = function (e) {
+    e.preventDefault();
+    //记录下鼠标的x和y坐标 ,记录下元素的x和y坐标
+    // 获取鼠标离元素的距离
+    var mouseBoxleft = ev.clientX - this.offsetLeft;
+    
+    document.onmousemove = function (ev) {
+        //移动元素x = 现在鼠标x - 鼠标离元素的距离x  
+        var l = ev.clientX - mouseBoxleft;
+        elBox.style.left = l + "px";
+    }
+    document.onmouseup = function () {
+        document.onmousemove = null;
+        document.onmouseup = null;
+    };;
+};
 ```
 
 #### 拖拽的范围
 ![](http://ouyzoz9zy.bkt.clouddn.com/17-10-10/76987254.jpg)
-#### 代码实现
-``` html
-<body>
-    <div class="bigBox">
-        <div class="box"></div>
-    </div>
-</body>
-```
-``` javascript
-draggie('.box')
-
-function draggie(oDiv) {
-    var tLeft, tTop; //鼠标按下时相对盒子的位移
-    oDiv = document.querySelector(oDiv);
-    oDiv.onmousedown = function(e) {
-        var _this = this;
-        //鼠标按下时和选中元素的坐标偏移:x坐标
-        tLeft = e.clientX - _this.getBoundingClientRect().left; 
-        tTop = e.clientY - _this.getBoundingClientRect().top; 
-        document.onmousemove = function(e) {
-            var pleft = _this.parentNode.getBoundingClientRect().left;
-            var pTop = _this.parentNode.getBoundingClientRect().top;
-            var moveX = e.clientX - tLeft - pleft,
-                moveY = e.clientY - tTop - pTop;
-            if (moveX < 0) {
-                moveX = 0;
-            } else if (moveX > _this.parentNode.offsetWidth - _this.offsetWidth) {
-                moveX = _this.parentNode.offsetWidth - _this.offsetWidth;
-            }
-            if (moveY < 0) {
-                moveY = 0;
-            } else if (moveY > _this.parentNode.offsetHeight - _this.offsetHeight) {
-                moveY = _this.parentNode.offsetHeight - _this.offsetHeight;
-            }
-
-            _this.style.left = moveX + 'px';
-            _this.style.top = moveY + 'px';
-
-        }
-        document.onmouseup = function() {
-            document.onmousemove = null;
-        }
-    };
-}
-```
