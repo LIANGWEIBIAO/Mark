@@ -1,3 +1,4 @@
+/* 自定义滚动条 */
 .wrap {
   width: 100%;
   height: 100%;
@@ -48,4 +49,41 @@
   width: 100%;
   height: 30px;
   background: red;
+}
+* {
+  -ms-touch-action: none;
+  touch-action: none;
+}
+/* 下拉加载 */
+.wrap_xljz {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.wrap_xljz .v_scrollView {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+.wrap_xljz .v_scrollView .v_scrollContent {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+}
+.wrap_xljz .v_scrollView .v_scrollContent li {
+  width: 100%;
+  height: 30px;
+  background: #cf4797;
+}
+.wrap_xljz .v_scrollView .v_scrollContent li:nth-of-type(even) {
+  background: #ffcc00;
 }
