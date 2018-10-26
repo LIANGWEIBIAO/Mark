@@ -4,7 +4,7 @@
 1.按下鼠标的时候，x2-x1即可确定。
 2.移动鼠标，鼠标当前的位置即x4减去x2-x1就可以得到`方块现在的位置`。
 
-基本思路如下：
+### 基本思路如下：
 
 ``` javascript
 拖拽状态 = 0鼠标在元素上按下的时候{    
@@ -21,7 +21,7 @@
 }
 ```
 
-代码：
+### 代码：
 ``` javascript
 elBox.onmousedown = function (e) {
     e.preventDefault();
@@ -43,6 +43,8 @@ elBox.onmousedown = function (e) {
     };;
 };
 ```
+
+### 移动端拖拽
 
 ``` javascript
 window.onload = function () {
