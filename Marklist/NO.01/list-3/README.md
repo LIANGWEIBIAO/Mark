@@ -30,6 +30,18 @@ word-break: normal;
 
 //强制换行
 word-break:break-all;
+
+.ellipse {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+
+
 ```
 
 #### 合并表格边框border-collapse:collapse
