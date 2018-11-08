@@ -30,7 +30,13 @@ word-break: normal;
 
 //强制换行
 word-break:break-all;
+//单行
 
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap
+
+//多行                      
 .ellipse {
     word-break: break-all;
     text-overflow: ellipsis;
