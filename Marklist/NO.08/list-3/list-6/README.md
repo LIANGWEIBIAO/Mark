@@ -1,7 +1,7 @@
 ### 动态传递（根据父组件中值的改变，props动态的改变子组件中的值）
 
 父组件
-``` javascript
+``` vue
 <template>
   <div>
     <input v-model="message">
@@ -28,7 +28,7 @@
 
 2.子组件
 
-``` javascript
+``` vue
 <template>
   <div>
     <p>childmessage is:{{childmessage}}</p>
