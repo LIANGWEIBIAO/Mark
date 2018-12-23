@@ -1,74 +1,17 @@
-## 常用的CSS水平垂直居中方法大全
+### css
 
-#### 水平居中
- - 行内元素（文字的水平居中）
- 如果被设置元素为文本、图片等行内元素时，水平居中是通过给父元素设置text-align:center来实现的。
- - 固定宽块级元素
- >当被设置元素为块状元素时用`text-align：centr`就不起作用了，这时也分两种情况： 定宽块状元素 和 不定宽块状元素 。我们先来讲一讲定宽块状元素。 
-满足 定宽和块状 两个条件的元素是可以通过设置左右margin值为auto来实现居中的。
+- css - 常用
+  - [常用的CSS水平垂直居中方法大全](./list-1/常用的CSS水平垂直居中方法大全.md)
+  - [弹性盒子布局](./Marklist/NO.01/list-11)
+  - [ html、css、css3常用的收集](./Marklist/NO.01/list-3)
+  - [input输入框美化](./Marklist/NO.01/list-4)
 
-
-- 设置 display:inline 方法
-改变块级元素的 `display` 为 `inline` 类型，然后使用 `text-align:center` 来实现居中效果
-- 定位解决
-``` css
-width: 300px;
-height:300px;
-position: absolute;
-top:50%;
-left:50%;
-margin-left: -150px; //自身高度的一半
-```
-
-
- - 未知宽块级元素
-``` css
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-```
-*注：transform属性，ie9以下不支持 transform，手机端表现的比较好。
-
-
-#### 垂直居中
-
-
-- 父元素高度确定的单行文本
- 父元素高度确定的单行文本的竖直居中的方法是通过设置父元素的 `height` 和 `line-height` 高度一致来实现的。
-
-- 已知高度的容器的垂直方向居中：
-``` css
-height:300px;
-position: absolute;
-top:50%;
-left:50%;
-margin-top: -150px; //自身高度的一半
-```
-- 未知高度的容器的垂直居中。
-> *注：transform属性，ie9以下不支持 transform，手机端表现的比较好。
-
-
-``` css
-.vertical-center-nowidth{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-```
-
-#### flex水平居中
-> 水平垂直居中记得要想到flexbox此时.div无论是否已知宽高，都能两个方向居中
-
-``` css
-.container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.container .div{
-//whatever
-}
-```
-
+-  css3 - 动画
+   - [Animation帧动画](./Marklist/NO.01/list-5)
+   - [transtion](./Marklist/NO.01/list-6)
+  
+-  css - demo
+   - [按钮 - CSS3鼠标滑过彩色动画](https://liangweibiao.github.io/v-mark/Marklist/NO.01/list-8/index.html)
+   - [按钮 - Hover动力悬停于链接](http://ianlunn.github.io/Hover/)
+   - [移动端 - 1px问题](./Marklist/NO.01/list-9/)
+   - [input框focus时的美化效果](https://liangweibiao.github.io/v-mark/Marklist/NO.01/list-10/index.html)
