@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="../list-1/js/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
     <style type="text/css">
     html,
@@ -43,7 +44,6 @@
     #bar .ing {
         color: #FFF;
         text-align: center;
-        font-family: "微软雅黑", Verdana, Geneva, sans-serif
     }
     </style>
 </head>
@@ -59,10 +59,10 @@
 <script type="text/javascript">
 $(function() {
     var i = 0;
-    var ms = 6000; //变量MS: 从0%到100%需要的毫秒数
+    var ms = 6200; //变量MS: 从0%到100%需要的毫秒数
     var time = setInterval(function() {
         $("#bar .finish").css("width", i + "%");
-        i = i + (1000 / ms);
+        i = i + parseInt(10000 / ms);  
         $("#bar .ing").text(Math.round(i) + "%")
         if (i > 100) {
             clearInterval(time);
