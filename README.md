@@ -2,21 +2,19 @@
 
 前端知识，随学随记。
 
-## 目录
+- [css](./Marklist/NO.01)         
+- [ES6](./Marklist/NO.03)     
+- [MYSQL](./Marklist/NO.15)
+- [vue笔记](./Marklist/NO.08)
+- [webpack笔记](https://github.com/LIANGWEIBIAO/webpack)
+- [NODEJS](./Marklist/NO.10)
+- [PHP](./Marklist/NO.13)
+- [微信小程序](./Marklist/NO.11)  
+- [移动端适配](./Marklist/NO.05/list-2)   
+- [GIT的使用](./Marklist/NO.05/list-1)
+- [前端知识点](./Marklist/NO.06/list-1)
 
-- [javaScript](#javaScript)
-- [ES6](#es6)
-- [vue](#vue)
-- [PHP](#php)
-- [MYSQL](#MYSQL)
-- [webpack](#webpack)
-- [Node.js](#node)
-- [微信小程序](#微信小程序)
-- [移动端适配](#移动端适配)
-- [版本控制](#版本控制)
-- [面试](#面试)
-- [开发者工具](#开发者工具)
-
+ 
 
 ### javaScript
 
@@ -47,40 +45,8 @@
   -  [validate-表单验证](https://liangweibiao.github.io/v-mark/Marklist/NO.02/list-20/index.html)
 
  
-- [css](./Marklist/NO.01)         
 
-### ES6
-   - [ES6](./Marklist/NO.03)     
 
-### MYSQL
-   - [MYSQL](./Marklist/NO.15)
 
-### vue
-   - [vue笔记](./Marklist/NO.08)
-   
-### webpack
-   - [webpack笔记](https://github.com/LIANGWEIBIAO/webpack)
-### Node
-   - [NODEJS](./Marklist/NO.10)
-
-### PHP
-   - [PHP](./Marklist/NO.13)
-
-### 微信小程序
-   - [微信小程序](./Marklist/NO.11)  
-
-### 移动端适配
-   - [移动端适配](./Marklist/NO.05/list-2)   
-
-### 版本控制
-   - [GIT的使用](./Marklist/NO.05/list-1)
-
-### 面试
- - [前端知识点](./Marklist/NO.06/list-1)
-
-### 开发者工具
-- [vscode](./Marklist/NO.07/list-3)
-- [Sublime Text 3](./Marklist/NO.07/list-2)
-- [webstorm —— The Smartest JavaScript IDE](./Marklist/NO.07/list-1)
 
 
