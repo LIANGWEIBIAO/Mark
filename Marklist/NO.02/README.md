@@ -10,7 +10,7 @@
 - [Javascript —— 面向对象编程（四）： 原型prototype](./Marklist/list-1/原型prototype) 
 - [最简单的AJAX](./Marklist/list-1/最简单的AJAX.md)
 - [Ajax搭配Promise的简单封装](./Marklist/list-1/Ajax搭配Promise的简单封装.md)
-- [jsonp跨域请求原理](./Marklist/list-1/jsonp跨域请求原理.md)
+- [jsonp跨域请求原理](./Marklist/list-1/jsonp跨域请求原理.md) 
 - [拖拽原理](./Marklist/list-1/拖拽原理.md)
 
 ### javascript-工具箱 
@@ -23,15 +23,15 @@
 ### javascript-组件
 |Title                 |Describtion               |Demo                                                                                 |
 |----------------------|--------------------------|-------------------------------------------------------------------------------------|
-|Mobile toast          |消息提示框                   |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.16/Marklist/list-2/dist/components/toast/index.html)     |
-|Mobile alert          |弹出式提示框，有多种交互形式   |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.16/Marklist/list-2/dist/components/alert/index.html)     |
-|Mobile loading        |loading动画                  |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.16/Marklist/list-2/dist/components/loading/index.html)     |
-|css   progress        |进度条                     |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.16/Marklist/list-2/dist/components/percent/)     |
-|Upload Progress       |显示上传进度实例           |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.16/Marklist/list-2/dist/components/upload-progress)     |
-|Drag   progress       |拖拽进度条                     |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.16/Marklist/list-2/dist/components/drag-progress/)     |
-|pagination            |分页插件                     |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.16/Marklist/list-2/dist/components/pagination/)     |
-|photoClip             |图片裁剪                     |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.16/Marklist/list-2/dist/components/photo-clip/)     |
+|Mobile toast          |消息提示框                   |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.02/Marklist/list-2/dist/components/toast/index.html)     |
+|Mobile alert          |弹出式提示框，有多种交互形式   |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.02/Marklist/list-2/dist/components/alert/index.html)     |
+|Mobile loading        |loading动画                  |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.02/Marklist/list-2/dist/components/loading/index.html)     |
+|css   progress        |进度条                     |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.02/Marklist/list-2/dist/components/percent/)     |
+|Upload Progress       |显示上传进度实例           |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.02/Marklist/list-2/dist/components/upload-progress)     |
+|Drag   progress       |拖拽进度条                     |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.02/Marklist/list-2/dist/components/drag-progress/)     |
+|pagination            |分页插件                     |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.02/Marklist/list-2/dist/components/pagination/)     |
+|photoClip             |图片裁剪                     |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.02/Marklist/list-2/dist/components/photo-clip/)     |
 |iosselect             |城市选择                     |[Preview](https://github.com/zhoushengmufc/iosselect)     |
-|Date   Picker         |选择日期                     |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.16/Marklist/list-2/dist/components/datePicker)     |
+|Date   Picker         |选择日期                     |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.02/Marklist/list-2/dist/components/datePicker)     |
 
  
