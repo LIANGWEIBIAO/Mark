@@ -14,9 +14,9 @@
 - [拖拽原理](./Marklist/list-1/拖拽原理.md)
 
 ### javascript-工具箱 
-- [常用代码封装util工具箱](./assets/utils)
+- [常用代码封装util工具箱](./Marklist/list-1/assets/utils)
 - [FileReader获取图片变成base64](./Marklist/list-1/FileReader获取图片变成base64.md)
-- [Ajax使用FormData对象上传文件](./Marklist/list-1/Ajax使用FormData对象上传文件)
+- [Ajax使用FormData对象上传文件](./Marklist/list-1/Ajax使用FormData对象上传文件.md)
 
  
 

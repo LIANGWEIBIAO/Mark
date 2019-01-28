@@ -1,0 +1,45 @@
+/*提示层开始*/
+.v-toast {
+  top: 50%;
+  left: 50%;
+  line-height: 1.2;
+  max-width: 50%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 17px;
+  z-index: 2;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-animation: vshow 300ms;
+  animation: vshow 300ms;
+}
+@-webkit-keyframes vshow {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes vshow {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+}
+/*提示层结束*/

@@ -1,0 +1,21 @@
+span {
+  margin: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  display: inline-block;
+}
+span.active {
+  background: pink;
+  color: #ff4756;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+}
+span.disable {
+  color: #c8cdd2;
+}
