@@ -62,21 +62,15 @@ function ajax(type, url, data, contentType) {
   });
 }
 
-// export default {
-//   get: function(url, data) {
-//     return ajax('GET', url, data);
-//   },
-//   post: function(url, data, contentType) {
-//     return ajax('POST', url, data, contentType);
-//   }
-// }
+export default {
+  get: function(url, data) {
+    return ajax('GET', url, data);
+  },
+  post: function(url, data, contentType) {
+    return ajax('POST', url, data, contentType);
+  }
+}
 
-function get(url, data) {
-  return ajax('GET', url, data);
-}
-function post(url, data, contentType) {
-  return ajax('POST', url, data, contentType);
-}
 
 
 
