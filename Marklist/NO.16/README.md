@@ -10,8 +10,8 @@
 - [Javascript —— 面向对象编程（四）： 原型prototype](./Marklist/list-1/原型prototype) 
 - [最简单的AJAX](./Marklist/list-1/最简单的AJAX.md)
 - [Ajax搭配Promise的简单封装](./Marklist/list-1/Ajax搭配Promise的简单封装.md)
-- jsonp跨域请求原理
-- 拖拽原理
+- [jsonp跨域请求原理](./Marklist/list-1/jsonp跨域请求原理.md)
+- [拖拽原理](./Marklist/list-1/拖拽原理.md)
 
 ### javascript-工具箱
 - 常用代码封装util工具

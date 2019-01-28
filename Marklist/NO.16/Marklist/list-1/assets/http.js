@@ -71,28 +71,7 @@ function ajax(type, url, data, contentType) {
     }
   }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   
   // note：xhr的兼容写法
   // function XHR() {
