@@ -49,5 +49,5 @@ Http.post('api/userCenter/login.json', {
 ```
 `get`的使用形式是`Http.get(url, data)`；`post`的使用形式是`Http.post(url, data, contentType)`，第三个参数`contentType`可选，当设置了对应的值时，`http.js`会对传入的参数做不同格式化的处理。
 
-[完整demo](./assets/http.js) 
+[完整demo](./assets/http.js) .
 
