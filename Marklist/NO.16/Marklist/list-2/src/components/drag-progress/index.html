@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .bar {
+        position: absolute;
+        margin-top: 200px;
+        width: 500px;
+        height: 5px;
+        background: #ccc;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .slider {
+        position: absolute;
+        left: 0;
+        top: -7px;
+        width: 10px;
+        height: 20px;
+        background: #369;
+        height: 20px;
+        cursor: pointer;
+    }
+    
+    .text {
+        position: absolute;
+        left: -38px;
+        top: -6px;
+    }
+    .mask{
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	height: 0;
+    	height: 100%;
+    	background:#369 ;
+    	width: 0px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="bar">
+         <i class="mask"></i>
+        <span class="text">0%</span>
+        <span class="slider"></span>
+    </div>
+</body>
+
+</html>
+<script>
+var bar = document.querySelector(".bar")
+var slider = document.querySelector(".slider")
+var text = document.querySelector(".text")
+var mask = document.querySelector(".mask")
+slider.onmousedown = function(e) {
+    var disX = e.clientX - this.offsetLeft;
+    var iMaxLeft = bar.offsetWidth - slider.offsetWidth
+    document.onmousemove = function(e) {
+            var sliderLeft = e.clientX - disX
+            if (sliderLeft < 0) {
+                sliderLeft = 0;
+            }
+            if (sliderLeft > iMaxLeft) {
+                sliderLeft = iMaxLeft;
+            }
+            slider.style.left = sliderLeft + "px"
+            mask.style.width = sliderLeft +'px' ;
+
+            var scalse = slider.offsetWidth / bar.offsetWidth
+            text.innerHTML = parseInt(sliderLeft / (bar.offsetWidth - slider.offsetWidth) * 100) + "%";
+
+            //防止选择内容--当拖动鼠标过快时候，弹起鼠标，bar也会移动，修复bug
+            window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+
+        }
+        //事件解绑
+    document.onmouseup = function() {
+        document.onmousemove = null;
+    }
+
+
+};
+</script>
