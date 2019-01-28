@@ -1,6 +1,6 @@
 ### javascript-基础
 
-- [JavaScript —— String(字符串的操作)](./Marklist/list-1/字符串的操作.md) 
+- [javascript —— 截取字符串方法实例](./Marklist/list-1/字符串的操作.md) 
 - [JavaScript —— Date(日期和时间)](./Marklist/list-1/Date日期对象.md)
 - [javascript —— This机制](./Marklist/list-1/This机制.md)
 - [javascript —— 理解js各种宽高](./Marklist/list-1/理解js各种宽高.md)
@@ -13,11 +13,12 @@
 - [jsonp跨域请求原理](./Marklist/list-1/jsonp跨域请求原理.md)
 - [拖拽原理](./Marklist/list-1/拖拽原理.md)
 
-### javascript-工具箱
-- 常用代码封装util工具
-- FileReader获取图片变成base64
-- Ajax使用FormData对象上传文件
+### javascript-工具箱 
+- [常用代码封装util工具箱](./assets/utils)
+- [FileReader获取图片变成base64](./Marklist/list-1/FileReader获取图片变成base64.md)
+- [Ajax使用FormData对象上传文件](./Marklist/list-1/Ajax使用FormData对象上传文件)
 
+ 
 
 ### javascript-组件
 |Title                 |Describtion               |Demo                                                                                 |
@@ -30,6 +31,6 @@
 |Drag   progress       |拖拽进度条                     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/upload-progress)     |
 |pagination            |分页插件                     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/upload-progress)     |
 |photoClip             |图片裁剪                     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/upload-progress)     |
-|FileReader            |图片变成base64               |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/upload-progress)     |
+|iosselect             |城市选择                     |[Preview](https://github.com/zhoushengmufc/iosselect)     |
 
  
