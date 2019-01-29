@@ -1,15 +1,4 @@
-### javascript-基础
-
-- [JavaScript —— Date(日期和时间)](./Marklist/list-1/Date日期对象.md)
-- [javascript —— 截取字符串方法实例](./Marklist/list-1/字符串的操作.md) 
-- [javascript —— this机制](./Marklist/list-1/This机制.md)
-- [javascript —— js内存分配与this原理](./Marklist/list-1/js内存分配与this原理.md)
-- [javascript —— call和apply的用途](./Marklist/list-1/call和apply的用途.md) 
-- [javascript —— 理解js各种宽高](./Marklist/list-1/理解js各种宽高.md)
-- [Javascript —— 面向对象编程（一）：基础概念](./Marklist/list-1/js面向对象基础概念.md)  
-- [Javascript —— 面向对象编程（二）：继承](./Marklist/list-1/js面向对象继承.md)  
-- [Javascript —— 面向对象编程（三）： 原型链](./Marklist/list-1/原型链.md) 
-- [Javascript —— 面向对象编程（四）： 原型prototype](./Marklist/list-1/原型prototype) 
+### javascript-基础原理
 - [最简单的AJAX](./Marklist/list-1/最简单的AJAX.md)
 - [Ajax搭配Promise的简单封装](./Marklist/list-1/Ajax搭配Promise的简单封装.md)
 - [jsonp跨域请求原理](./Marklist/list-1/jsonp跨域请求原理.md) 
@@ -20,7 +9,17 @@
 - [FileReader获取图片变成base64](./Marklist/list-1/FileReader获取图片变成base64.md)
 - [Ajax使用FormData对象上传文件](./Marklist/list-1/Ajax使用FormData对象上传文件.md)
 
- 
+### javascript-原生
+- [javascript —— 理解js各种宽高](./Marklist/list-1/理解js各种宽高.md)
+- [JavaScript —— Date(日期和时间)](./Marklist/list-1/Date日期对象.md)
+- [javascript —— 截取字符串方法实例](./Marklist/list-1/字符串的操作.md) 
+- [javascript —— this机制](./Marklist/list-1/This机制.md)
+- [javascript —— js内存分配与this原理](./Marklist/list-1/js内存分配与this原理.md)
+- [javascript —— call和apply的用途](./Marklist/list-1/call和apply的用途.md) 
+- [Javascript —— 面向对象编程（一）：基础概念](./Marklist/list-1/js面向对象基础概念.md)  
+- [Javascript —— 面向对象编程（二）：继承](./Marklist/list-1/js面向对象继承.md)  
+- [Javascript —— 面向对象编程（三）： 原型链](./Marklist/list-1/原型链.md) 
+- [Javascript —— 面向对象编程（四）： 原型prototype](./Marklist/list-1/原型prototype) 
 
 ### javascript-组件
 |Title                 |Describtion               |Demo                                                                                 |
