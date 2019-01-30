@@ -8,6 +8,7 @@
 - [常用代码封装util工具箱](./Marklist/list-1/assets/utils)
 - [FileReader获取图片变成base64](./Marklist/list-1/FileReader获取图片变成base64.md)
 - [Ajax使用FormData对象上传文件](./Marklist/list-1/Ajax使用FormData对象上传文件.md)
+- [函数防抖与函数节流](./Marklist/list-1/函数防抖与函数节流.md)
 
 ### javascript-原生
 - [javascript —— 理解js各种宽高](./Marklist/list-1/理解js各种宽高.md)
