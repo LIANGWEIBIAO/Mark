@@ -10,7 +10,8 @@
 - [Ajax使用FormData对象上传文件](./Marklist/list-1/Ajax使用FormData对象上传文件.md)
 - [函数防抖与函数节流](./Marklist/list-1/函数防抖与函数节流.md)
 
-### javascript-原生
+### javascript-原生 
+- [javascript —— 理解JS单线程与运行机制](./Marklist/list-1/理解JS单线程与运行机制.md)
 - [javascript —— 理解js各种宽高](./Marklist/list-1/理解js各种宽高.md)
 - [JavaScript —— Date(日期和时间)](./Marklist/list-1/Date日期对象.md)
 - [javascript —— 截取字符串方法实例](./Marklist/list-1/字符串的操作.md) 
