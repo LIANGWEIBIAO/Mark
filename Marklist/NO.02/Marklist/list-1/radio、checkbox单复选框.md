@@ -1,8 +1,8 @@
 # radio、checkbox单复选框
 
 ## radio
-radio又称单选框，它是html表单中的单选按钮。通常单选按钮是成组出现的，是互斥的，每次只能选取一个。
-当点击按钮的时候，就会触发onclick事件。通过属性`checked`判断按钮是否被选中。
+radio又称单选框，它是html表单中的单选按钮。通常单选按钮是成组出现的，是互斥的，每次只能选取一个。      
+当点击按钮的时候，就会触发onclick事件。通过属性`checked`判断按钮是否被选中。     
 声明的语法如下：`<input type="radio">`
 
 ```html
@@ -27,7 +27,7 @@ for(var i = 0;i < radioObj.length;i++){
 
 ## checkbox
 
-checkbox又称复选框，它是html表单中的一个选择框。通过checked属性判断是否被选中。
+checkbox又称复选框，它是html表单中的一个选择框。通过checked属性判断是否被选中。      
 声明语法如下：`<input type="checkbox">`
 
 ```html
