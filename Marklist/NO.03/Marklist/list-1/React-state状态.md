@@ -1,4 +1,4 @@
-#React State(状态)    
+# React State(状态)    
 
 React 里，只需更新组件的 state，然后根据新的 state 重新渲染用户界面（不要操作 DOM）。    
 以下实例创建一个名称扩展为 React.Component 的 ES6 类，在 render() 方法中使用 this.state 来修改当前的时间。    

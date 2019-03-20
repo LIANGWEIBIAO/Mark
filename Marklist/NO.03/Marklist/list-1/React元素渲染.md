@@ -1,4 +1,4 @@
-#React 元素渲染
+# React 元素渲染
 
 React元素渲染到根DOM节点中，我们通过把它们都传递给 ReactDOM.render() 的方法来将其渲染到页面上：
 
