@@ -1,23 +1,34 @@
 # React 组件
 
 #### 定义组件
-我们可以使用函数定义了一个组件：
+React 组件最常见的定义方法：
 ```javascript
-function HelloMessage(props) {
-    return <h1>Hello World!</h1>;
-}
+const  List = React.createClass({
+  render: function() {
+    return (<ul>{this.props.children}</ul>);
+  }
+});
 ```    
 
-也可以使用 ES6 class 来定义一个组件:    
+或者使用 ES6 类语法：  
 
 ```javascript
-class Welcome extends React.Component {
+class List extends React.Component {
   render() {
-    return <h1>Hello World!</h1>;
+    return (<ul>{this.props.children}</ul>);
   }
 }
 ```    
+又或者使用普通的 JS 函数：
+``` javascript
+// 无状态函数语法
+const List = function(children) {
+  return (<ul>{children}</ul>);
+};
 
+//ES6 箭头函数语法
+const List = (children) => (<ul>{children}</ul>);
+```
 如果我们需要向组件传递参数，可以使用 this.props 对象,实例如下：    
 
 ```javascript
