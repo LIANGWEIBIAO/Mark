@@ -1,4 +1,4 @@
-# js修改 DOM方法集合 
+# js修改DOM属性和方法
 
 ## 操作 className    
 ### addClass   
@@ -79,7 +79,7 @@ function insertBefore(parentNode, newEl, refEl) {
 ```   
 ### children   
 获取元素节点，浏览器表现相同。      
-``el.children`    
+`el.children`    
 或使用 querySeclectorAll
 
 ### childNodes    

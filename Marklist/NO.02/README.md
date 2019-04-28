@@ -1,6 +1,7 @@
 ### javascript-操作DOM
-- [radio、checkbox单复选框](./Marklist/list-1/radio、checkbox单复选框.md)
 - [js修改DOM属性和方法](./Marklist/list-1/js修改DOM属性和方法.md)
+- [HTML DOM的nodeType值](./Marklist/list-1/dom的nodeType值.md)
+- [radio、checkbox单复选框](./Marklist/list-1/radio、checkbox单复选框.md)
 
 
 ### javascript-基础原理
