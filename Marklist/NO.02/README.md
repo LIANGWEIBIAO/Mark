@@ -1,5 +1,9 @@
-### javascript-基础原理
+### javascript-操作DOM
 - [radio、checkbox单复选框](./Marklist/list-1/radio、checkbox单复选框.md)
+- [js修改DOM属性和方法](./Marklist/list-1/js修改DOM属性和方法.md)
+
+
+### javascript-基础原理
 - [最简单的AJAX](./Marklist/list-1/最简单的AJAX.md)
 - [Ajax搭配Promise的简单封装](./Marklist/list-1/Ajax搭配Promise的简单封装.md)
 - [jsonp跨域请求原理](./Marklist/list-1/jsonp跨域请求原理.md) 
