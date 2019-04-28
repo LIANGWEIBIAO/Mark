@@ -15,9 +15,10 @@ nodeValue 属性对于文档节点和元素节点是不可用的。
 
 ### nodeType   
 nodeType 属性可返回节点的类型。   
-最重要的节点类型是：    
+最重要的节点类型是：     
+
 |元素类型|节点类型|
-|--|--|
+|------|--------|
 |元素element|1|
 |元素element|2|
 |元素element|3|
@@ -42,7 +43,9 @@ HTML文件:
     <p><input id="btnDemo1" type="button" value="取H1 Element节点值"></p>
     <p><input id="btnDemo2" type="button" value="取H1 Element节点文本"></p>
     <p><input id="btnDemo3" type="button" value="取Document Element节点文本"></p>
-    <p><input type="button" alt="这是个演示按钮" title="演示按钮提示标题" name="btnShowAttr" id="btnShowAttr" value="按钮节点演示" /></p>
+    <p>
+        <input type="button" alt="这是个演示按钮" title="演示按钮提示标题" name="btnShowAttr" id="btnShowAttr" value="按钮节点演示" />
+    </p>
 </body>
 
 </html>
