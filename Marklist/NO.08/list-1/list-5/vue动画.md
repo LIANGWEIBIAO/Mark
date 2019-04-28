@@ -29,3 +29,26 @@
     }
 }
 ```
+
+``` css
+ .v-slide-up {
+    &-enter-active, &-leave-active{
+      transition: all 0.3s
+    }
+
+    &-enter, &-leave-to{
+      transform: translate3d(0,100%, 0)  
+    }
+
+  }
+
+ .v-fade {
+    &-enter-active, &-leave-active{
+      transition: all 0.3s;
+    }
+
+    &-enter, &-leave-to{
+      opcity:0;
+    }
+  }
+```
