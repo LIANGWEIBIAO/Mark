@@ -46,5 +46,6 @@
 |iosselect             |城市选择                     |[Preview](https://github.com/zhoushengmufc/iosselect)     |
 |Date   Picker         |选择日期                     |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.02/Marklist/list-2/dist/components/datePicker)     |
 |zoomify               |图片预览                     |[Preview](http://www.jq22.com/yanshi9102)     |
+|full-page             |全屏页面滚动                     |[Preview](https://liangweibiao.github.io/v-mark/Marklist/NO.02/Marklist/list-2/dist/components/full-page/index.html)     |
 
  
