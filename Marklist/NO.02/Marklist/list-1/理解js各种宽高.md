@@ -30,11 +30,11 @@ document.body.clientHeight;
 
 
 #### 坐标
--  1.clientX和clientY
-   相对于浏览器(可视区左右0,0)的坐标;
--  2.pageX和pageY
-    相对于设备屏幕左上角(0,0)的坐标(和client的差别在于滚动条)
--  3.offsetX和offsetY
-    相对于事件源左上角(0,0)的坐标（oDiv.onclick,oDiv就是事件源）   
--  getBoundingClientRect()  
-   `$("div")[0].getBoundingClientRect().top`
+-  1.clientX和clientY  
+相对于浏览器(可视区左右0,0)的坐标;
+-  2.pageX和pageY    
+相对于设备屏幕左上角(0,0)的坐标(和client的差别在于滚动条)
+-  3.offsetX和offsetY    
+相对于事件源左上角(0,0)的坐标（oDiv.onclick,oDiv就是事件源）   
+-  getBoundingClientRect()     
+`$("div")[0].getBoundingClientRect().top`
