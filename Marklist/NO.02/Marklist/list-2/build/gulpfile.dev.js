@@ -83,7 +83,7 @@ function dev() {    /**
     gulp.task('dev', ['html:dev','css:dev', 'less:dev', 'js:dev', 'public:dev', 'images:dev'], function () {
 
         connect.server({
-            port: 3006,
+            port: 3010,
             root: Config.dist,
             livereload: true,
             // open: true,

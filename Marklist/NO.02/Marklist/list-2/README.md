@@ -14,5 +14,6 @@
 |Drag   progress       |拖拽进度条                     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/upload-progress)     |
 |pagination            |分页插件                     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/upload-progress)     |
 |photoClip             |图片裁剪                     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/upload-progress)     |
+|full-page             |全屏页面滚动                     |[Preview](https://pwcong.github.io/FrontEnd-Hack/src/components/full-page)     |
 
  
