@@ -5,7 +5,7 @@
 
 
 ### javascript-基础原理
-- [移动端事件](./Marklist/list-1/移动端事件.md)
+- [移动端事件(touchstart,move,end)](./Marklist/list-1/移动端事件.md)
 - [移动端拖拽](./Marklist/list-1/移动端拖拽.md)
 - [pc拖拽原理](./Marklist/list-1/pc拖拽原理.md)
 - [最简单的AJAX](./Marklist/list-1/最简单的AJAX.md)
