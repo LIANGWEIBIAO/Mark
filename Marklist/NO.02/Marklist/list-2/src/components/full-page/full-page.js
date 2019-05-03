@@ -1,5 +1,18 @@
 class PureFullPage {
-    constructor() {
+    constructor(options) {
+        // 默认配置
+        const defaultOptions = {
+            isShowNav: true,
+            delay: 1000,
+            definePages: () => {},
+        };
+
+        // 合并自定义配置
+        this.options = Object.assign(defaultOptions, options);
+
+        // 将用户自定义函数绑定到实例 this
+        this.options.definePages = this.options.definePages.bind(this);
+
         // 获取当前视图高度
         this.viewHeight = document.documentElement.clientHeight;
         // 获取翻页容器
@@ -45,7 +58,7 @@ class PureFullPage {
         if (-this.container.offsetTop >= this.viewHeight) {
             // 重新指定当前页面距视图顶部的距离 currentPosition，实现全屏滚动，currentPosition 为负值，越大表示超出顶部部分越少
             this.currentPosition = this.currentPosition + this.viewHeight;
-            
+
             //跳转页面
             this.turnPage(this.currentPosition);
             //改变Dots样式
@@ -58,7 +71,7 @@ class PureFullPage {
         if (-this.container.offsetTop <= this.viewHeight * (this.pagesNum - 2)) {
             // 重新指定当前页面距视图顶部的距离 currentPosition，实现全屏滚动，currentPosition 为负值，越小表示超出顶部部分越多
             this.currentPosition = this.currentPosition - this.viewHeight;
-             //跳转页面
+            //跳转页面
             this.turnPage(this.currentPosition);
             //改变Dots样式
             this.changeNavStyle(this.currentPosition);
@@ -110,7 +123,7 @@ class PureFullPage {
     init() {
 
         this.container.style.height = `${this.viewHeight}px`;
-        
+
         this.createNav();
 
 

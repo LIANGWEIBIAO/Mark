@@ -5,6 +5,7 @@
 
 
 ### javascript-基础原理
+- [事件捕获,冒泡和处理程序(addEventListener)](./Marklist/list-1/事件捕获,冒泡和处理程序.md)
 - [移动端事件(touchstart,move,end)](./Marklist/list-1/移动端事件.md)
 - [移动端拖拽](./Marklist/list-1/移动端拖拽.md)
 - [pc拖拽原理](./Marklist/list-1/pc拖拽原理.md)

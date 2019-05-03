@@ -5,8 +5,21 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var PureFullPage = function () {
-    function PureFullPage() {
+    function PureFullPage(options) {
         _classCallCheck(this, PureFullPage);
+
+        // 默认配置
+        var defaultOptions = {
+            isShowNav: true,
+            delay: 1000,
+            definePages: function definePages() {}
+        };
+
+        // 合并自定义配置
+        this.options = Object.assign(defaultOptions, options);
+
+        // 将用户自定义函数绑定到实例 this
+        this.options.definePages = this.options.definePages.bind(this);
 
         // 获取当前视图高度
         this.viewHeight = document.documentElement.clientHeight;
