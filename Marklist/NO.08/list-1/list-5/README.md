@@ -4,7 +4,7 @@ vue中过渡效果通过transition标签来控制
 
 ``` html
 <transition name="fade">
-    <div> i am show </div>
+    <div> i am show </div>3
 </transition>
 
 <transition name="bounce">
