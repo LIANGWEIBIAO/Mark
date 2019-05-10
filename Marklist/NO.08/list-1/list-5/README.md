@@ -6,43 +6,70 @@ vue中过渡效果通过transition标签来控制
     <div> i am show </div>
 </transition>
 
-<transition name="my-strans">
+<transition name="bounce">
     <div> i am show </div>
 </transition>
 ```
 
 ``` css
-.fade-enter-active,.fade-leave-active{
-    transition:all .5s;
+.fade-enter-active,.fade-leave-active {
+  opacity: 1;
+  transition: opacity linear 0.2s;
 }
-.fade-enter-active{
-    opacity:1;
-}
-.fade-leave-active{
-    opacity:0;
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 
-.my-strans-enter-active,.my-strans-leave-active{
-    transition:all .5s;
+.bounce-enter-active {
+  animation: bounce-in .5s;
 }
-.my-strans-enter{
-    transform:translateY(-500px);
-    opacity:1;
+.bounce-leave-active {
+  animation: bounce-out .3s;
 }
-.my-strans-leave-active{
-   transform:translateY(500px);
-    opacity:0;
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(1.185);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
 }
 
 ```
 
-配合animate.css使用
-``` html
-// zoomInLeft , zoomOutRight。
-<tranlate enter-active-class="bounceInLeft" leave-active-class="bounceOutRinght">
-   <p v-show="show" class="animated"></p>
-</tranlate>
-```
+## 常用vue动画   
+``` css
+.v-slide-up {
+    &-enter-active, &-leave-active{
+      transition: all 0.3s
+    }
 
+    &-enter, &-leave-to{
+      transform: translate3d(0,100%, 0)  
+    }
 
-  [1]: https://cn.vuejs.org/images/transition.png
+  }
+
+ .v-fade {
+    &-enter-active, &-leave-active{
+      transition: all 0.3s;
+    }
+
+    &-enter, &-leave-to{
+      opcity:0;
+    }
+  }
+  ```
