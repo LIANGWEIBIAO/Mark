@@ -3,14 +3,14 @@
 - [js修改DOM属性和方法](./Marklist/list-1/js修改DOM属性和方法.md)
 - [函数防抖与函数节流](./Marklist/list-1/函数防抖与函数节流.md)
 
-###javascript-事件篇
+### javascript-事件篇
 - [事件捕获,冒泡和处理程序(addEventListener)](./Marklist/list-1/事件捕获,冒泡和处理程序.md)
 - [javascript中的事件委托](./Marklist/list-1/事件委托.md)
 - [移动端触摸事件(touchstart,move,end)](./Marklist/list-1/移动端事件.md)
 - [移动端拖拽](./Marklist/list-1/移动端拖拽.md)
 - [pc拖拽原理](./Marklist/list-1/pc拖拽原理.md)
 
-###javascript-Ajax 
+### javascript-Ajax 
 - [最简单的AJAX](./Marklist/list-1/最简单的AJAX.md)
 - [Ajax搭配Promise的简单封装](./Marklist/list-1/Ajax搭配Promise的简单封装.md)
 - [jsonp跨域请求原理](./Marklist/list-1/jsonp跨域请求原理.md) 
