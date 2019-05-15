@@ -7,7 +7,7 @@ Vue.js 是当下很火的一个 JavaScript MVVM 库，它以数据驱动和组�
 
 ### vue学习笔记
 - [VUE学习实践入门笔记](./list-1/list-1)
-- [VUE单选](./list-1/list-4/VUE单选.md)
+- [VUE单选](./list-4/VUE单选.md)
 - [VUE使用笔记](./list-1/list-6)
 - [vue-router](./list-1/list-3)
 - [VUE过渡效果](./list-1/list-5)
