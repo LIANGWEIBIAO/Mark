@@ -25,7 +25,7 @@
 }
 ```
 
-循环input,默认选中`香蕉`
+循环input  默认选中`香蕉`
 ```
 <label class="bui" v-for="(item,index) in checkboxList" :key="index">
     <input type="checkbox" v-model="checkList" :value="item.id">
@@ -50,10 +50,10 @@ export default {
           product_inf: "火龙果"
         }
       ],
-      checkList: [{
+      checkItem: {
           id: "1",
           product_inf: "香蕉"
-        }]
+        }
     };
   },
 ```
