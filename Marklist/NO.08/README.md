@@ -6,7 +6,6 @@ Vue.js 是当下很火的一个 JavaScript MVVM 库，它以数据驱动和组�
 
 
 ### vue学习笔记
-- [VUE学习实践入门笔记](./list-1/list-1)
 - [VUE单选](./list-4/VUE单选.md)
 - [VUE使用笔记](./list-1/list-6)
 - [vue-router](./list-1/list-3)
@@ -23,13 +22,16 @@ Vue.js 是当下很火的一个 JavaScript MVVM 库，它以数据驱动和组�
 - [环境切换](./list-3/list-4)
 - [设置代理跨域方法](./list-1/list-9)
 - [通过路由控制显示头部](./list-1/list-10)
-- [Swiper轮播图使用方法](./list-1/list-11)     
 
 ###  VUEX    
 - [Vuex基础详解](./list-2/Vuex基础详解.md) 
 - [Vuex modules模块](./list-2/modules模块.md)     
 - [mapState，mapMutations和mapGetters辅助函数](./list-2/vuex辅助函数.md)     
-- [action和mutations的区别](./list-2/action和mutations的区别.md)     
+- [action和mutations的区别](./list-2/action和mutations的区别.md)  
+
+###  VUE组件   
+- [overlay](./list-5/overlay.md) 
+ 
 
 
 
