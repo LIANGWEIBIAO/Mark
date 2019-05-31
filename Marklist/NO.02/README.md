@@ -17,7 +17,8 @@
 - [移动端拖拽](./Marklist/list-1/移动端拖拽.md)
 - [pc拖拽原理](./Marklist/list-1/pc拖拽原理.md)
 
-
+### javascript - 设计模式
+- [JS设计模式——观察者模式](./Marklist/list-1/观察者模式.md)
 
 ### javascript-基础 
 - [Object.prototype.toString.call 精确判断对象的类型](./Marklist/list-1/精确判断对象的类型.md)
