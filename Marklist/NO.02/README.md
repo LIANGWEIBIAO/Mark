@@ -18,6 +18,7 @@
 - [pc拖拽原理](./Marklist/list-1/pc拖拽原理.md)
 
 ### javascript - 设计模式
+- [JS订阅-发布模式](./Marklist/list-1/订阅发布模式.md)
 - [JS设计模式——观察者模式](./Marklist/list-1/观察者模式.md)
 
 ### javascript-基础 
