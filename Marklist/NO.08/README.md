@@ -25,6 +25,7 @@ Vue.js 是当下很火的一个 JavaScript MVVM 库，它以数据驱动和组�
 
 ###  VUEX    
 - [Vuex基础详解](./list-2/Vuex基础详解.md) 
+- [Vuex管理登陆状态](./list-2/Vuex管理登陆状态.md) 
 - [Vuex modules模块](./list-2/modules模块.md)     
 - [mapState，mapMutations和mapGetters辅助函数](./list-2/vuex辅助函数.md)     
 - [action和mutations的区别](./list-2/action和mutations的区别.md)  
