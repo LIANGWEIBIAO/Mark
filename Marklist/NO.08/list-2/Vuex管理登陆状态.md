@@ -7,8 +7,7 @@ login.js
 ```javascript
 const result = await this.$api.json('userInfo');
 	if(result.status === 1){
-		this.login(result.data);
-        uni.navigateBack();  
+		this.login(result.data); 
 	}
 }
 ```  
@@ -49,9 +48,7 @@ const store = new Vuex.Store({
 
 app.js
 ```javascript
-import {
-	mapMutations
-} from 'vuex';
+import {mapMutations} from 'vuex';
 export default {
 	methods: {
 		...mapMutations(['login'])
