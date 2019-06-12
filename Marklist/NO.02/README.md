@@ -21,6 +21,13 @@
 - [JS订阅-发布模式](./Marklist/list-1/订阅发布模式.md)
 - [JS设计模式——观察者模式](./Marklist/list-1/观察者模式.md)
 
+### better-scroll
+- [插件构造函数](./Marklist/list-3/插件构造函数.md)    
+- [插件处理配置参数](./Marklist/list-3/插件处理配置参数.md)   
+- [JS操作CSS3属性时自动添加前缀](./Marklist/list-3/JS操作CSS3属性时自动添加前缀.md)    
+- [兼容移动端和pc端滑动事件](./Marklist/list-3/兼容移动端和pc端滑动事件.md)
+
+
 ### javascript-基础 
 - [Object.prototype.toString.call 精确判断对象的类型](./Marklist/list-1/精确判断对象的类型.md)
 - [理解JS单线程与运行机制](./Marklist/list-1/理解JS单线程与运行机制.md)
