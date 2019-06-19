@@ -1,8 +1,10 @@
-### javascript-代码片段
-- [js分页](./Marklist/list-1/js分页.md)    
+### javascript-工具箱
+- [extend和Object.assign合并对象](./Marklist/list-1/extend和Object.assign合并对象.md) 
+- [js加载更多](./Marklist/list-1/js分页.md)    
 - [常用代码封装util工具箱](./Marklist/list-1/assets/utils)
 - [js修改DOM属性和方法](./Marklist/list-1/js修改DOM属性和方法.md)
-- [函数防抖与函数节流](./Marklist/list-1/函数防抖与函数节流.md)
+- [函数防抖与函数节流](./Marklist/list-1/函数防抖与函数节流.md) 
+
 
 ### Ajax 
 - [最简单的AJAX](./Marklist/list-1/最简单的AJAX.md)
