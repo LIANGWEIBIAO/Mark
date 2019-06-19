@@ -31,7 +31,8 @@ Vue.js 是当下很火的一个 JavaScript MVVM 库，它以数据驱动和组�
 - [action和mutations的区别](./list-2/action和mutations的区别.md)  
 
 ###  VUE组件   
-- [overlay](./list-5/overlay.md) 
+- [overlay](./list-5/overlay.vue) 
+- [添加图片，预览显示，删除预览图片](./list-5/upload.vue) 
  
 
 
