@@ -4,7 +4,7 @@
 那么怎么实现呢，这其实就是一个对象合并的问题，例如：  
 
 ```javascript
-function extend(target, ...rest) {
+const extend = (target, ...rest) => {
     for (let i = 0; i < rest.length; i++) {
         let source = rest[i]
         for (let key in source) {
@@ -13,6 +13,7 @@ function extend(target, ...rest) {
     }
     return target
 }
+
 // 默认参数
 var options = {
     pageNumber: 1,
@@ -28,6 +29,7 @@ var userOptions = {
 extend(options, userOptions);
 
 console.log(options);
+
 // 合并后
 options = {
     pageNumber: 1,
