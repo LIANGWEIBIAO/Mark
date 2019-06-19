@@ -24,8 +24,8 @@ var userOptions = {
     pageShow: 3,
     pageCount: 10
 }
+
 extend(options, userOptions);
-Object.assign(options, userOptions);
 
 console.log(options);
 // 合并后
@@ -35,4 +35,7 @@ options = {
     pageCount: 10
 }
 
-```
+```    
+
+##  Object.assign 也能实现同样的方法   
+`Object.assign(options, userOptions);`
