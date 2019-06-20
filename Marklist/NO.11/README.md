@@ -6,4 +6,4 @@
 - [小程序HTTP请求封装](./Marklist/list-1/list-2/)  
 
 ### 小程序笔记  
-- [小程序使用笔记](./Marklist/list-1/小程序使用笔记.md)  
+- [小程序使用笔记](./Marklist/list-2/小程序使用笔记.md)  
