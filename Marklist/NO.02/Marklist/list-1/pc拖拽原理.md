@@ -44,28 +44,3 @@ elBox.onmousedown = function (e) {
 };
 ```
 
-### 移动端拖拽
-
-``` javascript
-window.onload = function () {
-  var oBox = document.getElementById('box');
-  oBox.addEventListener('touchstart', function (e) {
-    var disX = e.targetTouches[0].pageX - oBox.offsetLeft();
-    var disY = e.targetTouches[0].pageY - oBox.offsetTop();
-
-    function move (e) {
-      oBox.style.left = e.targetTouches[0].pageX - disX + 'px';
-      oBox.style.top = e.targetTouches[0].pageY - disY + 'px';
-    }
-    function end (e) {
-      oBox.removeEventListener('touchmove', move, false);
-      oBox.removeEventListener('touchend', end, false);
-    }
-
-    oBox.addEventListener('touchmove', move, false);
-    oBox.addEventListener('touchend', end, false);
-  });
-}
-```
-
-[完整demo](https://liangweibiao.github.io/v-mark/Marklist/NO.16/Marklist/list-1/assets/%E6%8B%96%E6%8B%BD.html)
