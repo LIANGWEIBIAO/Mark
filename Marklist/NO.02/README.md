@@ -24,6 +24,7 @@
 - [JS设计模式——观察者模式](./Marklist/list-1/观察者模式.md)
 
 ### better-scroll
+- [better-scroll使用笔记](./Marklist/list-3/better-scroll使用笔记.md)    
 - [插件构造函数](./Marklist/list-3/插件构造函数.md)    
 - [插件处理配置参数](./Marklist/list-3/插件处理配置参数.md)   
 - [JS操作CSS3属性时自动添加前缀](./Marklist/list-3/JS操作CSS3属性时自动添加前缀.md)    
