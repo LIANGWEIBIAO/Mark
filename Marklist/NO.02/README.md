@@ -1,4 +1,5 @@
 ### javascript-工具箱
+- [微信分享](./Marklist/list-1/微信分享.md)    
 - [extend和Object.assign合并对象](./Marklist/list-1/extend和Object.assign合并对象.md) 
 - [js加载更多](./Marklist/list-1/js分页.md)    
 - [常用代码封装util工具箱](./Marklist/list-1/assets/utils)

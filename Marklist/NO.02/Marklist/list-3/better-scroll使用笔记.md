@@ -4,8 +4,9 @@ BetterScroll 是一款重点解决移动端各种滚动场景需求的开源插�
 
 最简单的初始化代码如下：
 ```javascript
+import BScroll from "better-scroll";
 
- setTimeout(() => {
+setTimeout(() => {
     let scroll = new BScroll('.scroll-wrapper',{
         click: true,
         scrollY: true,  //纵向滚动
@@ -27,7 +28,7 @@ bounce: {
 ```
 
 ## 核心方法   
-- refresh()
+- refresh()     
 重新计算 BetterScroll，当 DOM 结构发生变化的时候务必要调用确保滚动的效果正常。  
 
 ```javascript
