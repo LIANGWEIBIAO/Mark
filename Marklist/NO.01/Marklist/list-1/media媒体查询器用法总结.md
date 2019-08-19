@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-08-19 10:05:42
- * @LastEditTime: 2019-08-19 10:05:46
+ * @LastEditTime: 2019-08-19 10:08:16
  * @LastEditors: Please set LastEditors
  -->
 # css3 media媒体查询器用法总结  
@@ -17,7 +17,7 @@
 }
 ```   
 ### max-width
-屏幕可视窗口尺寸小于于 300 像素则修改背景颜色:   
+屏幕可视窗口尺寸小于 300 像素则修改背景颜色:   
 ```css
 @media screen and (max-width: 300px) {
     body {
