@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-09-01 10:43:58
- * @LastEditTime: 2019-09-01 11:28:42
+ * @LastEditTime: 2019-09-01 12:12:35
  * @LastEditors: Please set LastEditors
  -->
 # wb-Mark
@@ -18,7 +18,6 @@
 - [NODEJS](./Marklist/NO.10)
 - [WEBPACK](https://github.com/LIANGWEIBIAO/webpack)
 - [微信小程序](./Marklist/NO.11)  
-- [移动端适配](./Marklist/NO.05/list-2)   
 - [GIT的使用](./Marklist/NO.05/list-1)
 - [前端知识点](./Marklist/NO.06/list-1)
 
