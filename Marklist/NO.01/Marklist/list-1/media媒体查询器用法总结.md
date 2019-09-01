@@ -2,24 +2,24 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-08-19 10:05:42
- * @LastEditTime: 2019-08-19 10:05:46
+ * @LastEditTime: 2019-09-01 10:48:41
  * @LastEditors: Please set LastEditors
  -->
 # css3 media媒体查询器用法总结  
 
 ### min-width
-屏幕可视窗口尺寸大于 480 像素的设备上修改背景颜色:
+屏幕可视窗口尺寸大于 768 像素的设备上修改背景颜色:
 ```css
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
     body {
         background-color: lightgreen;
     }
 }
 ```   
 ### max-width
-屏幕可视窗口尺寸小于于 300 像素则修改背景颜色:   
+屏幕可视窗口尺寸小于 768 像素则修改背景颜色:   
 ```css
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 768px) {
     body {
         background-color:lightblue;
     }
