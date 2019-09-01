@@ -2,15 +2,14 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-09-01 10:43:57
- * @LastEditTime: 2019-09-01 11:18:30
+ * @LastEditTime: 2019-09-01 11:28:07
  * @LastEditors: Please set LastEditors
  -->
 
 
 ## css常用
 - [media媒体查询器用法总结](./Marklist/list-1/media媒体查询器用法总结.md)      
-- [checkbox和radio标签的样式自定义](./Marklist/list-1/checkbox和radio标签的样式自定义.md) 
-- [input输入框美化](./Marklist/list-1/input输入框美化.md) 
+- [自定义Checkbox和Radio标签的样式](./Marklist/list-1/checkbox和radio标签的样式自定义.md) 
 - [常用的CSS水平垂直居中方法大全](./Marklist/list-1/常用的CSS水平垂直居中方法大全.md)
 - [弹性盒子布局](./Marklist/list-1/弹性盒子布局.md)
 - [html、css、css3常用的收集](./Marklist/list-1/html、css、css3常用的收集.md)
