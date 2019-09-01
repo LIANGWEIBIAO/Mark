@@ -1,18 +1,25 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-09-01 10:43:58
+ * @LastEditTime: 2019-09-01 11:44:14
+ * @LastEditors: Please set LastEditors
+ -->
 # CSS像素，物理像素，设备独立像素的关系
 
 ## 各种像素概念
 - CSS像素：web开发的一个单位。
 
-- 物理像素(设备像素)：即手机分辨率，iphone6的物理像素1334*750（分辨率）。
+- 物理像素(设备像素)：即手机分辨率，iphone6的物理像素750*1334（分辨率）。
 
-- 逻辑像素（独立像素）：CSS像素转换为物理像素的媒介，CSS像素对应的实际上是逻辑像素，比如CSS中写个width:375px,是可以铺满横向的iphone6; iphone6的逻辑像素为375*667。
+- 独立像素（逻辑像素）：CSS像素转换为物理像素的媒介，CSS像素对应的实际上是逻辑像素，比如CSS中写个width:375px,是可以铺满横向的iphone6; iphone6的逻辑像素为375*667。
 
 - 像素比：物理像素/设备独立像素，iphone6的像素比为2,iphone6 plus则是3。
 
 图片以iphone为例作为理解：
 
 
-![Alt text](https://file.digitaling.com/eImg/image/20141024/20141024155045_87144.jpg "optional title")
+![Alt text](https://coding.net/u/lamber0808/p/Images/git/raw/master/20190831234509.png "optional title")
 
 ## 为什么需要两倍图？
 > 注意：我们开发是根据逻辑像素来开发的，iphone6横向逻辑像素最多是375pt。
@@ -33,28 +40,14 @@ iphone 6像素比是2，即是`一个css像素`是等于`两个物理像素`的�
 
 
 
-### iphone4 适配
-从iphone4开始，苹果公司便推出了所谓的Retina屏，分辨率提高了一倍，变成640x960，
-但屏幕尺寸却没变化，这就意味着同样大小的屏幕上，像素却多了一倍，这时，
-`一个css像素`是等于`两个物理像素`的。
-
-对于dpr = 2的1个`位像素`对应于`4个物理像素`，由于单个位像素不可以再进一步分割，所以只能就近取色，从而导致图片模糊；
-
 
 ### iphone6 适配
 > iphone6  4.7寸 设备独立像素(逻辑像素)375x667 物理像素750x1334
 
-
-
-
-因为iphone6像素比是2，横向填满iphone屏幕只需要375个设备独立像素（width:375px）
-占据一块iphone6的屏幕需要375*667(4n)个设备独立像素。
+因为iphone6`像素比`是2，横向填满iphone屏幕只需要375个`设备独立像素`
+占据一块iphone6的屏幕需要`375*667(4n)`个设备独立像素。
 iphone6  1设备独立像素 = 4倍物理像素(横纵各占2个，面积)。
 
 
-
-
-### iPhone X适配
-iPhone X的分辨率发生了变化，但变化仅限于物理像素层面。在真正决定屏幕内容的逻辑像素层面，新版的iPhone X与过去我们熟知的iPhone 4.7''、iPhone 5.5'' 放大模式宽度相同。通俗的说，iPhone X可看做是iPhone 4.7'' 的加长版
 
 
