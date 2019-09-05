@@ -13,6 +13,9 @@
 - [jsonp跨域请求原理](./Marklist/list-1/jsonp跨域请求原理.md)   
 
 
+### ES6
+- [ES6数组map,forEach,some,every,filter](./Marklist/list-1/ES6数组map,forEach,some,every,filter.md)
+
 ### javascript-事件篇
 - [事件捕获,冒泡和处理程序(addEventListener)](./Marklist/list-1/事件捕获,冒泡和处理程序.md)
 - [javascript中的事件委托](./Marklist/list-1/事件委托.md)
