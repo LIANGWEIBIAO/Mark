@@ -17,8 +17,8 @@
 - [MYSQL](./Marklist/NO.15)
 - [NODEJS](./Marklist/NO.10)
 - [WEBPACK](https://github.com/LIANGWEIBIAO/webpack)
+- [GIT](./Marklist/NO.05)
 - [微信小程序](./Marklist/NO.11)  
-- [GIT的使用](./Marklist/NO.05/list-1)
 - [前端知识点](./Marklist/NO.06/list-1)
 
  
