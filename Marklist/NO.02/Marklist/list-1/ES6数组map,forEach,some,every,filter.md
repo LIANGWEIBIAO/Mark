@@ -4,7 +4,6 @@
 map（映射）`不会改变`原数组，返回一个`新的数组`
 对应参数：item 每次的值，当前索引，原来数组 arr
 
-成绩对应等级
 ```javascript
 let arr =[22,55,67,33,99,70];
 let result = arr.map((item,index,arr)=>{
