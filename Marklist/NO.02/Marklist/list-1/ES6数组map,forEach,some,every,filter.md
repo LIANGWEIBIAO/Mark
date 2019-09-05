@@ -1,7 +1,7 @@
 # ES6数组map,forEach,some,every,filter
 
 ## map    
-map（映射）`不会改变`原数组，返回一个`新的数组`
+map`不会改变`原数组，返回一个`新的数组`
 对应参数：item 每次的值，当前索引，原来数组 arr
 
 ```javascript
