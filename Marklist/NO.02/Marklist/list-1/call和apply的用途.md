@@ -1,13 +1,30 @@
 ## call、apply 以及 bind 的区别和用法
 
 ### call 和 apply 的共同点
-它们的共同点是，都能够改变`函数执行时`的`上下文`，将一个对象的方法交给另一个对象来执行，并且是立即执行的。
+`call` 和 `apply` 都是为了改变函数体内部`this`的指向，也就是把Function(即this)绑定到obj，这时候obj具备了Function的属性和方法，说白一点就是obj继承了Function的属性和方法。    
 
-为何要改变执行上下文？举一个生活中的小例子：平时没时间做饭的我，周末想给孩子炖个腌笃鲜尝尝。但是没有适合的锅，而我又不想出去买。所以就问邻居借了一个锅来用，这样既达到了目的，又节省了开支，一举两得。
+另外，它们的写法也很类似，`调用 call 和 apply 的对象`，`必须是一个函数 Function`。接下来，就会说到具体的写法，那也是它们区别的主要体现。   
 
-改变执行上下文也是一样的，A 对象有一个方法，而 B 对象因为某种原因，也需要用到同样的方法，那么这时候我们是单独为 B 对象扩展一个方法呢，还是借用一下 A 对象的方法呢？当然是借用 A 对象的啦，既完成了需求，又减少了内存的占用。
+### 继承方法
+apply传的是数组
+```javascript
+//定义一个人类
+function Person(name,age){
+    this.name = name;
+    this.age = age;
+}
 
-另外，它们的写法也很类似，`调用 call 和 apply 的对象`，`必须是一个函数 Function`。接下来，就会说到具体的写法，那也是它们区别的主要体现。
+//定义一个学生类
+function Student(name,age,grade){
+    Person.apply(this,arguments);
+    //或者
+    Person.call(this,name,age)
+    this.grade = grade;
+}
+
+var student = new Student("李云龙","20","一年级");
+console.info("name:"+student.name+"\n"+"age:"+student.age+"\n"+"grade:"+student.grade);
+```
 
 ### call 和 apply 的区别
 
@@ -19,7 +36,9 @@ Function.call(obj,[param1[,param2[,…[,paramN]]]])
 #### call用途
 借用方法：类数组使用 Array 原型链上的方法，可以这样：
 ```javascript
-let domNodes = Array.prototype.slice.call(document.getElementsByTagName("*"));
+let str = 'abcdefe'
+let arg = Array.prototype.slice.call(str,1);
+console.log(arg); // ["b", "c", "d", "e", "f", "e"]
 ```
 
 #### apply的写法   

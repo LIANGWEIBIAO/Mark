@@ -40,7 +40,7 @@
 - [理解JS单线程与运行机制](./Marklist/list-1/理解JS单线程与运行机制.md)
 - [理解js各种宽高](./Marklist/list-1/理解js各种宽高.md)
 - [Date(日期和时间)](./Marklist/list-1/Date日期对象.md)
-- [截取字符串方法实例](./Marklist/list-1/字符串的操作.md) 
+- [substr,slice字符串和数组切割](./Marklist/list-1/字符串的操作.md) 
 - [javascript —— this机制](./Marklist/list-1/This机制.md)
 - [内存分配与this原理](./Marklist/list-1/js内存分配与this原理.md)
 - [call和apply的用途](./Marklist/list-1/call和apply的用途.md) 
