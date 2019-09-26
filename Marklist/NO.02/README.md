@@ -1,4 +1,5 @@
 ### javascript-工具箱
+- [字符串截取方法汇总(slice、substring、substr等)](./Marklist/list-1/字符串截取方法汇总(slice、substring、substr等).md)    
 - [微信分享](./Marklist/list-1/微信分享.md)    
 - [extend和Object.assign合并对象](./Marklist/list-1/extend和Object.assign合并对象.md) 
 - [js加载更多](./Marklist/list-1/js分页.md)    
@@ -40,7 +41,6 @@
 - [理解JS单线程与运行机制](./Marklist/list-1/理解JS单线程与运行机制.md)
 - [理解js各种宽高](./Marklist/list-1/理解js各种宽高.md)
 - [Date(日期和时间)](./Marklist/list-1/Date日期对象.md)
-- [substr,slice字符串和数组切割](./Marklist/list-1/字符串的操作.md) 
 - [javascript —— this机制](./Marklist/list-1/This机制.md)
 - [内存分配与this原理](./Marklist/list-1/js内存分配与this原理.md)
 - [call和apply的用途](./Marklist/list-1/call和apply的用途.md) 
