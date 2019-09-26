@@ -7,7 +7,7 @@
 str.slice(start, end)   
 ```    
 
-使用样例   
+### 使用样例   
 ```  
 var str = "0123456789";
 console.log("原始字符串：", str);
@@ -27,7 +27,7 @@ console.log("从索引为3的字符起到倒数第3个字符的前一个字符�
 ```javascript
 stringObject.substring(start, stop)
 ```   
-
+### 使用样例  
 ```javascript
 var str = "0123456789";
 console.log("原始字符串：", str);
@@ -49,7 +49,7 @@ substr 方法用于返回一个从指定位置开始的指定长度的子字符�
 ```javascript
 stringObject.substr(start, length)   
 ```    
-
+### 使用样例  
 ```javascript
 var str = "0123456789";
 console.log("原始字符串：", str);
