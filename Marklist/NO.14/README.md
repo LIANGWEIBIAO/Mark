@@ -1,6 +1,7 @@
 # JAVA
 
 - JAVA基础
+    - [Java 语言有特点](./Marklist/list-1/Java语言有特点.md)
     - [JVM JDK 和 JRE 最详细通俗的解答](./Marklist/list-1/JVM,JDK和JRE最详细通俗的解答.md)
     - [JAVA 数据类型](./Marklist/list-1/数据类型.md)
     - [JAVA 循环结构](./Marklist/list-1/Java循环结构.md)
