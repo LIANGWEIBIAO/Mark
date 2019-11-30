@@ -9,7 +9,11 @@
   * [基本数据类型](#基本数据类型)
   * [引用数据类型](#引用数据类型)
   * [常量与变量](#常量与变量)  
-  * [声明变量计算机底层做了什么事情](#声明变量计算机底层做了什么事情)  
+  * [声明变量计算机底层做了什么事情](#声明变量计算机底层做了什么事情)    
+* [三、运算](#三运算)
+    * [float 与 double](#float-与-double)
+    * [隐式类型转换](#隐式类型转换)
+    * [switch](#switch)
 <!-- GFM-TOC -->
   
 # 一、Java开发入门
@@ -180,6 +184,61 @@ public class Test{
 将硬盘上的Test.class内容 加载 到内存里，这个内存是由JVM为我们开辟的一块内存。   
 (5).我们写好的指令，执行内存的空间 赋值(常量是从常量池中复印一份出来的) ，变化…   
 
-![](https://coding.net/u/lamber0808/p/Images/git/raw/master/20191018151159324.png)
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/20191018151159324.png)   
+
+# 三、运算   
+
+## float 与 double
+
+Java 不能隐式执行向下转型，因为这会使得精度降低。
+
+1.1 字面量属于 double 类型，不能直接将 1.1 直接赋值给 float 变量，因为这是向下转型。
+
+```java
+// float f = 1.1;
+```
+
+1.1f 字面量才是 float 类型。
+
+```java
+float f = 1.1f;
+```
+
+## 隐式类型转换
+
+因为字面量 1 是 int 类型，它比 short 类型精度要高，因此不能隐式地将 int 类型下转型为 short 类型。
+
+```java
+short s1 = 1;
+// s1 = s1 + 1;
+```
+
+但是使用 += 或者 ++ 运算符可以执行隐式类型转换。
+
+```java
+s1 += 1;
+// s1++;
+```
+
+上面的语句相当于将 s1 + 1 的计算结果进行了向下转型：
+
+```java
+s1 = (short) (s1 + 1);
+```   
+## switch
+
+从 Java 7 开始，可以在 switch 条件判断语句中使用 String 对象。
+
+```java
+String s = "a";
+switch (s) {
+    case "a":
+        System.out.println("aaa");
+        break;
+    case "b":
+        System.out.println("bbb");
+        break;
+}
+```
 
 
