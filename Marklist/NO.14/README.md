@@ -1,4 +1,20 @@
-# Java语言特点  
+* [一、Java开发入门](#一、Java开发入门)
+  * [Java语言特点](##Java语言特点) 
+  * [Java安装JDK与环境配置](##Java环境准备)
+  * [JVM JDK 和 JRE 最详细通俗的解答](##-JVM-JDK-和-JRE-最详细通俗的解答)
+  * [第一个java程序](##第一个java程序) 
+  * [命名规则和规约](##命名规则和规约)   
+
+  
+* [二、数据类型](#二、数据类型)  
+  * [基本数据类型](##基本数据类型)
+  * [引用数据类型](##引用数据类型)
+  * [常量与变量](##常量与变量)
+  
+  
+
+#一、Java开发入门
+## Java语言特点  
 1. 简单易学；
 2. 面向对象（封装，继承，多态）；
 3. 平台无关性（ Java 虚拟机实现平台无关性）；
@@ -8,45 +24,16 @@
 7. 支持网络编程并且很方便（ Java 语言诞生本身就是为简化网络编程设计的，因此 Java 语言不仅支持网络编程而且很方便）；
 8. 编译与解释并存；
 
-# Java环境准备   
+## Java环境准备   
 安装jdk 1.8 (jre jvm)
 
 C:\Program Files\Java\jdk1.8.0_202\bin
 路径下存在一个`javac.exe编译工具`和`java.exe执行器`   
 
 
-# 第一个java程序  
-源文件 HelloWorld.java
-```java
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
-}  
-```   
-
-## 利用工具来进行编译和执行 
-编译 HelloWorld.java(源码件) ==>  生成 HelloWorld.class(字节码文件) => 执行 字节码文件
-```   
-javac HelloWorld.java
-java  HelloWorld  
-```
 
 
-# 命名规则和规约   
-
-## 规则  
-名字中可以含有如下的信息   
-* 字母(区分大小写，对大小写敏感，可用52个)  
-* 数字(0-9可以用，不能用作开头)   
-* 符号(_ $)  
-* 中文(强烈不推荐)   
-
-
-## 规约  
-类名字首字母大写`TestOne`    
-
-# JVM JDK 和 JRE 最详细通俗的解答   
+## JVM JDK 和 JRE 最详细通俗的解答   
 ### JVM
 
 Java虚拟机（JVM）是运行 Java 字节码的虚拟机。JVM有针对不同系统的特定实现（Windows，Linux，macOS），目的是使用相同的字节码，它们都会给出相同的结果。     
@@ -79,9 +66,40 @@ JDK是Java Development Kit，它是功能齐全的Java SDK。它拥有JRE所拥�
 
 JRE 是 Java运行时环境。它是运行已编译 Java 程序所需的所有内容的集合，包括 Java虚拟机（JVM），Java类库，java命令和其他的一些基础构件。但是，它不能用于创建新程序。
 
-如果你只是为了运行一下 Java 程序的话，那么你只需要安装 JRE 就可以了。如果你需要进行一些 Java 编程方面的工作，那么你就需要安装JDK了。但是，这不是绝对的。有时，即使您不打算在计算机上进行任何Java开发，仍然需要安装JDK。例如，如果要使用JSP部署Web应用程序，那么从技术上讲，您只是在应用程序服务器中运行Java程序。那你为什么需要JDK呢？因为应用程序服务器会将 JSP 转换为 Java servlet，并且需要使用 JDK 来编译 servlet。  
+如果你只是为了运行一下 Java 程序的话，那么你只需要安装 JRE 就可以了。如果你需要进行一些 Java 编程方面的工作，那么你就需要安装JDK了。但是，这不是绝对的。有时，即使您不打算在计算机上进行任何Java开发，仍然需要安装JDK。例如，如果要使用JSP部署Web应用程序，那么从技术上讲，您只是在应用程序服务器中运行Java程序。那你为什么需要JDK呢？因为应用程序服务器会将 JSP 转换为 Java servlet，并且需要使用 JDK 来编译 servlet。     
 
-# 数据类型  
+## 第一个java程序  
+源文件 HelloWorld.java
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}  
+```   
+
+利用工具来进行编译和执行 
+编译 HelloWorld.java(源码件) ==>  生成 HelloWorld.class(字节码文件) => 执行 字节码文件
+```   
+javac HelloWorld.java
+java  HelloWorld  
+```
+
+
+## 命名规则和规约   
+
+### 规则  
+名字中可以含有如下的信息   
+* 字母(区分大小写，对大小写敏感，可用52个)  
+* 数字(0-9可以用，不能用作开头)   
+* 符号(_ $)  
+* 中文(强烈不推荐)   
+
+
+### 规约  
+类名字首字母大写`TestOne`    
+
+# 二、数据类型 
 数据类型：分为基本数据类型和引用数据类型   
 
 ## 基本数据类型  
@@ -97,16 +115,16 @@ JRE 是 Java运行时环境。它是运行已编译 Java 程序所需的所有�
 - 枚举enum    
 - 注解@interface     
 
-# 常量与变量   
+## 常量与变量   
 
-## 常量    
+### 常量    
 常量是一个值,在程序运行的过程中不能再次发生改变   
 基本类型的值都可以认为是常量 4 3.4 ‘a’ true   
 String类是引用数据类型，String类的值“abc”可以视为常量   
 常量存储在常量缓存区(常量池)中，有且只有一份    
 量池中的值默认空间大小，32bit--int 64bit--double    
 
-## 变量   
+### 变量   
 变量是一个内存空间(小容器)，在栈(stack)内存中开辟的一块内存空间   
 空间在开辟(变量声明)必须指定***类型***和***名字***(规则规约)  
 变量空间内容有且只有一个(只能存一份值和引用)     
