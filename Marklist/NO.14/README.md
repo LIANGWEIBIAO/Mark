@@ -9,6 +9,7 @@
   * [基本数据类型](#基本数据类型)
   * [引用数据类型](#引用数据类型)
   * [常量与变量](#常量与变量)  
+  * [声明变量计算机底层做了什么事情](#声明计算机底层做了什么事情)  
 <!-- GFM-TOC -->
   
   
@@ -159,6 +160,25 @@ public class Test{
 
 ### 问题  
 #### 那为什么byte和short类型后面不用加东西？  
-java整型默认为int，且java会自动向下转型，byte和short都可以由int自动向下转型，但是long类型的不能自动向上转型，所以要加L，转为long类型
+java整型默认为int，且java会自动向下转型，byte和short都可以由int自动向下转型，但是long类型的不能自动向上转型，所以要加L，转为long类型    
+
+# 声明计算机底层做了什么事情  
+(1). 硬盘上创建了一个文件 Test.java    
+(2). 文件中的内容是我们编写的源代码(跟计算机发送指令)   
+```java  
+public class Test{
+	public static void main(String[] args){
+		byte x;
+		x = 1;
+	}
+}  
+```   
+(3).将Test.java源文件---->编译---->Test.class   
+内容是我们看不懂 的 字节码 ，留给计算机识别    
+(4).执行---->内存中执行   
+将硬盘上的Test.class内容 加载 到内存里，这个内存是由JVM为我们开辟的一块内存。   
+(5).我们写好的指令，执行内存的空间 赋值(常量是从常量池中复印一份出来的) ，变化…   
+
+![](https://coding.net/u/lamber0808/p/Images/git/blob/master/20191018151159324.png)
 
 
