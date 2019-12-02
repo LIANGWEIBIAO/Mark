@@ -195,6 +195,8 @@ public class Test{
 
 ![](https://coding.net/u/lamber0808/p/Images/git/raw/master/20191018151159324.png)   
 
+---
+
 # 三、运算   
 
 ## float 与 double
@@ -249,6 +251,8 @@ switch (s) {
         break;
 }
 ```
+
+---
 
 # 四、数组
 
