@@ -199,7 +199,7 @@ public class Test{
 
 # 三、运算   
 
-## float 与 double
+### float 与 double
 
 Java 不能隐式执行向下转型，因为这会使得精度降低。
 
@@ -215,7 +215,7 @@ Java 不能隐式执行向下转型，因为这会使得精度降低。
 float f = 1.1f;
 ```
 
-## 隐式类型转换
+### 隐式类型转换
 
 因为字面量 1 是 int 类型，它比 short 类型精度要高，因此不能隐式地将 int 类型下转型为 short 类型。
 
@@ -236,7 +236,7 @@ s1 += 1;
 ```java
 s1 = (short) (s1 + 1);
 ```   
-## switch
+### switch
 
 从 Java 7 开始，可以在 switch 条件判断语句中使用 String 对象。
 
