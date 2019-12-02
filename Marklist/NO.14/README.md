@@ -21,6 +21,13 @@
     * [动态初始化](#动态初始化)
     * [数组引用传递](#数组引用传递)
     * [数组练习题](#数据练习题)
+ * [类和对象](#类和对象) 
+    * [面向对象之初识](#面向对象之初识)
+    * [属性和方法](#属性和方法)
+    * [方法重载](#方法重载 )
+    * [构造函数](#构造函数)
+    * [this关键字](#this关键字)
+ 
  
 <!-- GFM-TOC -->
   
@@ -311,4 +318,150 @@ public class ArrayDemo {
 - 给定一个数组`a{1,2,3,0,0,4,5,0,6,0,7}` 去掉数组中的0元素  
 - 创建一个数组 存储2-100直接的素数(质数)  
 - 数组元素的排序(冒泡 选择 插入 快速 希尔 堆排序 归并排序  递归....)
+
+
+
+# 类和对象   
+
+### 面向对象之初识  
+- 类：具有相同特征行为的抽象描述的一类事物。 
+  - 静态特征（描述）——属性
+  - 动态行为（做事）——方法    
+- 对象：具体的事物
+
+### 属性和方法 
+
+属性的结构：   
+```java
+权限修饰符 [特征修饰符] 数据类型 属性名字 [= 值];
+```  
+
+方法的结构  
+```java
+权限修饰符 [特征修饰符] 返回值类型 方法名字 (参数列表) [抛出异常]  [{
+	方法体
+}]
+```   
+
+
+### 方法重载  
+
+一个类中的一组方法，同名不同参（参数的个数、类型、顺序）   
+
+```java
+public class OverloadDemo {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 10;
+        getMax(a, b);
+
+        float c = 5f;
+        float d = 10f;
+        getMax(c, d);
+    }
+
+    private static void getMax(int firstNum, int lastNum) {
+        if (firstNum > lastNum) {
+            System.out.println("较大的数是" + firstNum);
+        } else if (firstNum < lastNum) {
+            System.out.println("较大的数是" + lastNum);
+        } else {
+            System.out.println("两个数相等");
+        }
+    }
+
+    //只有方法的返回类型不同不能算是重载
+//    private static int getMax(int firstNum, int lastNum) {return 1;}
+
+    private static void getMax(float firstNum, float lastNum) {
+        if (firstNum > lastNum) {
+            System.out.println("较大的数是" + firstNum);
+        } else if (firstNum < lastNum) {
+            System.out.println("较大的数是" + lastNum);
+        } else {
+            System.out.println("两个数相等");
+        }
+    }
+
+    //只有方法的修饰符不同不能算是重载
+//    public static void getMax(float firstNum, float lastNum) {}
+}
+```  
+
+---
+
+### 构造函数   
+
+构造函数的作用是创建当前类的对象
+
+#### 构造写法 
+
+```java
+权限修饰符  与类名一致的方法名 (参数列表) [抛出异常] {
+	代码块
+}
+```   
+```java 
+public class ConstructorDemo {
+    public static void main(String[] args) {
+        Person p = new Person("小明", 25);
+        System.out.println(p.speak());
+    }
+}
+```
+
+#### 构造方法的特点 
+
+- 构造函数名和类名相同  
+- 没有返回值类型，连void都没有(没有具体返回值)
+- 在创建新对象时，系统自动的调用该类的构造函数 
+- 一个类可以有多个构造函数   
+
+---
+
+### this关键字   
+this:是当前类的对象引用。简单的记，它就代表当前类的一个对象。    
+this的场景：解决局部变量隐藏成员变量     
+谁调用这个方法，在该方法内部的this就代表谁。   
+
+```java
+class Student {
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name; //这里其实是隐含了this
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+class StudentTest2 {
+    public static void main(String[] args) {
+        //创建一个对象
+        Student s1 = new Student();
+        s1.setName("林青霞");
+        s1.setAge(27);
+        System.out.println(s1.getName()+"---"+s1.getAge());
+
+        //创建第二个对象
+        Student s2 = new Student();
+        s2.setName("刘意");
+        s2.setAge(30);
+        System.out.println(s2.getName()+"---"+s2.getAge());
+    }
+}
+```
+
+
 
