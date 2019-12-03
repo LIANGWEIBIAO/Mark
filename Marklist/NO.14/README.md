@@ -346,8 +346,22 @@ public class ArrayDemo {
 
 ### 方法重载  
 
-一个类中的一组方法，同名不同参（参数的个数、类型、顺序）   
+Java 允许同一个类中定义多个同名方法，只要它们的形参列表不同即可。
+如果同一个类中包含了两个或两个以上方法名相同的方法，但形参列表不同，这种情况被称为方法重载（overload）。
 
+例如，在 JDK 的 java.io.PrintStream 中定义了十多个同名的 println() 方法。
+
+```java
+public void println(int i){…}
+public void println(double d){…}
+public void println(String s){…}  
+
+System.out.println(102);    // 调用println(int i)方法
+System.out.println(102.25);    // 调用println(double d)方法
+System.out.println("价格为 102.25");    // 调用println(String s)方法
+``` 
+
+利用方法重载实现获取最大值
 ```java
 public class OverloadDemo {
     public static void main(String[] args) {
