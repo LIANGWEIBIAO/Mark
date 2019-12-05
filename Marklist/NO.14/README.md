@@ -23,10 +23,14 @@
     * [数组练习题](#数据练习题)
  * [类和对象](#类和对象) 
     * [面向对象之初识](#面向对象之初识)
+    * [修饰符(private,protect,public,final,static,abstract)](#修饰符)
+    * [关键字(this,super,final,static)](#关键字)
     * [属性和方法](#属性和方法)
     * [方法重载](#方法重载 )
     * [构造函数](#构造函数)
-    * [this关键字](#this关键字)
+    * [this关键字](#this关键字)  
+    * [创建对象内存图](#创建对象内存图)  
+
  
  
 <!-- GFM-TOC -->
@@ -341,7 +345,15 @@ public class ArrayDemo {
 权限修饰符 [特征修饰符] 返回值类型 方法名字 (参数列表) [抛出异常]  [{
 	方法体
 }]
-```   
+```     
+
+### 修饰符  
+
+![](https://alleniverson.gitbooks.io/java-basic-introduction/content/%E7%AC%AC3%E7%AB%A0%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/img/OOP_15.png)     
+
+### 关键字   
+
+![](https://alleniverson.gitbooks.io/java-basic-introduction/content/%E7%AC%AC3%E7%AB%A0%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/img/OOP_16.png)
 
 
 ### 方法重载  
@@ -475,7 +487,251 @@ class StudentTest2 {
         System.out.println(s2.getName()+"---"+s2.getAge());
     }
 }
+```   
+
+### 创建对象内存图     
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E5%8F%8A%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA.jpg)
+ 
+# 继承   
+
+## 权限修饰符  
+
+public ／protected ／ 默认 /private  
+
+```java   
+/**
+ *  1. 公开级别：public，对外公开，都可以访问
+ *  2. 受保护级别：protected，对子类和同一个包中的类公开
+ *  3. 默认级别：同一个包中的类公开
+ *  4. 私有级别：private，只有类本身可以访问，不对外公开
+ *
+ */
+public class PackageIdentity {
+    public static void main(String[] args) {
+        Cat cat = new Cat();
+        System.out.println(cat.name); //public
+        //protected、默认 -- 在其他的包下面，实例化Cat，看能访问几个变量
+        //private -- 无法访问，需要封装成方法，才能访问。getter/setter
+    }
+}
+```    
+
+## 特征修饰符   
+final ／static ／ abstract ／ native ／ transient ／ synchronized ／ volatile   
+
+
+
+## super关键字   
+
+当子类重写父类的方法后，子类对象将无法访问父类被重写的方法。
+为了解决这个问题，在Java中专门提供了一个`super`关键字用于访问父类的成员。
+例如访问父类的成员变量、成员方法和构造方法。 
+
+`this`代表本类对象的引用，`super`代表父类的内存空间的标识    
+```java 
+class Fu{
+   private int num = 4;
+
+   public int getNum(){
+       return num ;
+   }
+}
+
+class Zi extends Fu{
+   private int num = 5;
+
+   void show(){
+       System.out.println(this.num + "..." + super.getNum());
+   }
+}
+
+class ExtendDemo{
+   public static void main(String[] args){
+       Zi z = new Zi();
+       z.show();
+   }
+}
+
+//运行结果 
+//5...4
 ```
 
+#### 子类的实例化过程  
+子类中所有的构造函数默认都会访问父类中空参数的构造函数。因为每一个构造函数的第一行都有一条默认的语句`super()`;   
+
+为什么子类实例化的时候要访问父类中的构造函数呢？  
+
+因为子类继承了父类，获取到了父类中内容（属性），所以在使用父类内容之前，要先看父类是如何对自己的内容进行初始化的。  
+
+注意事项：  
+- 当父类中没有空参数的构造函数时，子类的构造函数必须通过this或者super语句指定要访问的构造函数。    
+- 子类构造函数中如果使用this调用了本类构造函数，那么默认的super();就没有了，因为super和this都只能定义在第一行，所以只能有一个。但是可以保证的是，子类中肯定会有其他的构造函数访问父类的构造函数。   
+- super语句必须要定义在子类构造函数的第一行！因为父类的初始化动作要先完成。   
+
+## final关键字   
+
+final关键字可用于修饰类、变量和方法，它有“无法改变”或者“最终”的含义，因此被final修饰的类、变量和方法将具有以下特性：
+
+- final可以修饰类，方法，变量    
+- final修饰的类不可以被继承   
+- final修饰的方法不可以被覆盖   
+- final修饰的变量是一个常量，只能被赋值一次   
+- 写法规范：常量所有字母都大写，多个单词，中间用_连接   
+
+```java
+ //继承弊端：打破了封装性
+ class Fu{
+        void method(){
+        }
+ }
+
+ class Zi extends Fu{
+        public static final double PI = 3.14;
+        void method(){
+             System.out.println(PI);
+        }
+ }
+
+ class FinalDemo{
+        public static void main(String[] args){
+             Zi zi = new Zi();
+             zi.method();
+        }
+ }
+ ```      
+
+## static关键字
+
+ static关键字可以修饰成员变量和成员方法   
+
+#### static关键字特点  
+
+ - 随着类的加载而加载    
+ - 优先于对象存在  
+ - 被类的所有对象共享     
+ - 可以通过类名调用    
+
+#### static关键字注意事项   
+
+- 在静态方法中是没有this关键字的  
+- 静态方法只能访问静态的成员变量和静态的成员方法  
+
+#### 静态变量和成员变量的区别      
+
+
+![](https://alleniverson.gitbooks.io/java-basic-introduction/content/%E7%AC%AC3%E7%AB%A0%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/img/OOP_13.png)  
+
+#### main方法是静态的  
+
+```public static void main(String[] args) {}```   
+
+- public 被jvm调用，访问权限足够大。  
+- static 被jvm调用，不用创建对象，直接类名访问  
+- void被jvm调用，不需要给jvm返回值  
+- main 一个通用的名称，虽然不是关键字，但是被jvm识别  
+- String[] args 以前用于接收键盘录入的
+
+## 抽象类与接口   
+
+#### 抽象类
+
+当定义一个类时，常常需要定义一些方法来描述该类的行为特征，但有时这些方法的实现方式是无法确定的。
+例如前面在定义Animal类时，`shout()`方法用于表示动物的叫声，但是针对不同的动物，叫声也是不同的，因此在`shout()`方法中无法准确描述动物的叫声。
+
+针对上面描述的情况，Java允许在定义方法时***不写方法体***，`不包含方法体的方法为抽象方法`，抽象方法必须使用`abstract`关键字来修饰。  
+
+#### 抽象类概述    
+
+抽象定义：抽象就是从多个事物中将共性的、本质的内容抽取出来。例如：狼和狗共性都是犬科，犬科就是抽象出来的概念。    
+
+#### 抽象类的特点  
+
+抽象类不能创建实例，只能当成父类来被继承。抽象类是从多个具体类中抽象出来的父类，它具有更高层次的抽象。  
+
+抽象类体现的就是一种模板模式的设计，抽象类作为多个子类的通用模板。   
+
+当一个类中包含了抽象方法，该类必须使用`abstract`关键字来修饰，使用`abstract`关键字修饰的类为抽象类。  
+
+抽象类是具体事物抽取出来的，本身是不具体的，没有对应的实例。例如：犬科是一个抽象的概念，真正存在的是狼和狗。
+
+
+
+#### 抽象类举例代码讲解     
+
+需求：公司中程序员有姓名，工号，薪水，工作内容。项目经理除了有姓名，工号，薪水，还有奖金，工作内容。
+分析：在这个问题领域中，通过名词提炼法：
+程序员： 属性：姓名，工号，薪水。 行为：工作。
+经理： 属性：姓名，工号，薪水，奖金。 行为：工作。
+程序员和经理不存在着直接继承关系。但是，程序员和经理却具有共性内容，可以进行抽取，因为他们都是公司的雇员。可以将程序员和经理进行抽取，建立体系。    
+
+```java   
+ //描述雇员。
+ abstract class Employee{
+        private String name ;
+        private String id ;
+        private double pay ;
+
+       Employee(String name,String id, double pay){
+              this.name = name;
+              this.id = id;
+              this.pay = pay;
+       }
+
+        public abstract void work();
+ }
+
+ //描述程序员
+ class Programmer extends Employee{
+       Programmer(String name,String id, double pay){
+              super(name,id,pay);
+       }
+
+        public void work(){
+             System.out.println("code..." );
+        }
+ }
+
+ //描述经理
+ class Manager extends Employee{
+       private int bonus ;
+
+       Manager(String name,String id, double pay,int bonus){
+              super(name,id,pay);
+              this.bonus = bonus;
+       }
+
+       public void work(){
+             System.out.println("manage" );
+       }
+ }
+ ```   
+
+ #### 抽象类相关问题     
+
+ 抽象类中是否有构造函数？ 答：有，用于给子类对象进行初始化。   
+
+ 抽象关键字abstract不可以和哪些关键字共存？ 答：private、static、final。   
+
+ 抽象类中可不可以没有抽象方法？  
+ 答：可以，但是很少见。目的就是不让该类创建对象，AWT的适配器对象就是这种类。通常这个类中的方法有方法体，但是却没有内容。   
+
+
+ #### 抽象类和一般类的区别    
+
+ 相同点：抽象类和一般类都是用来描述事物的，都在内部定义了成员。   
+
+ 不同点：  
+
+ 1.一般类有足够的信息描述事物。抽象类描述事物的信息有可能不足。  
+
+ 2.一般类中不能定义抽象方法，只能定义非抽象方法。抽象类中可定义抽象方法，同时也可以定义非抽象方法。  
+
+ 3.一般类可以被实例化。抽象类不可以被实例化。   
+
+ 抽象类一定是个父类吗？ 答：是的，因为需要子类覆盖其方法后才可以对子类实例化。   
+
+
+ #### 接口  
 
 
