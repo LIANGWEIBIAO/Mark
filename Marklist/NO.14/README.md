@@ -7,7 +7,7 @@
 - 编写 HelloWorld程序  
 - 常量和变量   
 
-# 第一章
+# 第一章 开发前言
 
 ## 1.1Java 语言概述  
 
@@ -169,4 +169,75 @@ public class ConstantDemo {
 
 # 第五章 变量和数据类型   
 
-## 5.1  变量概述
+## 5.1  变量概述 
+
+变量：常量是固定不变的数据，那么在程序中可以变化的量称为变量。  
+
+> Java中要求一个变量每次只能保存一个数据，必须要明确保存的数据类型   
+
+## 5.2  数据类型    
+
+### 数据类型分类   
+
+Java的数据类型分为两大类： 
+
+- 基本数据类型 ：包括  `整数` 、 `浮点数` 、 `字符` 、 `布尔` 。  
+- 引用数据类型 ：包括  `类` 、 `数组` 、 `接口` 。   
+
+### 基本数据类型  
+
+四类八种基本数据类型：  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png)  
+
+> Java中的默认类型：整数类型是 `int` 、浮点类型是 `double`   
+
+## 5.3  变量的定义  
+
+### 格式  
+```  
+数据类型 变量名 = 数据值;
+```  
+
+### 练习   
+
+定义所有基本数据类型的变量，代码如下：  
+
+```java
+public class Variable {
+  public static void main(String[] args){    
+          //定义字节型变量
+          byte b = 100;
+          System.out.println(b);
+          //定义短整型变量
+          short s = 1000;
+          System.out.println(s);
+          //定义整型变量
+          int i = 123456;
+          System.out.println(i);
+          //定义长整型变量
+          long l = 12345678900L;
+          System.out.println(l);
+          //定义单精度浮点型变量
+          float f = 5.5F;
+          System.out.println(f);
+          //定义双精度浮点型变量
+          double d = 8.5;
+          System.out.println(d);
+          //定义布尔型变量
+          boolean bool = false;
+          System.out.println(bool);
+          //定义字符型变量
+          char c = 'A';
+          System.out.println(c);
+  }    
+}
+```  
+
+> long类型：建议数据后加L表示。  
+> float类型：建议数据后加F表示。  
+
+### 5.4  注意事项  
+
+- 变量名称：在同一个大括号范围内，变量的名字不可以相同。  
+- 变量赋值：定义的变量，不赋值不能使用。  
