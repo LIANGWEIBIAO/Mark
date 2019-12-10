@@ -99,8 +99,7 @@ Java程序开发三步骤：编写、编译、运行。
 
 
 ## 3.2  编写Java源程序
-1. 在 d:\day01 目录下新建文本文件，完整的文件名修改为 HelloWorld.java ，其中文件名为 HelloWorld ，后
-缀名必须为 .java 。
+1. 在 `d:\day01` 目录下新建文本文件，完整的文件名修改为 HelloWorld.java ，其中文件名为 HelloWorld ，后缀名必须为 .java 。
 2. 用记事本打开
 3. 在文件中键入文本并保存，代码如下：  
 
@@ -124,7 +123,7 @@ public class HelloWorld {
 ```java
 javac HelloWorld.java
 ```  
-编译成功后，命令行没有任何提示。打开 d:\day01 目录，发现产生了一个新的文件  HelloWorld.class ，该文件
+编译成功后，命令行没有任何提示。打开 `d:\day01` 目录，发现产生了一个新的文件  HelloWorld.class ，该文件
 就是编译后的文件，是Java的可运行文件，称为字节码文件，有了字节码文件，就可以运行程序了。  
 > Java源文件的编译工具 javac.exe ，在JDK安装目录的bin目录下。但是由于配置了环境变量，可以再任意目录下使用。  
 
@@ -139,24 +138,22 @@ java HelloWorld
 
 ### 编译和运行是两回事  
 
-- 编译 ：是指将我们编写的Java源文件翻译成JVM认识的class文件，在这个过程中， javac 编译器会检查我们
-所写的程序是否有错误，有错误就会提示出来，如果没有错误就会编译成功。 
+- 编译 ：是指将我们编写的Java源文件翻译成JVM认识的class文件，在这个过程中， javac 编译器会检查我们所写的程序是否有错误，有错误就会提示出来，如果没有错误就会编译成功。 
 - 运行 ：是指将 class 文件 交给JVM去运行，此时JVM就会去执行我们编写的程序了。  
 
 ### 关于main方法   
-main 方法：称为主方法。写法是固定格式不可以更改。main方法是程序的入口点或起始点，无论我们编写多
-少程序，JVM在运行的时候，都会从main方法这里开始执行。  
+main方法：称为主方法。写法是固定格式不可以更改。main方法是程序的入口点或起始点，无论我们编写多少程序，JVM在运行的时候，都会从main方法这里开始执行。  
 
 ### 标识符  
 
 - 标识符 ：是指在程序中，我们自己定义内容。比如类的名字、方法的名字和变量的名字等等，都是标识符。 
 
-- 命名规则： 硬性要求  
+- 命名规则： `硬性要求`
   - 标识符可以包含 英文字母 26个(区分大小写) 、 0 -9数字 、 $ （美元符号） 和 _ （下划线） 。
   - 标识符不能以数字开头。
   - 标识符不能是关键字。 
 
-- 命名规范： 软性建议  
+- 命名规范： `软性建议`  
   - 类名规范：首字母大写，后面每个单词首字母大写（大驼峰式）。
   - 方法名规范： 首字母小写，后面每个单词首字母大写（小驼峰式）。 
   - 变量名规范：全部小写。
@@ -306,7 +303,7 @@ byte b = 2;
 ```  
 运算结果，变量的类型将是 `int ` 类型，这就是出现了数据类型的自动类型转换现象。 
 
-- 自动转换 ：将 取值范围小的类型 自动提升为 取值范围大的类型 。  
+- 自动转换 ：将取值范围小的类型`自动提升为`取值范围大的类型 。  
 
 ```java
 public static void main(String[] args) {
@@ -1677,7 +1674,7 @@ public static void println(byte a) {    
   - new ：关键字，创建数组使用的关键字。
   - 数组存储的数据类型： 创建的数组容器可以存储什么数据类型。
   - [ 长度]：数组的长度，表示数组容器中可以存储多少个元素。 
-  - 注意：数组有定长特性，长度一旦指定，不可更改。
+  - **注意：数组有定长特性，长度一旦指定，不可更改。**
     - 和水杯道理相同，买了一个 2升的水杯，总容量就是2升，不能多也不能少。
 
 
@@ -1721,4 +1718,303 @@ int[] arr = new int[]{1,2,3,4,5};
 int[] arr = {1,2,3,4,5};
 ```  
 
-## 1.4  数组的访问
+## 1.4  数组的访问  
+
+- 索引： 每一个存储到数组的元素，都会自动的拥有一个编号，从0开始，这个自动编号称为数组索引(index)，可以通过数组的索引访问到数组中的元素。 
+
+- 数组的长度属性：每个数组都具有长度，而且是固定的，Java中赋予了数组的一个属性，可以获取到数组的长度，语句为： 数组名 .length ，属性length的执行结果是数组的长度，int类型结果。由次可以推断出，数组的最大索引值为 数组名 .length-1 。  
+
+```java
+public static void main(String[] args) {
+   int[] arr = new int[]{1,2,3,4,5};  
+   //打印数组的属性，输出结果是5  
+   System.out.println(arr.length);  
+}
+```  
+
+- 索引访问数组中的元素：  
+  - 数组名 [索引]=数值，为数组中的元素赋值
+  - 变量 =数组名[索引]，获取出数组中的元素  
+
+```java
+public static void main(String[] args) {
+    //定义存储int类型数组，赋值元素1，2，3，4，5
+    int[] arr = {1,2,3,4,5};
+    //为0索引元素赋值为6
+    arr[0] = 6;
+    //获取数组0索引上的元素
+    int i = arr[0];
+    System.out.println(i);
+    //直接输出数组0索引元素
+    System.out.println(arr[0]);
+}
+```  
+
+# 第二章 数组原理内存图  
+
+## 2.1  内存概述  
+
+内存是计算机中的重要原件，临时存储区域，作用是运行程序。我们编写的程序是存放在硬盘中的，在硬盘中的程
+序是不会运行的，必须放进内存中才能运行，运行完毕后会清空内存。  
+
+Java虚拟机要运行程序，必须要对内存进行空间的分配和管理。  
+
+## 2.2 Java 虚拟机的内存划分  
+
+为了提高运算效率，就对空间进行了不同区域的划分，因为每一片区域都有特定的处理数据方式和内存管理方式。  
+
+- JVM 的内存划分：  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E7%BB%841.png)  
+
+
+## 2.3  数组在内存中的存储    
+
+### 一个数组内存图  
+
+```java
+public static void main(String[] args) {
+   int[] arr = new int[3];  
+   System.out.println(arr);//[I@5f150435  
+}
+```  
+
+以上方法执行，输出的结果是[I@5f150435，这个是什么呢？是数组在内存中的地址。new出来的内容，都是在堆
+内存中存储的，而方法中的变量arr保存的是数组的地址。   
+
+输出arr[0]，就会输出arr保存的内存地址中数组中0索引上的元素  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E7%BB%842.png)  
+
+### 两个数组内存图    
+
+```java
+ public static void main(String[] args) {
+    int[] arr = new int[3];
+    int[] arr2 = new int[2];
+    System.out.println(arr);
+    System.out.println(arr2);
+}
+```  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E7%BB%843.png)  
+
+### 两个变量指向一个数组  
+
+```java
+public static void main(String[] args) {
+    // 定义数组，存储3个元素
+    int[] arr = new int[3];
+    //数组索引进行赋值
+    arr[0] = 5;
+    arr[1] = 6;
+    arr[2] = 7;
+    //输出3个索引上的元素值
+    System.out.println(arr[0]);
+    System.out.println(arr[1]);
+    System.out.println(arr[2]);
+    //定义数组变量arr2，将arr的地址赋值给arr2
+    int[] arr2 = arr;
+    arr2[1] = 9;
+    System.out.println(arr[1]);
+}
+```   
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E7%BB%844.png)  
+
+
+# 第三章 数组的常见操作
+
+## 3.1  数组越界异常  
+
+观察一下代码，运行后会出现什么结果。  
+
+```java
+public static void main(String[] args) {
+    int[] arr = {1,2,3};
+    System.out.println(arr[3]);
+}
+```  
+
+创建数组，赋值3个元素，数组的索引就是0，1，2，没有3索引，因此我们不能访问数组中不存在的索引，程序运
+行后，将会抛出 ` ArrayIndexOutOfBoundsException` 数组越界异常。在开发中，数组的越界异常是不能出现的，一
+旦出现了，就必须要修改我们编写的代码。  
+
+## 3.2  数组空指针异常  
+
+观察一下代码，运行后会出现什么结果。  
+
+```java
+public static void main(String[] args) {
+    int[] arr = {1,2,3};
+    arr = null;
+    System.out.println(arr[0]);
+｝
+```  
+
+`arr = null` 这行代码，意味着变量arr将不会在保存数组的内存地址，也就不允许再操作数组了，因此运行的时候
+会抛出 `NullPointerException` 空指针异常。在开发中，数组的越界异常是不能出现的，一旦出现了，就必须要修
+改我们编写的代码。  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E7%BB%845.png)
+
+**空指针异常在内存图中的表现** 
+
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E7%BB%846.png)  
+
+## 3.3  数组遍历【重点】  
+
+- 数组遍历： 就是将数组中的每个元素分别获取出来，就是遍历。遍历也是数组操作中的基石。  
+
+```java
+public static void main(String[] args) {
+    int[] arr = { 1, 2, 3, 4, 5 };
+    System.out.println(arr[0]);
+    System.out.println(arr[1]);
+    System.out.println(arr[2]);
+    System.out.println(arr[3]);
+    System.out.println(arr[4]);
+}
+```
+
+以上代码是可以将数组中每个元素全部遍历出来，但是如果数组元素非常多，这种写法肯定不行，因此我们需要改
+造成循环的写法。数组的索引是 `0` 到 `lenght -1` ，可以作为循环的条件出现。
+
+```java
+public static void main(String[] args) {
+    int[] arr = { 1, 2, 3, 4, 5 };
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i]);
+    }
+}
+```  
+
+## 3.4  数组获取最大值元素  
+
+```java
+public static void main(String[] args) {
+    int[] arr = { 5, 15, 2000, 10000, 100, 4000 };
+    //定义变量，保存数组中0索引的元素
+    int max = arr[0];
+    //遍历数组，取出每个元素
+    for (int i = 0; i < arr.length; i++) {
+      //遍历到的元素和变量max比较
+      //如果数组元素大于max
+      if (arr[i] > max) {
+        //max记录住大值
+        max = arr[i];
+      }
+    }
+    System.out.println("数组最大值是： " + max);
+}
+```  
+
+## 3.5  数组反转  
+
+- 数组的反转： 数组中的元素颠倒顺序，例如原始数组为1,2,3,4,5，反转后的数组为5,4,3,2,1  
+
+```java
+void invertUsingFor(Object[] array) {
+    for (int i = 0; i < array.length / 2; i++) {
+        Object temp = array[i];
+        array[i] = array[array.length - 1 - i];
+        array[array.length - 1 - i] = temp;
+    }
+}
+```  
+
+# 第四章 数组作为方法参数和返回值   
+
+## 4.1  数组作为方法参数  
+
+以前的方法中我们学习了方法的参数和返回值，但是使用的都是基本数据类型。那么作为引用类型的数组能否作为
+方法的参数进行传递呢，当然是可以的。
+
+- 数组作为方法参数传递，传递的参数是数组内存的地址  
+
+```java
+public static void main(String[] args) {
+    int[] arr = { 1, 3, 5, 7, 9 };
+    //调用方法，传递数组
+    printArray(arr);
+}
+/*
+创建方法，方法接收数组类型的参数    
+进行数组的遍历    
+*/
+public static void printArray(int[] arr) {
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i]);
+    }
+}
+```  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E7%BB%847.png)    
+
+
+## 4.2  数组作为方法返回值   
+
+- 数组作为方法的返回值，返回的是数组的内存地址   
+
+```java
+public static void main(String[] args) {
+    //调用方法，接收数组的返回值
+    //接收到的是数组的内存地址
+    int[] arr = getArray();
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i]);
+    }
+}
+/*
+方法，返回值是数组类型    
+return返回数组的地址    
+*/
+public static int[] getArray() {
+    int[] arr = { 1, 3, 5, 7, 9 };
+    //返回数组的地址，返回到调用者
+    return arr;
+}
+
+```  
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E7%BB%848.png);  
+
+## 4.3  方法的参数类型区别    
+
+### 代码分析  
+
+1. 分析下列程序代码，计算输出结果。  
+
+```java
+public static void main(String[] args) {
+    int a = 1;
+    int b = 2;
+    System.out.println(a);
+    System.out.println(b);
+    change(a, b);
+    System.out.println(a);
+    System.out.println(b);
+}
+
+public static void change(int a, int b) {
+    a = a + b;
+    b = b + a;
+}
+``` 
+
+2.  分析下列程序代码，计算输出结果。  
+
+```java
+public static void main(String[] args) {
+    int[] arr = {1,3,5};
+    System.out.println(arr[0]);
+    change(arr);
+    System.out.println(arr[0]);
+}
+public static void change(int[] arr) {
+   arr[0] = 200;  
+}
+```  
+
+> 总结:
+> 方法的参数为基本类型时,传递的是数据值. 方法的参数为引用类型时,传递的是地址值.
