@@ -11,19 +11,19 @@ Math类】](#day08-String类static关键字Arrays类)
 * [day09 【继承、super、this、抽象类】](#day09-继承superthis抽象类)  
 * [day10 【接口、多态】](#day10-接口多态)   
 * [day11 【final、权限、内部类、引用类型】](#day11final权限内部类引用类型)  
-* [day12【Object类、Date类、Calendar类、System类、StringBuilder类、基本类型包装类】]
-* [day13【Collection、泛型】]
-* [day14【List、Set】]
-* [day15 【Map】]
-* [day16 【异常、线程】]
-* [day17 【线程、同步】]
-* [day18【线程池、Lambda表达式】]
-* [day19【File类、递归】]
-* [day20【字节流、字符流】]
-* [day21【缓冲流、转换流、序列化流、打印流】]
-* [day22【网络编程】]
-* [day23【函数式接口】]
-* [day24【Stream流、方法引用】]
+* [day12 【Object类、Date类、Calendar类、System类、StringBuilder类、基本类型包装类】](#day11final权限内部类引用类型) 
+* [day13【Collection、泛型】](#day11final权限内部类引用类型) 
+* [day14【List、Set】](#day11final权限内部类引用类型) 
+* [day15 【Map】](#day11final权限内部类引用类型) 
+* [day16 【异常、线程】](#day11final权限内部类引用类型) 
+* [day17 【线程、同步】](#day11final权限内部类引用类型) 
+* [day18【线程池、Lambda表达式】](#day11final权限内部类引用类型) 
+* [day19【File类、递归】](#day11final权限内部类引用类型) 
+* [day20【字节流、字符流】](#day11final权限内部类引用类型) 
+* [day21【缓冲流、转换流、序列化流、打印流】](#day11final权限内部类引用类型) 
+* [day22【网络编程】](#day11final权限内部类引用类型) 
+* [day23【函数式接口】](#day11final权限内部类引用类型) 
+* [day24【Stream流、方法引用】](#day11final权限内部类引用类型) 
 
  
 <!-- GFM-TOC -->
