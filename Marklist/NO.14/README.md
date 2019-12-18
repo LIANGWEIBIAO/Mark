@@ -12,17 +12,17 @@
 * [day11 【final、权限、内部类、引用类型】](#day11-final权限内部类引用类型)  
 * [day12 【Object类、Date类、Calendar类、System类、StringBuilder类、基本类型包装类】](#day12-Object类Date类Calendar类System类StringBuilder类基本类型包装类) 
 * [day13 【Collection、泛型】](#day13-Collection泛型)    
-* [day14 【List、Set】](#day14-ListSet) 
-* [day15 【Map】](#day11final权限内部类引用类型) 
-* [day16 【异常、线程】](#day11final权限内部类引用类型) 
-* [day17 【线程、同步】](#day11final权限内部类引用类型) 
-* [day18【线程池、Lambda表达式】](#day11final权限内部类引用类型) 
-* [day19【File类、递归】](#day11final权限内部类引用类型) 
-* [day20【字节流、字符流】](#day11final权限内部类引用类型) 
-* [day21【缓冲流、转换流、序列化流、打印流】](#day11final权限内部类引用类型) 
-* [day22【网络编程】](#day11final权限内部类引用类型) 
-* [day23【函数式接口】](#day11final权限内部类引用类型) 
-* [day24【Stream流、方法引用】](#day11final权限内部类引用类型) 
+* [day14 【List、Set、数据结构、Collections】](#day14-ListSet数据结构Collections) 
+* [day15 【Map】](#day15-Map) 
+* [day16 【异常、线程】](#day16-异常线程) 
+* [day17 【线程、同步】](#day17-线程同步) 
+* [day18 【线程池、Lambda表达式】](#day18-线程池Lambda表达式) 
+* [day19 【File类、递归】](#day19-File类递归) 
+* [day20 【字节流、字符流】](#day20-字节流字符流) 
+* [day21 【缓冲流、转换流、序列化流、打印流】](#day21-缓冲流转换流序列化流打印流) 
+* [day22 【网络编程】](#day22-网络编程) 
+* [day23 【函数式接口】](#day23函数式接口) 
+* [day24 【Stream流、方法引用】](#day24-Stream流方法引用) 
 
  
 <!-- GFM-TOC -->
@@ -7250,7 +7250,2460 @@ public class Poker {
 }
 ~~~
 
-# day14 【List、Set】
+# day14 【List、Set、数据结构、Collections】
+
+## 主要内容  
+
+- 数据结构   
+- List集合   
+- Set集合   
+- Collections     
+
+## 学习目标
+
+- [ ] 能够说出List集合特点  
+- [ ] 能够说出常见的数据结构   
+- [ ] 能够说出数组结构特点  
+- [ ] 能够说出栈结构特点  
+- [ ] 能够说出队列结构特点  
+- [ ] 能够说出单向链表结构特点  
+- [ ] 能够说出Set集合的特点  
+- [ ] 能够说出哈希表的特点  
+- [ ] 使用HashSet集合存储自定义元素   
+- [ ] 能够说出可变参数的格式   
+- [ ] 能够使用集合工具类   
+- [ ] 能够使用Comparator比较器进行排序   
+
+# 第一章 数据结构  
+
+## 2.1 数据结构有什么用？  
+
+当你用着java里面的容器类很爽的时候，你有没有想过，怎么ArrayList就像一个无限扩充的数组，也好像链表之类
+的。好用吗？好用，这就是数据结构的用处，只不过你在不知不觉中使用了。
+
+现实世界的存储，我们使用的工具和建模。每种数据结构有自己的优点和缺点，想想如果Google的数据用的是数
+组的存储，我们还能方便地查询到所需要的数据吗？而算法，在这么多的数据中如何做到最快的插入，查找，删
+除，也是在追求更快。  
+
+我们java是面向对象的语言，就好似自动档轿车，C语言好似手动档吉普。数据结构呢？是变速箱的工作原理。你
+完全可以不知道变速箱怎样工作，就把自动档的车子从 A点 开到 B点，而且未必就比懂得的人慢。写程序这件事，
+和开车一样，经验可以起到很大作用，但如果你不知道底层是怎么工作的，就永远只能开车，既不会修车，也不能
+造车。当然了，数据结构内容比较多，细细的学起来也是相对费功夫的，不可能达到一蹴而就。我们将常见的数据
+结构：堆栈、队列、数组、链表和红黑树 这几种给大家介绍一下，作为数据结构的入门，了解一下它们的特点即  
+可。  
+
+!()[https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%8401.png]  
+
+## 2.2 常见的数据结构  
+
+数据存储的常用结构有：栈、队列、数组、链表和红黑树。我们分别来了解一下：  
+
+### 栈  
+
+stack,又称堆栈，它是运算受限的线性表，其限制是仅允许在标的一端进行插入和删除操作，不允许在其
+他任何位置进行添加、查找、删除等操作。  
+
+简单的说：采用该结构的集合，对元素的存取有如下的特点  
+
+- 先进后出（即，存进去的元素，要在后它后面的元素依次取出后，才能取出该元素）。例如，子弹压进弹
+夹，先压进去的子弹在下面，后压进去的子弹在上面，当开枪时，先弹出上面的子弹，然后才能弹出下面的
+子弹。  
+
+- 栈的入口、出口的都是栈的顶端位置。  
+
+!()[https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%8402.png]  
+
+这里两个名词需要注意：  
+
+- 压栈：就是存元素。即，把元素存储到栈的顶端位置，栈中已有元素依次向栈底方向移动一个位置。  
+- 弹栈：就是取元素。即，把栈的顶端位置元素取出，栈中已有元素依次向栈顶方向移动一个位置。  
+
+### 队列  
+
+queue,简称队，它同堆栈一样，也是一种运算受限的线性表，其限制是仅允许在表的一端进行插入，
+而在表的另一端进行删除。   
+
+简单的说，采用该结构的集合，对元素的存取有如下的特点：   
+- 先进先出（即，存进去的元素，要在后它前面的元素依次取出后，才能取出该元素）。例如，小火车过山
+洞，车头先进去，车尾后进去；车头先出来，车尾后出来。    
+
+- 队列的入口、出口各占一侧。例如，下图中的左侧为入口，右侧为出口。  
+
+!()[https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%8403.png]  
+
+### 数组  
+
+Array,是有序的元素序列，数组是在内存中开辟一段连续的空间，并在此空间存放元素。就像是一排出
+租屋，有100个房间，从001到100每个房间都有固定编号，通过编号就可以快速找到租房子的人。 
+
+简单的说,采用该结构的集合，对元素的存取有如下的特点：  
+
+- 查找元素快：通过索引，可以快速访问指定位置的元素  
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%8404.png)  
+
+- 增删元素慢  
+  - 指定索引位置增加元素：需要创建一个新数组，将指定新元素存储在指定索引位置，再把原数组元素根
+据索引，复制到新数组对应索引的位置。如下图  
+
+  ![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%8405.png)
+
+  - 指定索引位置删除元素：需要创建一个新数组，把原数组元素根据索引，复制到新数组对应索引的位
+置，原数组中指定索引位置元素不复制到新数组中。如下图  
+
+  ![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%8406.png)   
+
+
+### 链表  
+
+
+链表:linked list,由一系列结点node（链表中每一个元素称为结点）组成，结点可以在运行时i动态生成。每
+个结点包括两个部分：一个是存储数据元素的数据域，另一个是存储下一个结点地址的指针域。我们常说的
+链表结构有单向链表与双向链表，那么这里给大家介绍的是单向链表。  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%8407.png)  
+
+简单的说，采用该结构的集合，对元素的存取有如下的特点：  
+
+- 多个结点之间，通过地址进行连接。例如，多个人手拉手，每个人使用自己的右手拉住下个人的左手，依次
+类推，这样多个人就连在一起了。  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%8408.png)  
+
+- 查找元素慢：想查找某个元素，需要通过连接的节点，依次向后查找指定元素 
+
+- 增删元素快：  
+
+  - 增加元素：只需要修改连接下个元素的地址即可。  
+  ![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%8409.png)
+
+  - 删除元素：只需要修改连接下个元素的地址即可。 
+  ![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%8410.png)
+
+ # 第二章 List集合  
+
+我们掌握了Collection接口的使用后，再来看看Collection接口中的子类，他们都具备那些特性呢？
+接下来，我们一起学习Collection中的常用几个子类（ `java.util.List` 集合、 `java.util.Set` 集合）。 
+
+看完API，我们总结一下  
+List接口特点：  
+
+1. 它是一个元素存取有序的集合。例如，存元素的顺序是11、22、33。那么集合中，元素的存储就是按照11、22、33的顺序完成的）。
+2. 它是一个带有索引的集合，通过索引就可以精确的操作集合中的元素（与数组的索引是一个道理）。  
+3. 集合中可以有重复的元素，通过元素的equals方法，来比较是否为重复的元素。  
+
+> tips:我们在基础班的时候已经学习过List接口的子类java.util.ArrayList类，该类中的方法都是来自List中定义。
+
+## 1.2 List接口中常用方法  
+
+List作为Collection集合的子接口，不但继承了Collection接口中的全部方法，而且还增加了一些根据元素索引来操
+作集合的特有方法，如下：   
+
+- `public void add(int index, E element)` : 将指定的元素，添加到该集合中的指定位置上。   
+- `public E get(int index)` :返回集合中指定位置的元素。   
+- `public E remove(int index)` : 移除列表中指定位置的元素, 返回的是被移除的元素。   
+- `public E set(int index, E element)` :用指定元素替换集合中指定位置的元素,返回值的更新前的元素。  
+ 
+List集合特有的方法都是跟索引相关，我们在基础班都学习过，那么我们再来复习一遍吧：    
+
+```java
+public class ListDemo {
+    public static void main(String[] args) {
+    // 创建List集合对象        
+     List<String> list = new ArrayList<String>();    
+       
+     // 往 尾部添加 指定元素    
+     list.add("图图");    
+     list.add("小美");    
+     list.add("不高兴");    
+       
+     System.out.println(list);    
+     // add(int index,String s) 往指定位置添加    
+     list.add(1,"没头脑");    
+       
+     System.out.println(list);    
+     // String remove(int index) 删除指定位置元素  返回被删除元素    
+     // 删除索引位置为2的元素     
+     System.out.println("删除索引位置为2的元素");    
+     System.out.println(list.remove(2));    
+       
+     System.out.println(list);    
+       
+     // String set(int index,String s)    
+     // 在指定位置 进行 元素替代（改）     
+     // 修改指定位置元素    
+     list.set(0, "三毛");    
+     System.out.println(list);    
+       
+     // String get(int index)  获取指定位置元素    
+       
+     // 跟size() 方法一起用  来 遍历的     
+     for(int i = 0;i<list.size();i++){    
+       System.out.println(list.get(i));        
+     }    
+     //还可以使用增强for
+    for (String string : list) {    
+      System.out.println(string);            
+    }            
+  }    
+}
+```  
+
+# 第三章 List的子类   
+
+## 3.1 ArrayList集合  
+
+`java.util.ArrayList` 集合数据存储的结构是数组结构。元素增删慢，查找快，由于日常开发中使用最多的功能为
+查询数据、遍历数据，所以 `ArrayList` 是最常用的集合。
+
+许多程序员开发时非常随意地使用ArrayList完成任何需求，并不严谨，这种用法是不提倡的。  
+
+## 3.2 LinkedList集合  
+
+`java.util.LinkedList` 集合数据存储的结构是链表结构。方便元素添加、删除的集合。
+> LinkedList是一个双向链表，那么双向链表是什么样子的呢，我们用个图了解下  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/list01.png)
+
+实际开发中对一个集合元素的添加与删除经常涉及到首尾操作，而LinkedList提供了大量首尾操作的方法。这些方
+法我们作为了解即可：
+
+- `public void addFirst(E e)` :将指定元素插入此列表的开头。 
+- `public void addLast(E e)` :将指定元素添加到此列表的结尾。 
+- `public E getFirst()` :返回此列表的第一个元素。 
+- `public E getLast()` :返回此列表的最后一个元素。 
+- `public E removeFirst()` :移除并返回此列表的第一个元素。 
+- `public E removeLast()` :移除并返回此列表的最后一个元素。
+- `public E pop()` :从此列表所表示的堆栈处弹出一个元素。
+- `public void push(E e)` :将元素推入此列表所表示的堆栈。
+- `public boolean isEmpty()` ：如果列表不包含元素，则返回true。  
+
+LinkedList是List的子类，List中的方法LinkedList都是可以使用，这里就不做详细介绍，我们只需要了解LinkedList
+的特有方法即可。在开发时，LinkedList集合也可以作为堆栈，队列的结构使用。（了解即可）
+
+方法演示：  
+
+```java
+public class LinkedListDemo {
+    public static void main(String[] args) {
+        LinkedList<String> link = new LinkedList<String>();
+        //添加元素
+        link.addFirst("abc1");
+        link.addFirst("abc2");
+        link.addFirst("abc3");
+        System.out.println(link);
+        // 获取元素
+        System.out.println(link.getFirst());
+        System.out.println(link.getLast());
+        // 删除元素
+        System.out.println(link.removeFirst());
+        System.out.println(link.removeLast());
+        while (!link.isEmpty()) { //判断集合是否为空
+            System.out.println(link.pop()); //弹出集合中的栈顶元素
+        }
+        System.out.println(link);
+    }
+}
+```
+
+# 第四章 Set接口  
+
+`java.util.Set` 接口和 `java.util.List` 接口一样，同样继承自 `Collection` 接口，它与 `Collection`接口中的方法基本一致，并没有对 Collection 接口进行功能上的扩充，只是比 `Collection` 接口更加严格了。与 `List` 接口不同的是， `Set` 接口中元素无序，并且都会以某种规则保证存入的元素不出现重复。
+
+`Set` 集合有多个子类，这里我们介绍其中的 `java.util.HashSet` 、 `java.util.LinkedHashSet` 这两个集合。
+
+> tips:Set集合取出元素的方式可以采用：迭代器、增强for。  
+
+## 3.1 HashSet集合介绍  
+
+`java.util.HashSet` 是 `Set` 接口的一个实现类，它所存储的元素是不可重复的，并且元素都是无序的(即存取顺序不一致)。 `java.util.HashSet` 底层的实现其实是一个 `java.util.HashMap` 支持，由于我们暂时还未学习，先做了解。  
+
+`HashSet` 是根据对象的哈希值来确定元素在集合中的存储位置，因此具有良好的存取和查找性能。保证元素唯一性
+的方式依赖于： `hashCode` 与 `equals` 方法。   
+
+我们先来使用一下Set集合存储，看下现象，再进行原理的讲解:  
+
+```java
+public class HashSetDemo {
+    public static void main(String[] args) {
+        //创建 Set集合
+        HashSet<String>  set = new HashSet<String>();
+        //添加元素
+        set.add(new String("cba"));
+        set.add("abc");
+        set.add("bac");
+        set.add("cba"); 
+        //遍历
+        for (String name : set) {
+            System.out.println(name);
+        }
+    }
+}
+```
+
+输出结果如下，说明集合中不能存储重复元素：  
+
+```java
+cba
+abc
+bac
+```
+
+> tips:根据结果我们发现字符串"cba"只存储了一个，也就是说重复的元素set集合不存储。  
+
+## 2.2 HashSet集合存储数据的结构（哈希表）  
+
+什么是哈希表呢？  
+
+在JDK1.8之前，哈希表底层采用数组+链表实现，即使用链表处理冲突，同一hash值的链表都存储在一个链表里。
+但是当位于一个桶中的元素较多，即hash值相等的元素较多时，通过key值依次查找的效率较低。而JDK1.8中，哈
+希表存储采用数组+链表+红黑树实现，当链表长度超过阈值（8）时，将链表转换为红黑树，这样大大减少了查找
+时间。  
+
+简单的来说，哈希表是由数组+链表+红黑树（JDK1.8增加了红黑树部分）实现的，如下图所示。  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/HashSet01.png);
+
+看到这张图就有人要问了，这个是怎么存储的呢？  
+
+为了方便大家的理解我们结合一个存储流程图来说明一下：  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/HashSet02.png)
+
+总而言之，JDK1.8引入红黑树大程度优化了HashMap的性能，那么对于我们来讲保证HashSet集合元素的唯一，
+其实就是根据对象的hashCode和equals方法来决定的。如果我们往集合中存放自定义的对象，那么保证其唯一，
+就必须复写hashCode和equals方法建立属于当前对象的比较方式。  
+
+## 2.3 HashSet存储自定义类型元素  
+
+给HashSet中存放自定义类型元素时，需要重写对象中的hashCode和equals方法，建立自己的比较方式，才能保
+证HashSet集合中的对象唯一
+
+创建自定义Student类  
+
+```java
+public class Student {
+    private String name;
+    private int age;
+    public Student() {
+        }
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Student student = (Student) o;
+        return age == student.age &&
+               Objects.equals(name, student.name);
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+}
+```
+
+```java
+public class HashSetDemo2 {
+    public static void main(String[] args) {
+        //创建集合对象   该集合中存储 Student类型对象
+        HashSet<Student> stuSet = new HashSet<Student>();
+        //存储
+        Student stu = new Student("于谦", 43);
+        stuSet.add(stu);
+        stuSet.add(new Student("郭德纲", 44));
+        stuSet.add(new Student("于谦", 43));
+        stuSet.add(new Student("郭麒麟", 23));
+        stuSet.add(stu);
+        for (Student stu2 : stuSet) {
+
+                    System.out.println(stu2);
+        }
+    }
+}
+执行结果：
+Student [name=郭德纲, age=44]
+Student [name=于谦, age=43]
+Student [name=郭麒麟, age=23]
+```
+
+## 2.3 LinkedHashSet  
+
+我们知道HashSet保证元素唯一，可是元素存放进去是没有顺序的，那么我们要保证有序，怎么办呢？
+在HashSet下面有一个子类 `java.util.LinkedHashSet` ，它是链表和哈希表组合的一个数据存储结构。
+演示代码如下:
+
+```java
+public class LinkedHashSetDemo {
+public static void main(String[] args) {
+      
+  Set<String> set = new LinkedHashSet<String>();        
+  set.add("bbb");        
+  set.add("aaa");        
+  set.add("abc");        
+  set.add("bbc");        
+  Iterator<String> it = set.iterator();
+
+  while (it.hasNext()) {        
+    System.out.println(it.next());            
+    }        
+  }    
+}
+
+结果：
+  bbb
+  aaa
+  abc
+  bbc
+```
+
+## 1.9 可变参数 
+
+在JDK1.5之后，如果我们定义一个方法需要接受多个参数，并且多个参数类型一致，我们可以对其简化成如下格式：
+
+```java
+修饰符 返回值类型 方法名(参数类型... 形参名){  }
+```
+
+其实这个书写完全等价与
+```java
+修饰符 返回值类型 方法名(参数类型[] 形参名){  }
+```
+
+只是后面这种定义，在调用时必须传递数组，而前者可以直接传递数据即可。JDK1.5以后。出现了简化操作。... 用在参数上，称之为可变参数。
+
+同样是代表数组，但是在调用这个带有可变参数的方法时，不用创建数组(这就是简单之处)，直接将数组中的元素
+作为实际参数进行传递，其实编译成的class文件，将这些元素先封装到一个数组中，在进行传递。这些动作都在编
+译.class文件时，自动完成了。
+
+代码演示：  
+```java
+public class ChangeArgs {
+    public static void main(String[] args) {
+        int[] arr = { 1, 4, 62, 431, 2 };
+        int sum = getSum(arr);
+        System.out.println(sum);
+        //  6  7  2 12 2121
+        // 求 这几个元素和 6  7  2 12 2121
+        int sum2 = getSum(6, 7, 2, 12, 2121);
+        System.out.println(sum2);
+    }
+    /*
+     * 完成数组  所有元素的求和 原始写法
+    
+      public static int getSum(int[] arr){
+        int sum = 0;
+        for(int a : arr){
+            sum += a;
+        }
+       
+        return sum;
+      }
+    */
+    //可变参数写法
+    public static int getSum(int... arr) {
+        int sum = 0;
+        for (int a : arr) {
+            sum += a;
+        }
+        return sum;
+    }
+}
+```
+
+> tips: 上述add方法在同一个类中，只能存在一个。因为会发生调用的不确定性 
+> 注意：如果在方法书写时，这个方法拥有多参数，参数中包含可变参数，可变参数一定要写在参数列表的末尾位置。 
+
+# 第五章 Collections  
+
+## 2.1 常用功能  
+
+`java.utils.Collections` 是集合工具类，用来对集合进行操作。部分方法如下： 
+
+- `public static <T> boolean addAll(Collection<T> c, T... elements)` :往集合中添加一些元素。
+- `public static void shuffle(List<?> list)` 打乱顺序 :打乱集合顺序。  
+- `public static <T> void sort(List<T> list)` :将集合中元素按照默认规则排序。  
+- `public static <T> void sort(List<T> list，Comparator<? super T> )` :将集合中元素按照指定规则排序。代码演示：
+
+代码演示：  
+
+```java
+public class CollectionsDemo {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        //原来写法
+        //list.add(12);
+        //list.add(14);
+        //list.add(15);
+        //list.add(1000);
+        //采用工具类 完成 往集合中添加元素 
+        Collections.addAll(list, 5, 222, 1，2);
+        System.out.println(list);
+        //排序方法
+        Collections.sort(list);
+        System.out.println(list);
+    }
+}
+结果：
+[5, 222, 1, 2]
+[1, 2, 5, 222]
+```
+
+代码演示之后 ，发现我们的集合按照顺序进行了排列，可是这样的顺序是采用默认的顺序，如果想要指定顺序那该
+怎么办呢？  
+
+我们发现还有个方法没有讲， `public static <T> void sort(List<T> list，Comparator<? super T> )` :将集合中
+元素按照指定规则排序。接下来讲解一下指定规则的排列。
+
+## 2.2 Comparator比较器  
+
+我们还是先研究这个方法 
+`public static <T> void sort(List<T> list)` :将集合中元素按照默认规则排序。
+不过这次存储的是字符串类型。  
+
+```java
+public class CollectionsDemo2 {
+    public static void main(String[] args) {
+        ArrayList<String>  list = new ArrayList<String>();
+        list.add("cba");
+        list.add("aba");
+        list.add("sba");
+        list.add("nba");
+        //排序方法
+        Collections.sort(list);
+        System.out.println(list);
+    }
+}
+```
+
+结果：  
+
+```java
+[aba, cba, nba, sba]
+```
+
+我们使用的是默认的规则完成字符串的排序，那么默认规则是怎么定义出来的呢？  
+
+说到排序了，简单的说就是两个对象之间比较大小，那么在JAVA中提供了两种比较实现的方式，一种是比较死板的采用 `java.lang.Comparable` 接口去实现，一种是灵活的当我需要做排序的时候在去选择的`java.util.Comparator` 接口完成。
+
+那么我们采用的 `public static <T> void sort(List<T> list)` 这个方法完成的排序，实际上要求了被排序的类型
+需要实现Comparable接口完成比较的功能，在String类型上如下：
+
+```java
+public final class String implements java.io.Serializable, Comparable<String>, CharSequence {
+  
+}
+```
+String类实现了这个接口，并完成了比较规则的定义，但是这样就把这种规则写死了，那比如我想要字符串按照第
+一个字符降序排列，那么这样就要修改String的源代码，这是不可能的了，那么这个时候我们可以使用
+
+
+`public static <T> void sort(List<T> list，Comparator<? super T> )` 方法灵活的完成，这个里面就涉及到了
+Comparator这个接口，位于位于java.util包下，排序是comparator能实现的功能之一,该接口代表一个比较器，比
+较器具有可比性！顾名思义就是做排序的，通俗地讲需要比较两个对象谁排在前谁排在后，那么比较的方法就是：
+
+- `public int compare(String o1, String o2)` ：比较其两个参数的顺序。
+
+> 两个对象比较的结果有三种：大于，等于，小于。
+> 如果要按照升序排序， 则o1 小于o2，返回（负数），相等返回0，01大于02返回（正数） 如果要按照降序排序 则o1 小于o2，返回（正数），相等返回0，01大于02返回（负数） 
+
+操作如下:  
+
+```java
+public class CollectionsDemo3 {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("cba");
+        list.add("aba");
+        list.add("sba");
+        list.add("nba");
+        //排序方法  按照第一个单词的降序
+        Collections.sort(list, new Comparator<String>() {
+                    @Override
+            public int compare(String o1, String o2) {
+                return o2.charAt(0) ‐ o1.charAt(0);
+            }
+        });
+        System.out.println(list);
+    }
+}
+```
+
+结果如下：  
+
+```java
+[sba, nba, cba, aba]
+```
+
+## 2.3 简述Comparable和Comparator两个接口的区别。  
+Comparable：强行对实现它的每个类的对象进行整体排序。这种排序被称为类的自然排序，类的compareTo方法
+被称为它的自然比较方法。只能在类中实现compareTo()一次，不能经常修改类的代码实现自己想要的排序。实现
+此接口的对象列表（和数组）可以通过Collections.sort（和Arrays.sort）进行自动排序，对象可以用作有序映射中
+的键或有序集合中的元素，无需指定比较器。
+
+
+Comparator强行对某个对象进行整体排序。可以将Comparator 传递给sort方法（如Collections.sort或
+Arrays.sort），从而允许在排序顺序上实现精确控制。还可以使用Comparator来控制某些数据结构（如有序set或
+有序映射）的顺序，或者为那些没有自然顺序的对象collection提供排序。
+
+## 2.4 练习 
+
+创建一个学生类，存储到ArrayList集合中完成指定排序操作。 
+
+Student 初始类  
+
+```java
+public class Student{
+    private String name;
+    private int age;
+    public Student() {
+    }
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getAge() {
+            return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    @Override
+    public String toString() {
+        return "Student{" +
+               "name='" + name + '\'' +
+               ", age=" + age +
+               '}';
+    }
+}
+```
+
+测试类：
+
+```java
+public class Demo {
+    public static void main(String[] args) {
+        // 创建四个学生对象 存储到集合中
+        ArrayList<Student> list = new ArrayList<Student>();
+        list.add(new Student("rose",18));
+        list.add(new Student("jack",16));
+        list.add(new Student("abc",16));
+        list.add(new Student("ace",17));
+        list.add(new Student("mark",16));
+        /*
+          让学生 按照年龄排序 升序
+         */
+//        Collections.sort(list);//要求 该list中元素类型  必须实现比较器Comparable接口
+        for (Student student : list) {
+            System.out.println(student);
+        }
+    }
+}
+```
+
+发现，当我们调用Collections.sort()方法的时候 程序报错了。  
+原因：如果想要集合中的元素完成排序，那么必须要实现比较器Comparable接口。
+于是我们就完成了Student类的一个实现，如下： 
+
+```java
+public class Student implements Comparable<Student>{
+    ....
+    @Override
+    public int compareTo(Student o) {
+        return this.age‐o.age;//升序
+    }
+}
+```
+
+再次测试，代码就OK 了效果如下：  
+
+```java
+Student{name='jack', age=16}
+Student{name='abc', age=16}
+Student{name='mark', age=16}
+Student{name='ace', age=17}
+Student{name='rose', age=18}
+```
+
+## 2.5 扩展  
+
+如果在使用的时候，想要独立的定义规则去使用 可以采用Collections.sort(List list,Comparetor c)方式，自己定义
+规则：  
+
+```java
+Collections.sort(list, new Comparator<Student>() {
+    @Override
+    public int compare(Student o1, Student o2) {
+        return o2.getAge()‐o1.getAge();//以学生的年龄降序
+    }
+});
+```
+
+效果：  
+```java
+Student{name='rose', age=18}
+Student{name='ace', age=17}
+Student{name='jack', age=16}
+Student{name='abc', age=16}
+Student{name='mark', age=16}
+```
+
+如果想要规则更多一些，可以参考下面代码：  
+
+```java
+Collections.sort(list, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                // 年龄降序
+                int result = o2.getAge()‐o1.getAge();//年龄降序
+                if(result==0){//第一个规则判断完了 下一个规则 姓名的首字母 升序
+                    result = o1.getName().charAt(0)‐o2.getName().charAt(0);
+                }
+                return result;
+            }
+        });
+```
+
+效果如下：
+
+```java
+Student{name='rose', age=18}
+Student{name='ace', age=17}
+Student{name='abc', age=16}
+Student{name='jack', age=16}
+Student{name='mark', age=16}
+```
+
+# day15 【Map】 
+
+## 主要内容  
+
+- Map 集合 
+
+## 学习目标
+
+- [ ] 能够说出Map集合特点
+- [ ] 使用Map集合添加方法保存数据
+- [ ] 使使用”键找值”的方式遍历Map集合
+- [ ] 使用”键值对”的方式遍历Map集合
+- [ ] 能够使用HashMap存储自定义键值对的数据
+- [ ] 能够使用HashMap编写斗地主洗牌发牌案例
+
+# 第一章 Map集合 
+
+1.1  概述  
+现实生活中，我们常会看到这样的一种集合：IP地址与主机名，身份证号与个人，系统用户名与系统用户对象等，
+这种一一对应的关系，就叫做映射。Java提供了专门的集合类用来存放这种对象关系的对象，即 `java.util.Map` 接
+口。  
+
+我们通过查看 Map 接口描述，发现 `Map` 接口下的集合与 `Collection` 接口下的集合，它们存储数据的形式不同，如下图。 
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/map01.png)
+
+- `Collection` 中的集合，元素是孤立存在的（理解为单身），向集合中存储元素采用一个个元素的方式存储。
+- `Map` 中的集合，元素是成对存在的(理解为夫妻)。每个元素由键与值两部分组成，通过键可以找对所对应的
+值。
+- `Collection` 中的集合称为单列集合， `Map` 中的集合称为双列集合
+- 需要注意的是， `Map` 中的集合不能包含重复的键，值可以重复；每个键只能对应一个值  
+
+## 1.2 Map 常用子类  
+通过查看Map接口描述，看到Map有多个子类，这里我们主要讲解常用的HashMap集合、LinkedHashMap集合。  
+
+- HashMap ：存储数据采用的哈希表结构，元素的存取顺序不能保证一致。由于要保证键的唯一、不重复，需
+要重写键的hashCode()方法、equals()方法。  
+
+- LinkedHashMap ：HashMap下有个子类LinkedHashMap，存储数据采用的哈希表结构+链表结构。通过链
+表结构可以保证元素的存取顺序一致；通过哈希表结构可以保证的键的唯一、不重复，需要重写键的  hashCode()方法、equals()方法。
+
+> tips：Map接口中的集合都有两个泛型变量,在使用时，要为两个泛型变量赋予数据类型。两个泛型变量的数
+> 据类型可以相同，也可以不同。  
+
+## 1.3 Map 接口中的常用方法  
+Map接口中定义了很多方法，常用的如下：
+
+- `public V put(K key, V value)` : 把指定的键与指定的值添加到Map集合中。
+- `public V remove(Object key)` : 把指定的键 所对应的键值对元素 在Map集合中删除，返回被删除元素的值。
+- `public V get(Object key)` 根据指定的键，在Map集合中获取对应的值。
+- `public Set<K> keySet()` : 获取Map集合中所有的键，存储到Set集合中。
+- `public Set<Map.Entry<K,V>> entrySet()` : 获取到Map集合中所有的键值对对象的集合(Set集合)。
+
+
+Map 接口的方法演示  
+
+```java
+public class MapDemo {
+    public static void main(String[] args) {
+        //创建 map对象
+        HashMap<String, String>  map = new HashMap<String, String>();
+        //添加元素到集合
+        map.put("黄晓明", "杨颖");
+        map.put("文章", "马伊琍");
+        map.put("邓超", "孙俪");
+        System.out.println(map);
+        //String remove(String key)
+        System.out.println(map.remove("邓超"));
+        System.out.println(map);
+        // 想要查看 黄晓明的媳妇 是谁
+        System.out.println(map.get("黄晓明"));
+        System.out.println(map.get("邓超"));   
+    }
+}
+```
+> tips:
+> 使用put方法时，若指定的键(key)在集合中没有，则没有这个键对应的值，返回null，并把指定的键值添加到集合中； 
+> 若指定的键(key)在集合中存在，则返回值为集合中键对应的值（该值为替换前的值），并把指定键所对应的值，替换成指定的新值。
+
+## 1.4 Map 集合遍历键找值方式  
+
+键找值方式：即通过元素中的键，获取键所对应的值 
+
+分析步骤：  
+  1. 获取Map中所有的键，由于键是唯一的，所以返回一个Set集合存储所有的键。方法提示: `keyset()`
+  2. 遍历键的Set集合，得到每一个键。
+  3. 根据键，获取键所对应的值。方法提示: `get(K key)`
+
+代码演示: 
+
+```java
+public class MapDemo01 {
+    public static void main(String[] args) {
+        //创建Map集合对象
+        HashMap<String, String> map = new HashMap<String,String>();
+        //添加元素到集合
+        map.put("胡歌", "霍建华");
+        map.put("郭德纲", "于谦");
+        map.put("薛之谦", "大张伟");
+        //获取所有的键  获取键集
+                Set<String> keys = map.keySet();
+        // 遍历键集 得到 每一个键
+        for (String key : keys) {
+           //key  就是键  
+            //获取对应值
+            String value = map.get(key);
+            System.out.println(key+"的CP是："+value);
+        } 
+    }
+}
+```
+
+遍历图解：  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/map02.png)
+
+## 1.5 Entry 键值对对象  
+
+我们已经知道， Map 中存放的是两种对象，一种称为key(键)，一种称为value(值)，它们在在 Map 中是一一对应关
+系，这一对对象又称做 Map 中的一个 Entry( 项) 。 Entry 将键值对的对应关系封装成了对象。即键值对对象，这
+样我们在遍历 Map 集合时，就可以从每一个键值对（ Entry ）对象中获取对应的键与对应的值。 
+
+既然Entry表示了一对键和值，那么也同样提供了获取对应键和对应值得方法： 
+
+- `public K getKey()` ：获取Entry对象中的键。 
+- `public V getValue()` ：获取Entry对象中的值。 
+
+在Map集合中也提供了获取所有Entry对象的方法：  
+
+- `public Set<Map.Entry<K,V>> entrySet()` : 获取到Map集合中所有的键值对对象的集合(Set集合)。
+
+## 1.6 Map 集合遍历键值对方式  
+
+键值对方式：即通过集合中每个键值对(Entry)对象，获取键值对(Entry)对象中的键与值。  
+
+操作步骤与图解：  
+
+1. 获取Map集合中，所有的键值对(Entry)对象，以Set集合形式返回。方法提示: `entrySet()` 。 
+2. 遍历包含键值对(Entry)对象的Set集合，得到每一个键值对(Entry)对象。   
+3. 通过键值对(Entry)对象，获取Entry对象中的键与值。 方法提示: `getkey() getValue()`
+
+```java
+public class MapDemo02 {
+    public static void main(String[] args) {
+        // 创建Map集合对象
+        HashMap<String, String> map = new HashMap<String,String>();
+        // 添加元素到集合
+        map.put("胡歌", "霍建华");
+        map.put("郭德纲", "于谦");
+        map.put("薛之谦", "大张伟");
+        // 获取 所有的 entry对象  entrySet
+        Set<Entry<String,String>> entrySet = map.entrySet();
+        // 遍历得到每一个entry对象
+        for (Entry<String, String> entry : entrySet) {
+           // 解析  
+            String key = entry.getKey();
+            String value = entry.getValue(); 
+            System.out.println(key+"的CP是:"+value);
+        }
+    }
+}
+```
+
+遍历图解：  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/map03.png)
+
+## 1.7 HashMap 存储自定义类型键值  
+
+练习：每位学生（姓名，年龄）都有自己的家庭住址。那么，既然有对应关系，则将学生对象和家庭住址存储到
+map集合中。学生作为键, 家庭住址作为值。 
+
+> 注意，学生姓名相同并且年龄相同视为同一名学生。 
+
+编写学生类：
+
+```java
+public class Student {
+     private String name;
+    private int age;
+    public Student() {
+    }
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Student student = (Student) o;
+        return age == student.age && Objects.equals(name, student.name);
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+}
+``` 
+
+编写测试类：  
+
+```java
+public class HashMapTest {
+    public static void main(String[] args) {
+        //1,创建Hashmap集合对象。
+        Map<Student,String>map = new HashMap<Student,String>();
+        //2,添加元素。
+        map.put(newStudent("lisi",28), "上海");
+        map.put(newStudent("wangwu",22), "北京");
+        map.put(newStudent("zhaoliu",24), "成都");
+        map.put(newStudent("zhouqi",25), "广州");
+        map.put(newStudent("wangwu",22), "南京");
+       
+        //3,取出元素。键找值方式
+        Set<Student>keySet = map.keySet();
+        for(Student key: keySet){
+            Stringvalue = map.get(key);
+            System.out.println(key.toString()+"....."+value);
+        }
+    }
+}
+```
+
+- 当给 HashMap中存放自定义对象时，如果自定义对象作为key存在，这时要保证对象唯一，必须复写对象的
+hashCode和equals方法(如果忘记，请回顾HashSet存放自定义对象)。 
+- 如果要保证 map中存放的key和取出的顺序一致，可以使用 `java.util.LinkedHashMap` 集合来存放。
+
+## 1.8 LinkedHashMap 
+
+我们知道HashMap保证成对元素唯一，并且查询速度很快，可是成对元素存放进去是没有顺序的，那么我们要保
+证有序，还要速度快怎么办呢？  
+
+在HashMap下面有一个子类LinkedHashMap，它是链表和哈希表组合的一个数据存储结构。  
+
+```java
+public class LinkedHashMapDemo {
+    public static void main(String[] args) {
+        LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
+        map.put("邓超", "孙俪");
+        map.put("李晨", "范冰冰");
+        map.put("刘德华", "朱丽倩");
+        Set<Entry<String, String>> entrySet = map.entrySet();
+        for (Entry<String, String> entry : entrySet) {
+            System.out.println(entry.getKey() + "  " + entry.getValue());
+        }
+    }
+}
+```
+
+结果: 
+```java
+邓超  孙俪
+李晨  范冰冰
+刘德华  朱丽倩
+```
+
+## 1.9 Map 集合练习 
+
+## 需求： 
+
+计算一个字符串中每个字符出现次数。  
+
+## 分析： 
+
+1. 获取一个字符串对象
+2. 创建一个Map集合，键代表字符，值代表次数。   
+3. 遍历字符串得到每个字符。  
+4. 判断Map中是否有该键。  
+5. 如果没有，第一次出现，存储次数为1；如果有，则说明已经出现过，获取到对应的值进行++，再次存储。     
+6. 打印最终结果  
+
+## 代码: 
+
+```java
+public class MapTest {
+public static void main(String[] args) {
+        //友情提示
+        System.out.println("请录入一个字符串:");
+        String line = new Scanner(System.in).nextLine();
+        // 定义 每个字符出现次数的方法
+        findChar(line);
+    }
+    private static void findChar(String line) {
+        //1:创建一个集合 存储  字符 以及其出现的次数
+        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        //2:遍历字符串
+        for (int i = 0; i < line.length(); i++) {
+            char c = line.charAt(i);
+            //判断 该字符 是否在键集中
+            if (!map.containsKey(c)) {//说明这个字符没有出现过
+                //那就是第一次
+                map.put(c, 1);
+            } else {
+                //先获取之前的次数
+                Integer count = map.get(c);
+                //count++;
+                //再次存入  更新
+                map.put(c, ++count);
+            }
+        }
+        System.out.println(map);
+    }
+}
+```
+
+## 第二章 补充知识点  
+
+### 2.1 JDK9 对集合添加的优化 
+
+通常，我们在代码中创建一个集合（例如，List 或 Set ），并直接用一些元素填充它。 实例化集合，几个 add方法
+调用，使得代码重复。  
+
+```java
+public class Demo01 {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("abc");
+        list.add("def");
+        list.add("ghi");
+        System.out.println(list);
+    }
+}
+```
+
+Java 9，添加了几种集合工厂方法,更方便创建少量元素的集合、map实例。新的List、Set、Map的静态工厂方法可
+以更方便地创建集合的不可变实例。 
+
+例子： 
+
+```java
+public class HelloJDK9 { 
+    public static void main(String[] args) { 
+        Set<String> str1=Set.of("a","b","c"); 
+        //str1.add("c");这里编译的时候不会错，但是执行的时候会报错，因为是不可变的集合 
+        System.out.println(str1); 
+        Map<String,Integer> str2=Map.of("a",1,"b",2); 
+        System.out.println(str2); 
+        List<String> str3=List.of("a","b"); 
+        System.out.println(str3); 
+    } 
+}
+```
+
+需要注意以下两点：
+
+> 1:of()方法只是Map，List，Set这三个接口的静态方法，其父类接口和子类实现并没有这类方法，比如HashSet，ArrayList等待；
+> 2:返回的集合是不可变的；  
+
+# 第三章 模拟斗地主洗牌发牌   
+
+## 3.1  案例介绍 
+
+按照斗地主的规则，完成洗牌发牌的动作。  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/map04.png)  
+
+具体规则： 
+1. 组装54张扑克牌将  
+2. 54张牌顺序打乱  
+3. 三个玩家参与游戏，三人交替摸牌，每人17张牌，最后三张留作底牌。  
+4. 查看三人各自手中的牌（按照牌的大小排序）、底牌
+
+> 规则：手中扑克牌从大到小的摆放顺序：大王,小王,2,A,K,Q,J,10,9,8,7,6,5,4,3 
+
+## 3.2  案例需求分析 
+
+1. 准备牌：  
+完成数字与纸牌的映射关系：
+使用双列Map(HashMap)集合，完成一个数字与字符串纸牌的对应关系(相当于一个字典)。
+
+2. 洗牌：  
+通过数字完成洗牌发牌  
+
+3. 发牌：  
+将每个人以及底牌设计为ArrayList,将最后3张牌直接存放于底牌，剩余牌通过对3取模依次发牌。
+存放的过程中要求数字大小与斗地主规则的大小对应。
+将代表不同纸牌的数字分配给不同的玩家与底牌。
+
+4. 看牌： 
+通过Map集合找到对应字符展示。
+通过查询纸牌与数字的对应关系，由数字转成纸牌字符串再进行展示。  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/map05.png)
+
+## 3.3 实现代码步骤  
+
+```java
+  public class Poker {
+    public static void main(String[] args) {
+        /*
+         * 1组装54张扑克牌
+         */
+        // 1.1 创建Map集合存储
+        HashMap<Integer, String> pokerMap = new HashMap<Integer, String>();
+        // 1.2 创建 花色集合 与 数字集合
+        ArrayList<String> colors = new ArrayList<String>();
+        ArrayList<String> numbers = new ArrayList<String>();
+        // 1.3 存储 花色 与数字
+        Collections.addAll(colors, "♦", "♣", "♥", "♠");
+        Collections.addAll(numbers, "2", "A", "K", "Q", "J", "10", "9", "8", "7", "6", "5", "4",
+"3");
+        // 设置 存储编号变量
+        int count = 1;
+        pokerMap.put(count++, "大王");
+        pokerMap.put(count++, "小王");
+        // 1.4 创建牌 存储到map集合中
+        for (String number : numbers) {
+            for (String color : colors) {
+                String card = color + number;
+                pokerMap.put(count++, card);
+            }
+        }
+        /*
+         * 2 将54张牌顺序打乱
+         */
+        // 取出编号 集合
+        Set<Integer> numberSet = pokerMap.keySet();
+        // 因为要将编号打乱顺序 所以 应该先进行转换到 list集合中
+        ArrayList<Integer> numberList = new ArrayList<Integer>();
+        numberList.addAll(numberSet);
+        // 打乱顺序
+        Collections.shuffle(numberList);
+                // 3 完成三个玩家交替摸牌，每人17张牌，最后三张留作底牌
+        // 3.1 发牌的编号
+        // 创建三个玩家编号集合 和一个 底牌编号集合
+        ArrayList<Integer> noP1 = new ArrayList<Integer>();
+        ArrayList<Integer> noP2 = new ArrayList<Integer>();
+        ArrayList<Integer> noP3 = new ArrayList<Integer>();
+        ArrayList<Integer> dipaiNo = new ArrayList<Integer>();
+        // 3.2发牌的编号
+        for (int i = 0; i < numberList.size(); i++) {
+            // 获取该编号
+            Integer no = numberList.get(i);
+            // 发牌
+            // 留出底牌
+            if (i >= 51) {
+                dipaiNo.add(no);
+            } else {
+                if (i % 3 == 0) {
+                    noP1.add(no);
+                } else if (i % 3 == 1) {
+                    noP2.add(no);
+                } else {
+                    noP3.add(no);
+                }
+            }
+        }
+        // 4 查看三人各自手中的牌（按照牌的大小排序）、底牌
+        // 4.1 对手中编号进行排序
+        Collections.sort(noP1);
+        Collections.sort(noP2);
+        Collections.sort(noP3);
+        Collections.sort(dipaiNo);
+        // 4.2 进行牌面的转换
+        // 创建三个玩家牌面集合 以及底牌牌面集合
+        ArrayList<String> player1 = new ArrayList<String>();
+        ArrayList<String> player2 = new ArrayList<String>();
+        ArrayList<String> player3 = new ArrayList<String>();
+        ArrayList<String> dipai = new ArrayList<String>();
+        // 4.3转换
+        for (Integer i : noP1) {
+            // 4.4 根据编号找到 牌面 pokerMap
+            String card = pokerMap.get(i);
+            // 添加到对应的 牌面集合中
+            player1.add(card);
+        }
+        for (Integer i : noP2) {
+            String card = pokerMap.get(i);
+            player2.add(card);
+                }
+        for (Integer i : noP3) {
+            String card = pokerMap.get(i);
+            player3.add(card);
+        }
+        for (Integer i : dipaiNo) {
+            String card = pokerMap.get(i);
+            dipai.add(card);
+        }
+        //4.5 查看
+        System.out.println("令狐冲："+player1);
+        System.out.println("石破天："+player2);
+        System.out.println("鸠摩智："+player3);
+        System.out.println("底牌："+dipai);
+    }
+}
+```
+
+# day16 【异常、线程】
+
+## 主要内容  
+
+- 异常、线程 
+
+## 学习目标 
+
+- [ ] 能够辨别程序中异常和错误的区别  
+- [ ] 说出异常的分类   
+- [ ] 说出虚拟机处理异常的方式   
+- [ ] 列举出常见的三个运行期异常   
+- [ ] 能够使用try...catch关键字处理异常   
+- [ ] 能够使用throws关键字处理异常   
+- [ ] 能够自定义异常类   
+- [ ] 能够处理自定义异常类  
+- [ ] 说出进程的概念  
+- [ ] 说出线程的概念   
+- [ ] 能够理解并发与并行的区别   
+- [ ] 能够开启新线程   
+
+# 第一章 异常 
+
+## 1.1 异常概念  
+
+异常，就是不正常的意思。在生活中:医生说,你的身体某个部位有异常,该部位和正常相比有点不同,该部位的功能将
+受影响.在程序中的意思就是：  
+
+异常 ：指的是程序在执行过程中，出现的非正常的情况，最终会导致JVM的非正常停止。  
+
+在Java等面向对象的编程语言中，异常本身是一个类，产生异常就是创建异常对象并抛出了一个异常对象。Java处
+理异常的方式是中断处理。
+
+> 异常指的并不是语法错误,语法错了,编译不通过,不会产生字节码文件,根本不能运行.  
+
+## 1.2 异常体系  
+
+异常机制其实是帮助我们找到程序中的问题，异常的根类是 `java.lang.Throwable` ，其下有两个子类：`java.lang.Error` 与 `java.lang.Exception` ，平常所说的异常指 `java.lang.Exception` 。  
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%BC%82%E5%B8%B801.png)   
+
+### Throwable体系： 
+
+- Error:严重错误Error，无法通过处理的错误，只能事先避免，好比绝症。  
+- Exception:表示异常，异常产生后程序员可以通过代码的方式纠正，使程序继续运行，是必须要处理的。好比感冒、阑尾炎。   
+
+### Throwable中的常用方法：  
+
+- `public void printStackTrace()` :打印异常的详细信息。  
+  包含了异常的类型,异常的原因,还包括异常出现的位置,在开发和调试阶段,都得使用printStackTrace。   
+
+- `public String getMessage()` :获取发生异常的原因。 
+  提示给用户的时候,就提示错误原因。  
+
+- `public String toString()` :获取异常的类型和异常描述信息(不用)。  
+
+## 1.3 异常分类  
+
+我们平常说的异常就是指Exception，因为这类异常一旦出现，我们就要对代码进行更正，修复程序。  
+异常(Exception)的分类:根据在编译时期还是运行时期去检查异常? 
+
+- 编译时期异常:checked异常。在编译时期,就会检查,如果没有处理异常,则编译失败。(如日期格式化异常)  
+- 运行时期异常:runtime异常。在运行时期,检查异常.在编译时期,运行异常不会编译器检测(不报错)。(如数学异常)  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%BC%82%E5%B8%B802.png)  
+
+## 1.4 异常的产生过程解析  
+
+先运行下面的程序，程序会产生一个数组索引越界异常ArrayIndexOfBoundsException。我们通过图解来解析下
+异常产生的过程。  
+
+工具类  
+
+```java
+public class ArrayTools {
+    // 对给定的数组通过给定的角标获取元素。
+    public static int getElement(int[] arr, int index) {
+        int element = arr[index];
+        return element;
+    }
+}
+```
+
+测试类  
+```java
+public class ExceptionDemo {
+    public static void main(String[] args) {
+        int[] arr = { 34, 12, 67 };
+        intnum = ArrayTools.getElement(arr, 4)
+        System.out.println("num=" + num);
+        System.out.println("over");
+    }
+}
+```
+
+上述程序执行过程图解： 
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%BC%82%E5%B8%B803.png)  
+
+# 第二章 异常的处理  
+
+java异常处理的五个关键字：try、catch、finally、throw、throws  
+
+## 2.1 抛出异常throw  
+在编写程序时，我们必须要考虑程序出现问题的情况。比如，在定义方法时，方法需要接受参数。那么，当调用方法使用接受到的参数时，首先需要先对参数数据进行合法的判断，数据若不合法，就应该告诉调用者，传递合法的数据进来。这时需要使用抛出异常的方式来告诉调用者。
+
+在java中，提供了一个throw关键字，它用来抛出一个指定的异常对象。那么，抛出一个异常具体如何操作呢？  
+1. 创建一个异常对象。封装一些提示信息(信息可以自己编写)。
+2. 需要将这个异常对象告知给调用者。怎么告知呢？怎么将这个异常对象传递到调用者处呢？通过关键字throw就可以完成。throw 异常对象。
+throw用在方法内，用来抛出一个异常对象，将这个异常对象传递到调用者处，并结束当前方法的执行。
+
+使用格式：
+
+```java
+throw new 异常类名(参数);
+```
+
+例如：  
+
+```java
+throw new NullPointerException("要访问的arr数组不存在");
+
+throw new ArrayIndexOutOfBoundsException("该索引在数组中不存在，已超出范围");
+```
+
+学习完抛出异常的格式后，我们通过下面程序演示下throw的使用。  
+
+```java
+public class ThrowDemo {
+    public static void main(String[] args) {
+        //创建一个数组
+        int[] arr = {2,4,52,2};
+        //根据索引找对应的元素
+        int index = 4;
+        int element = getElement(arr, index);
+        System.out.println(element);
+        System.out.println("over");
+    }
+    /*
+     * 根据 索引找到数组中对应的元素
+     */
+    public static int getElement(int[] arr,int index){
+       //判断  索引是否越界 
+        if(index<0 || index>arr.length‐1){
+             /*
+             判断条件如果满足，当执行完throw抛出异常对象后，方法已经无法继续运算。
+             这时就会结束当前方法的执行，并将异常告知给调用者。这时就需要通过异常来解决。
+              */
+             throw new ArrayIndexOutOfBoundsException("哥们，角标越界了~~~");
+        }
+        int element = arr[index];
+        return element;
+    }
+}
+```
+> 注意：如果产生了问题，我们就会throw将问题描述类即异常进行抛出，也就是将问题返回给该方法的调用者。
+> 那么对于调用者来说，该怎么处理呢？一种是进行捕获处理，另一种就是继续讲问题声明出去，使用throws声明处理。
+
+## 2.2 Objects非空判断  
+
+还记得我们学习过一个类Objects吗，曾经提到过它由一些静态的实用方法组成，这些方法是null-save（空指针安
+全的）或null-tolerant（容忍空指针的），那么在它的源码中，对对象为null的值进行了抛出异常操作。
+
+- `public static <T> T requireNonNull(T obj)` :查看指定引用对象不是null。
+
+查看源码发现这里对为null的进行了抛出异常操作：  
+
+```java
+public static <T> T requireNonNull(T obj) {
+    if (obj == null)
+       throw new NullPointerException();  
+    return obj;
+}
+```
+
+## 2.3 声明异常throws  
+
+声明异常：将问题标识出来，报告给调用者。如果方法内通过throw抛出了编译时异常，而没有捕获处理（稍后讲
+解该方式），那么必须通过throws进行声明，让调用者去处理。   
+
+关键字throws运用于方法声明之上,用于表示当前方法不处理异常,而是提醒该方法的调用者来处理异常(抛出异常).  
+
+声明异常格式：  
+
+```java
+修饰符 返回值类型 方法名(参数) throws 异常类名1,异常类名2…{   }   
+```
+
+声明异常的代码演示：  
+
+```java
+public class ThrowsDemo {
+    public static void main(String[] args) throws FileNotFoundException {
+        read("a.txt");
+    }
+    // 如果定义功能时有问题发生需要报告给调用者。可以通过在方法上使用throws关键字进行声明
+    public static void read(String path) throws FileNotFoundException {
+        if (!path.equals("a.txt")) {//如果不是 a.txt这个文件
+            // 我假设  如果不是 a.txt 认为 该文件不存在 是一个错误 也就是异常  throw
+            throw new FileNotFoundException("文件不存在");
+        }
+    }
+}
+
+```
+
+throws用于进行异常类的声明，若该方法可能有多种异常情况产生，那么在throws后面可以写多个异常类，用逗
+号隔开。
+
+```java
+public class ThrowsDemo2 {
+    public static void main(String[] args) throws IOException {
+        read("a.txt");
+    }
+    public static void read(String path)throws FileNotFoundException, IOException {
+        if (!path.equals("a.txt")) {//如果不是 a.txt这个文件
+            // 我假设  如果不是 a.txt 认为 该文件不存在 是一个错误 也就是异常  throw
+            throw new FileNotFoundException("文件不存在");
+        }
+        if (!path.equals("b.txt")) {
+            throw new IOException();
+        }
+    }
+}
+```
+
+## 2.4 捕获异常try…catch  
+
+如果异常出现的话,会立刻终止程序,所以我们得处理异常:  
+1. 该方法不处理,而是声明抛出,由该方法的调用者来处理(throws)。   
+2. 在方法中使用try-catch的语句块来处理异常。  
+
+try-catch的方式就是捕获异常。  
+
+- 捕获异常：Java中对异常有针对性的语句进行捕获，可以对出现的异常进行指定方式的处理。
+
+捕获异常语法如下： 
+```java
+try{
+     编写可能会出现异常的代码
+}catch(异常类型  e){
+     处理异常的代码
+     //记录日志/打印异常信息/继续抛出异常
+}
+```
+**try**：该代码块中编写可能产生异常的代码。
+**catch**：该代码块中编写可能产生异常的代码。
+> 注意:try和catch都不能单独使用,必须连用。  
+
+演示如下：  
+
+```java
+public class TryCatchDemo {
+    public static void main(String[] args) {
+        try {// 当产生异常时，必须有处理方式。要么捕获，要么声明。
+            read("b.txt");
+        } catch (FileNotFoundException e) {// 括号中需要定义什么呢？
+           //try中抛出的是什么异常，在括号中就定义什么异常类型  
+            System.out.println(e);
+        }
+        System.out.println("over");
+    }
+    /*
+     *
+     * 我们 当前的这个方法中 有异常  有编译期异常
+     */
+    public static void read(String path) throws FileNotFoundException {
+        if (!path.equals("a.txt")) {//如果不是 a.txt这个文件
+            // 我假设  如果不是 a.txt 认为 该文件不存在 是一个错误 也就是异常  throw
+            throw new FileNotFoundException("文件不存在");
+        }
+    }
+}
+```  
+
+如何获取异常信息：  
+
+Throwable类中定义了一些查看方法:  
+- `public String getMessage()` :获取异常的描述信息,原因(提示给用户的时候,就提示错误原因。 
+- `public String toString()` :获取异常的描述信息,原因(提示给用户的时候,就提示错误原因。 
+- `public void printStackTrace()` :打印异常的跟踪栈信息并输出到控制台。
+
+包含了异常的类型,异常的原因,还包括异常出现的位置,在开发和调试阶段,都得使用printStackTrace。  
+
+## 2.4 finally 代码块  
+
+finally：有一些特定的代码无论异常是否发生，都需要执行。另外，因为异常会引发程序跳转，导致有些语句执行
+不到。而finally就是解决这个问题的，在finally代码块中存放的代码都是一定会被执行的。  
+
+什么时候的代码必须最终执行？  
+
+当我们在try语句块中打开了一些物理资源(磁盘文件/网络连接/数据库连接等),我们都得在使用完之后,最终关闭打开
+的资源。
+
+finally的语法:  
+
+try...catch....finally:自身需要处理异常,最终还得关闭资源。  
+
+> 注意:finally不能单独使用。  
+
+比如在我们之后学习的IO流中，当打开了一个关联文件的资源，最后程序不管结果如何，都需要把这个资源关闭掉。
+
+finally代码参考如下： 
+
+```java
+public class TryCatchDemo4 {
+    public static void main(String[] args) {
+        try {
+            read("a.txt");
+        } catch (FileNotFoundException e) {
+            //抓取到的是编译期异常  抛出去的是运行期
+            throw new RuntimeException(e);
+        } finally {
+            System.out.println("不管程序怎样，这里都将会被执行。");
+        }
+        System.out.println("over");
+    }
+    /*
+     *
+     * 我们 当前的这个方法中 有异常  有编译期异常
+     */
+    public static void read(String path) throws FileNotFoundException {
+        if (!path.equals("a.txt")) {//如果不是 a.txt这个文件
+            // 我假设  如果不是 a.txt 认为 该文件不存在 是一个错误 也就是异常  throw
+            throw new FileNotFoundException("文件不存在");
+        }
+    }
+}
+```
+
+> 当只有在try或者catch中调用退出JVM的相关方法,此时finally才不会执行,否则finally永远会执行。  
+
+## 2.5 异常注意事项  
+
+- 多个异常使用捕获又该如何处理呢？ 
+  1. 多个异常分别处理。
+  2. 多个异常一次捕获，多次处理。
+  3. 多个异常一次捕获一次处理。  
+
+一般我们是使用一次捕获多次处理方式，格式如下：  
+
+```java
+try{
+     编写可能会出现异常的代码
+}catch(异常类型A  e){  当try中出现A类型异常,就用该catch来捕获.
+     处理异常的代码
+     //记录日志/打印异常信息/继续抛出异常
+}catch(异常类型B  e){  当try中出现B类型异常,就用该catch来捕获.
+     处理异常的代码
+     //记录日志/打印异常信息/继续抛出异常
+}
+```
+
+> 注意:这种异常处理方式，要求多个catch中的异常不能相同，并且若catch中的多个异常之间有子父类异常的关系，那么子类异常要求在上面的catch处理，父类异常在下面的catch处理
+
+- 运行时异常被抛出可以不处理。即不捕获也不声明抛出。  
+
+- 如果finally有return语句,永远返回finally中的结果,避免该情况.  
+
+- 如果父类抛出了多个异常,子类重写父类方法时,抛出和父类相同的异常或者是父类异常的子类或者不抛出异常。
+
+- 父类方法没有抛出异常，子类重写父类该方法时也不可抛出异常。此时子类产生该异常，只能捕获处理，不能声明抛出
+
+# 第三章 自定义异常  
+
+## 3.1 概述 
+
+为什么需要自定义异常类:  
+
+我们说了Java中不同的异常类,分别表示着某一种具体的异常情况,那么在开发中总是有些异常情况是SUN没有定义
+好的,此时我们根据自己业务的异常情况来定义异常类。例如年龄负数问题,考试成绩负数问题等等。
+
+在上述代码中，发现这些异常都是JDK内部定义好的，但是实际开发中也会出现很多异常,这些异常很可能在JDK中
+没有定义过,例如年龄负数问题,考试成绩负数问题.那么能不能自己定义异常呢？  
+
+什么是自定义异常类:  
+
+在开发中根据自己业务的异常情况来定义异常类.  
+
+自定义一个业务逻辑异常: RegisterException。一个注册异常类。  
+
+异常类如何定义:
+
+1. 自定义一个编译期异常: 自定义类 并继承于`java.lang.Exception` 。  
+2. 自定义一个运行时期的异常类:自定义类 并继承于 `java.lang.RuntimeException` 。
+
+## 3.2 自定义异常的练习  
+
+要求：我们模拟注册操作，如果用户名已存在，则抛出异常并提示：亲，该用户名已经被注册。  
+首先定义一个登陆异常类RegisterException： 
+
+```java
+// 业务逻辑异常
+public class RegisterException extends Exception {
+    /**
+     * 空参构造
+     */
+    public RegisterException() {
+    }
+    /**
+     *
+     * @param message 表示异常提示
+     */
+    public RegisterException(String message) {
+        super(message);
+    }
+}
+```
+
+模拟登陆操作，使用数组模拟数据库中存储的数据，并提供当前注册账号是否存在方法用于判断。  
+
+```java
+public class Demo {
+    // 模拟数据库中已存在账号
+    private static String[] names = {"bill","hill","jill"};
+  
+    public static void main(String[] args) {    
+        //调用方法
+        try{
+              // 可能出现异常的代码
+            checkUsername("nill");
+            System.out.println("注册成功");//如果没有异常就是注册成功
+        }catch(RegisterException e){
+            //处理异常
+            e.printStackTrace();
+        }
+    }
+    //判断当前注册账号是否存在
+    //因为是编译期异常，又想调用者去处理 所以声明该异常
+    public static boolean checkUsername(String uname) throws LoginException{
+        for (String name : names) {
+            if(name.equals(uname)){//如果名字在这里面 就抛出登陆异常
+                throw new RegisterException("亲"+name+"已经被注册了！");
+            }
+        }
+        return true;
+    }
+}
+```
+
+# 第四章 多线程 
+
+我们在之前，学习的程序在没有跳转语句的前提下，都是由上至下依次执行，那现在想要设计一个程序，边打游戏
+边听歌，怎么设计？
+
+要解决上述问题,咱们得使用多进程或者多线程来解决.  
+
+## 4.1 并发与并行 
+
+- 并发：指两个或多个事件在同一个时间段内发生。
+- 并行：指两个或多个事件在同一时刻发生（同时发生）。  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B01.png) 
+
+
+在操作系统中，安装了多个程序，并发指的是在一段时间内宏观上有多个程序同时运行，这在单 CPU 系统中，每
+一时刻只能有一道程序执行，即微观上这些程序是分时的交替运行，只不过是给人的感觉是同时运行，那是因为分
+时交替运行的时间是非常短的。  
+
+而在多个 CPU 系统中，则这些可以并发执行的程序便可以分配到多个处理器上（CPU），实现多任务并行执行，
+即利用每个处理器来处理一个可以并发执行的程序，这样多个程序便可以同时执行。目前电脑市场上说的多核
+CPU，便是多核处理器，核 越多，并行处理的程序越多，能大大的提高电脑运行的效率。
+
+> 注意：单核处理器的计算机肯定是不能并行的处理多个任务的，只能是多个任务在单个CPU上并发运行。同理,线程也是一样的，从宏观角度上理解线程是并行运行的，但是从微观角度上分析却是串行运行的，即一个线程一个线程的去运行，当系统只有一个CPU时，线程会以某种顺序执行多个线程，我们把这种情况称之为线程调度。
+
+## 4.2 线程与进程  
+
+- 进程：是指一个内存中运行的应用程序，每个进程都有一个独立的内存空间，一个应用程序可以同时运行多个进程；进程也是程序的一次执行过程，是系统运行程序的基本单位；系统运行一个程序即是一个进程从创建、运行到消亡的过程。
+
+- 线程：线程是进程中的一个执行单元，负责当前进程中程序的执行，一个进程中至少有一个线程。一个进程中是可以有多个线程的，这个应用程序也可以称之为多线程程序。
+
+简而言之：一个程序运行后至少有一个进程，一个进程中可以包含多个线程  
+
+我们可以再电脑底部任务栏，右键----->打开任务管理器,可以查看当前任务的进程：
+
+进程  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B02.png)  
+
+
+线程:
+
+线程调度:  
+- 分时调度 
+  所有线程轮流使用 CPU 的使用权，平均分配每个线程占用 CPU 的时间。
+
+- 抢占式调度
+  优先让优先级高的线程使用 CPU，如果线程的优先级相同，那么会随机选择一个(线程随机性)，Java使用的为抢占式调度。
+
+  - 设置线程的优先级
+  ![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B03.png)
+
+  - 抢占式调度详解  
+    大部分操作系统都支持多进程并发运行，现在的操作系统几乎都支持同时运行多个程序。比如：现在我们上课一边使用编辑器，一边使用录屏软件，同时还开着画图板，
+    dos窗口等软件。此时，这些程序是在同时运行，”感觉这些软件好像在同一时刻运行着“。
+
+    实际上，CPU(中央处理器)使用抢占式调度模式在多个线程间进行着高速的切换。对于CPU的一个核而言，某个时刻，只能执行一个线程，而 CPU的在多个线程间切换速度相对我们的感觉要快，看上去就是在同一时刻运行。 其实，多线程程序并不能提高程序的运行速度，但能够提高程序运行效率，让CPU的使用率更高。
+
+    ![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B04.png)
+
+ ## 4.3 创建线程类    
+
+ Java使用 `java.lang.Thread` 类代表线程，所有的线程对象都必须是Thread类或其子类的实例。每个线程的作用是
+完成一定的任务，实际上就是执行一段程序流即一段顺序执行的代码。Java使用线程执行体来代表这段程序流。
+Java中通过继承Thread类来创建并启动多线程的步骤如下：
+
+1. 定义Thread类的子类，并重写该类的run()方法，该run()方法的方法体就代表了线程需要完成的任务,因此把
+run()方法称为线程执行体。  
+
+2. 创建Thread子类的实例，即创建了线程对象  
+
+3. 调用线程对象的start()方法来启动该线程
+
+代码如下：  
+
+测试类：  
+
+```
+public class Demo01 {
+  public static void main(String[] args) {    
+    //创建自定义线程对象        
+    MyThread mt = new MyThread("新的线程！");        
+    //开启新线程        
+    mt.start();        
+    //在主方法中执行for循环        
+    for (int i = 0; i < 10; i++) {        
+      System.out.println("main线程！"+i);            
+    }        
+  }    
+}
+```
+
+自定义线程类：  
+
+```java
+public class MyThread extends Thread {
+//定义指定线程名称的构造方法    
+public MyThread(String name) {    
+//调用父类的String参数的构造方法，指定线程的名称        
+super(name);        
+} 
+/**    
+ * 重写run方法，完成该线程执行的逻辑    
+ */    
+@Override    
+  public void run() {    
+    for (int i = 0; i < 10; i++) {        
+        System.out.println(getName()+"：正在执行！"+i);            
+    }        
+  }    
+}
+```
+
+# day17 【线程、同步】  
+
+## 主要内容  
+
+- 线程
+- 同步
+- 线程状态  
+
+## 学习目标
+
+- [ ]  能够描述Java中多线程运行原理
+- [ ]  能够使用继承类的方式创建多线程
+- [ ]  能够使用实现接口的方式创建多线程
+- [ ]  能够说出实现接口方式的好处
+- [ ]  能够解释安全问题的出现的原因
+- [ ]  能够使用同步代码块解决线程安全问题
+- [ ]  能够使用同步方法解决线程安全问题
+- [ ]  能够说出线程6个状态的名称   
+
+# 第一章 线程  
+
+## 1.1  多线程原理  
+昨天的时候我们已经写过一版多线程的代码，很多同学对原理不是很清楚，那么我们今天先画个多线程执行时序图
+来体现一下多线程程序的执行流程。
+
+代码如下： 
+自定义线程类：
+
+```java
+public class MyThread extends Thread{
+  /*    
+   * 利用继承中的特点     
+   *   将线程名称传递  进行设置    
+   */    
+  public MyThread(String name){    
+    super(name);        
+  }    
+  /*    
+   * 重写run方法    
+   *  定义线程要执行的代码    
+   */    
+  public void run(){           
+    for (int i = 0; i < 20; i++) { 
+      //getName()方法 来自父亲 
+      System.out.println(getName()+i);            
+    }        
+  }    
+}
+```
+
+测试类：  
+```java
+public class Demo {
+    public static void main(String[] args) {
+        System.out.println("这里是main线程"); 
+     
+        MyThread mt = new MyThread("小强");  
+              
+        mt.start();//开启了一个新的线程    
+
+        for (int i = 0; i < 20; i++) {    
+          System.out.println("旺财:"+i);            
+        }        
+    }    
+}
+```
+
+流程图：
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B05.png)  
+
+程序启动运行 main时候，java虚拟机启动一个进程，主线程main在main()调用时候被创建。随着调用mt的对象的
+start方法，另外一个新的线程也启动了，这样，整个应用就在多线程下运行。    
+
+通过这张图我们可以很清晰的看到多线程的执行流程，那么为什么可以完成并发执行呢？我们再来讲一讲原理。    
+
+多线程执行时，到底在内存中是如何运行的呢？以上个程序为例，进行图解说明：   
+
+多线程执行时，在栈内存中，其实每一个执行线程都有一片自己所属的栈内存空间。进行方法的压栈和弹栈。  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B06.png)  
+
+当执行线程的任务结束了，线程自动在栈内存中释放了。但是当所有的执行线程都结束了，那么进程就结束了。
+
+
+## 1.2 Thread 类   
+
+在上一天内容中我们已经可以完成最基本的线程开启，那么在我们完成操作过程中用到了 java.lang.Thread 类，
+API中该类中定义了有关线程的一些方法，具体如下：
+
+###  构造方法：
+
+- `public Thread()` :分配一个新的线程对象。  
+- `public Thread(String name)` :分配一个指定名字的新的线程对象。  
+- `public Thread(Runnable target)` :分配一个带有指定目标新的线程对象。
+- `public Thread(Runnable target,String name)` :分配一个带有指定目标新的线程对象并指定名字。
+
+### 常用方法： 
+
+- `public String getName()` :获取当前线程名称。 
+- `public void start()` :导致此线程开始执行; Java虚拟机调用此线程的run方法。  
+- `public void run()` :此线程要执行的任务在此处定义代码。  
+- `public static void sleep(long millis)` :使当前正在执行的线程以指定的毫秒数暂停（暂时停止执行）。 
+- `public static Thread currentThread()` :返回对当前正在执行的线程对象的引用。
+
+翻阅API后得知创建线程的方式总共有两种，一种是继承Thread类方式，一种是实现Runnable接口方式，方式一我
+们上一天已经完成，接下来讲解方式二实现的方式。
+
+## 1.3  创建线程方式二 
+采用 `java.lang.Runnable` 也是非常常见的一种，我们只需要重写run方法即可。
+
+步骤如下：  
+1. 定义Runnable接口的实现类，并重写该接口的run()方法，该run()方法的方法体同样是该线程的线程执行体。
+2. 创建Runnable实现类的实例，并以此实例作为Thread的target来创建Thread对象，该Thread对象才是真正的线程对象。
+3. 调用线程对象的start()方法来启动线程。  
+
+代码如下：
+
+```java
+public class MyRunnable implements Runnable{
+  @Override    
+  public void run() {    
+    for (int i = 0; i < 20; i++) {        
+      System.out.println(Thread.currentThread().getName()+" "+i);            
+    }        
+  }    
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        //创建自定义类对象  线程任务对象
+        MyRunnable mr = new MyRunnable();
+        //创建线程对象
+        Thread t = new Thread(mr, "小强");
+        t.start();
+        for (int i = 0; i < 20; i++) {
+            System.out.println("旺财 " + i);
+        }
+    }
+}
+```
+
+通过实现 Runnable接口，使得该类有了多线程类的特征。run()方法是多线程程序的一个执行目标。所有的多线程
+代码都在run方法里面。Thread类实际上也是实现了Runnable接口的类。  
+
+在启动的多线程的时候，需要先通过Thread类的构造方法Thread(Runnable target) 构造出对象，然后调用Thread
+对象的start()方法来运行多线程代码。  
+
+实际上所有的多线程代码都是通过运行Thread的start()方法来运行的。因此，不管是继承Thread类还是实现
+Runnable接口来实现多线程，最终还是通过Thread的对象的API来控制线程的，熟悉Thread类的API是进行多线程编程的基础。
+
+> tips:Runnable对象仅仅作为Thread对象的target，Runnable实现类里包含的run()方法仅作为线程执行体。而实际的线程对象依然是Thread实例，只是该Thread线程负责执行其target的run()方法。
+
+## 1.4 Thread 和Runnable的区别  
+
+如果一个类继承Thread，则不适合资源共享。但是如果实现了Runable接口的话，则很容易的实现资源共享。 
+
+总结：  
+
+实现Runnable接口比继承Thread类所具有的优势：  
+
+1. 适合多个相同的程序代码的线程去共享同一个资源。 
+2. 可以避免java中的单继承的局限性。 
+3. 增加程序的健壮性，实现解耦操作，代码可以被多个线程共享，代码和线程独立。 
+4. 线程池只能放入实现Runable或Callable类线程，不能直接放入继承Thread的类。
+
+>扩充：在java中，每次程序运行至少启动2个线程。一个是main线程，一个是垃圾收集线程。因为每当使用java命令执行一个类的时候，实际上都会启动一个JVM，每一个JVM其实在就是在操作系统中启动了一个进程。
+
+
+## 1.5  匿名内部类方式实现线程的创建  
+
+使用线程的内匿名内部类方式，可以方便的实现每个线程执行不同的线程任务操作。  
+
+使用匿名内部类的方式实现Runnable接口，重新Runnable接口中的run方法： 
+
+```java
+  public class NoNameInnerClassThread {
+   public static void main(String[] args) {            
+// new Runnable(){      
+// public void run(){          
+// for (int i = 0; i < 20; i++) {              
+// System.out.println("张宇:"+i);                  
+// }              
+// }            
+//    }; //‐‐‐这个整体  相当于new MyRunnable()    
+        Runnable r = new Runnable(){
+            public void run(){
+                for (int i = 0; i < 20; i++) {
+                   System.out.println("张宇:"+i);  
+                }
+            } 
+        };
+        new Thread(r).start();
+        for (int i = 0; i < 20; i++) {
+           System.out.println("费玉清:"+i);  
+        }
+   } 
+}
+```
+
+# 第二章 线程安全  
+
+## 2.1  线程安全 
+
+如果有多个线程在同时运行，而这些线程可能会同时运行这段代码。程序每次运行结果和单线程运行的结果是一样
+的，而且其他的变量的值也和预期的是一样的，就是线程安全的。  
+
+我们通过一个案例，演示线程的安全问题：  
+
+电影院要卖票，我们模拟电影院的卖票过程。假设要播放的电影是 “葫芦娃大战奥特曼”，本次电影的座位共100个
+(本场电影只能卖100张票)。
+
+我们来模拟电影院的售票窗口，实现多个窗口同时卖 “葫芦娃大战奥特曼”这场电影票(多个窗口一起卖这100张票)
+
+需要窗口，采用线程对象来模拟；需要票，Runnable接口子类来模拟
+
+模拟票：
+
+```java
+public class Ticket implements Runnable {
+    private int ticket = 100;
+    /*
+     * 执行卖票操作
+     */
+    @Override
+    public void run() {
+        //每个窗口卖票的操作
+        //窗口 永远开启
+        while (true) {
+            if (ticket > 0) {//有票 可以卖
+                //出票操作
+                //使用sleep模拟一下出票时间
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    // TODO Auto‐generated catch block
+                    e.printStackTrace();
+                }
+                //获取当前线程对象的名字
+                String name = Thread.currentThread().getName();
+                System.out.println(name + "正在卖:" + ticket‐‐);
+            }
+        }
+    }
+}
+```
+
+测试类：
+
+```java
+public class Demo {
+  public static void main(String[] args) {    
+    //创建线程任务对象        
+    Ticket ticket = new Ticket();        
+    //创建三个窗口对象        
+    Thread t1 = new Thread(ticket, "窗口1");        
+    Thread t2 = new Thread(ticket, "窗口2");        
+    Thread t3 = new Thread(ticket, "窗口3");        
+           
+    //同时卖票        
+    t1.start();        
+    t2.start();        
+    t3.start();        
+  }    
+}
+```
+
+结果中有一部分这样现象：  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B07.png)  
+
+发现程序出现了两个问题：  
+
+1. 相同的票数,比如5这张票被卖了两回。
+2. 不存在的票，比如0票与-1票，是不存在的。   
+
+这种问题，几个窗口(线程)票数不同步了，这种问题称为线程不安全。  
+
+> 线程安全问题都是由全局变量及静态变量引起的。若每个线程中对全局变量、静态变量只有读操作，而无写操作，一般来说，这个全局变量是线程安全的；若有多个线程同时执行写操作，一般都需要考虑线程同步，否则的话就可能影响线程安全。
+
+## 2.2  线程同步  
+
+当我们使用多个线程访问同一资源的时候，且多个线程中对资源有写的操作，就容易出现线程安全问题。 
+
+要解决上述多线程并发访问一个资源的安全性问题:也就是解决重复票与不存在票问题，Java中提供了同步机制
+(synchronized)来解决。  
+
+根据案例简述：  
+
+```java
+窗口1线程进入操作的时候，窗口2和窗口3线程只能在外等着，窗口1操作结束，窗口1和窗口2和窗口3才有机会进入代码
+去执行。也就是说在某个线程修改共享资源的时候，其他线程不能修改该资源，等待修改完毕同步之后，才能去抢夺CPU
+资源，完成对应的操作，保证了数据的同步性，解决了线程不安全的现象。
+
+```
+
+为了保证每个线程都能正常执行原子操作,Java引入了线程同步机制。  
+
+那么怎么去使用呢？有三种方式完成同步操作：  
+
+1. 同步代码块。
+2. 同步方法。
+3. 锁机制。
+
+## 2.3  同步代码块  
+
+- 同步代码块 ： synchronized 关键字可以用于方法中的某个区块中，表示只对这个区块的资源实行互斥访问。  
+
+格式:  
+
+```java
+synchronized(同步锁){
+     需要同步操作的代码
+}
+```
+
+同步锁:  
+对象的同步锁只是一个概念,可以想象为在对象上标记了一个锁.
+
+1. 锁对象 可以是任意类型。 
+2. 多个线程对象 要使用同一把锁。
+
+> 注意:在任何时候,最多允许一个线程拥有同步锁,谁拿到锁就进入代码块,其他的线程只能在外等着(BLOCKED)。
+
+使用同步代码块解决代码： 
+
+```java
+public class Ticket implements Runnable{
+  private int ticket = 100;    
+     
+  Object lock = new Object();    
+  /*    
+   * 执行卖票操作    
+   */    
+  @Override    
+  public void run() {    
+    //每个窗口卖票的操作         
+    //窗口 永远开启         
+    while(true){        
+      synchronized (lock) {            
+        if(ticket>0){//有票 可以卖                
+          //出票操作                    
+          //使用sleep模拟一下出票时间                     
+          try {                    
+              Thread.sleep(50);                        
+          } catch (InterruptedException e) {                    
+            // TODO Auto‐generated catch block                        
+            e.printStackTrace();                        
+          }   
+                           
+          //获取当前线程对象的名字                     
+          String name = Thread.currentThread().getName();                    
+          System.out.println(name+"正在卖:"+ticket‐‐);                    
+        }                
+      } 
+    }           
+  }    
+}
+```  
+
+当使用了同步代码块后，上述的线程的安全问题，解决了。 
+
+## 2.4  同步方法
+
+同步方法 :使用synchronized修饰的方法,就叫做同步方法,保证A线程执行该方法的时候,其他线程只能在方法外
+等着。
+
+格式：
+
+```java
+public synchronized void method(){
+   可能会产生线程安全问题的代码 
+}
+```
+
+> 同步锁是谁?
+> 对于非static方法,同步锁就是this。
+> 对于static方法,我们使用当前方法所在类的字节码对象(类名.class)。
+
+使用同步方法代码如下：  
+
+```java
+public class Ticket implements Runnable{
+
+    private int ticket = 100;    
+    /*    
+     * 执行卖票操作    
+     */    
+    @Override    
+    public void run() {    
+      //每个窗口卖票的操作         
+      //窗口 永远开启         
+      while(true){        
+        sellTicket();            
+      }        
+    }    
+     
+  /*    
+   * 锁对象 是 谁调用这个方法 就是谁     
+   *   隐含 锁对象 就是  this    
+   *        
+   */    
+    public synchronized void sellTicket(){    
+        if(ticket>0){//有票 可以卖  
+            //出票操作
+            //使用sleep模拟一下出票时间
+            try {
+               Thread.sleep(100);  
+            } catch (InterruptedException e) {
+               // TODO Auto‐generated catch block  
+               e.printStackTrace();
+            }
+            //获取当前线程对象的名字
+            String name = Thread.currentThread().getName();
+            System.out.println(name+"正在卖:"+ticket‐‐);
+        }
+    }    
+}
+```
+
+## 2.5 Lock 锁  
+
+`java.util.concurrent.locks.Lock` 机制提供了比synchronized代码块和synchronized方法更广泛的锁定操作,
+同步代码块/同步方法具有的功能Lock都有,除此之外更强大,更体现面向对象。
+
+Lock锁也称同步锁，加锁与释放锁方法化了，如下：  
+- `public void lock()` :加同步锁。
+- `public void unlock()` :释放同步锁。
+
+使用如下：  
+
+```java
+public class Ticket implements Runnable{
+  private int ticket = 100;    
+     
+  Lock lock = new ReentrantLock();    
+  /*    
+   * 执行卖票操作    
+   */    
+  @Override    
+  public void run() {    
+    //每个窗口卖票的操作         
+    //窗口 永远开启         
+    while(true){      
+        
+        lock.lock();            
+        if(ticket>0){//有票 可以卖            
+        //出票操作                 
+        //使用sleep模拟一下出票时间    
+                     
+        try {                
+        Thread.sleep(50);                    
+        } catch (InterruptedException e) {                
+          // TODO Auto‐generated catch block                    
+          e.printStackTrace();                    
+        }                
+
+        //获取当前线程对象的名字                 
+        String name = Thread.currentThread().getName();                
+        System.out.println(name+"正在卖:"+ticket‐‐);                
+      }            
+      lock.unlock();            
+    }        
+  }    
+}
+```
+
+# 第三章 线程状态  
+
+## 3.1  线程状态概述  
+
+当线程被创建并启动以后，它既不是一启动就进入了执行状态，也不是一直处于执行状态。在线程的生命周期中，
+有几种状态呢？在API中 `java.lang.Thread.State` 这个枚举中给出了六种线程状态：
+
+这里先列出各个线程状态发生的条件，下面将会对每种状态进行详细解析
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B08.png);
+
+我们不需要去研究这几种状态的实现原理，我们只需知道在做线程操作中存在这样的状态。那我们怎么去理解这几
+个状态呢，新建与被终止还是很容易理解的，我们就研究一下线程从Runnable（可运行）状态与非运行状态之间
+的转换问题。
+
+
+## 3.2 Timed Waiting （计时等待）
+
+Timed Waiting在API中的描述为：一个正在限时等待另一个线程执行一个（唤醒）动作的线程处于这一状态。单独
+的去理解这句话，真是玄之又玄，其实我们在之前的操作中已经接触过这个状态了，在哪里呢？
+
+在我们写卖票的案例中，为了减少线程执行太快，现象不明显等问题，我们在run方法中添加了sleep语句，这样就
+强制当前正在执行的线程休眠（暂停执行），以“减慢线程”。
+
+其实当我们调用了sleep方法之后，当前执行的线程就进入到“休眠状态”，其实就是所谓的Timed Waiting(计时等
+待)，那么我们通过一个案例加深对该状态的一个理解。
+
+实现一个计数器，计数到100，在每个数字之间暂停1秒，每隔10个数字输出一个字符串
+
+代码：
+
+```java
+public class MyThread extends Thread {
+    public void run() {
+        for (int i = 0; i < 100; i++) {
+            if ((i) % 10 == 0) {
+                System.out.println("‐‐‐‐‐‐‐" + i);
+            }
+            System.out.print(i);
+            try {
+                Thread.sleep(1000);
+               System.out.print("    线程睡眠1秒！\n");  
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public static void main(String[] args) {
+        new MyThread().start();
+    }
+}
+
+```
+通过案例可以发现， sleep方法的使用还是很简单的。我们需要记住下面几点：
+
+1. 进入 TIMED_WAITING 状态的一种常见情形是调用的 sleep 方法，单独的线程也可以调用，不一定非要有协作关系。
+
+2. 为了让其他线程有机会执行，可以将Thread.sleep()的调用放线程run()之内。这样才能保证该线程执行过程
+中会睡眠
+
+3. sleep与锁无关，线程睡眠到期自动苏醒，并返回到Runnable（可运行）状态。
+
+> 小提示：sleep()中指定的时间是线程不会运行的最短时间。因此，sleep()方法不能保证该线程睡眠到期后就开始立刻执行。
+
+Timed Waiting 线程状态图：
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B09.png)
+
+## 3.3 BLOCKED （锁阻塞） 
+
+Blocked 状态在API中的介绍为：一个正在阻塞等待一个监视器锁（锁对象）的线程处于这一状态。
+
+我们已经学完同步机制，那么这个状态是非常好理解的了。比如，线程A与线程B代码中使用同一锁，如果线程A获
+取到锁，线程A进入到Runnable状态，那么线程B就进入到Blocked锁阻塞状态。
+
+这是由Runnable状态进入Blocked状态。除此Waiting以及Time Waiting状态也会在某种情况下进入阻塞状态，而
+这部分内容作为扩充知识点带领大家了解一下。
+
+Blocked 线程状态图
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B10.png)
+
+## 3.4 Waiting （无限等待）
+
+Wating状态在API中介绍为：一个正在无限期等待另一个线程执行一个特别的（唤醒）动作的线程处于这一状态。  
+
+那么我们之前遇到过这种状态吗？答案是并没有，但并不妨碍我们进行一个简单深入的了解。我们通过一段代码来
+学习一下：
+
+```java
+ public class WaitingTest {
+    public static Object obj = new Object();
+    public static void main(String[] args) {
+        // 演示waiting
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true){
+                    synchronized (obj){
+                        try {
+                            System.out.println( Thread.currentThread().getName() +"=== 获取到锁对象，调用wait方法，进入waiting状态，释放锁对象");
+                            obj.wait();  //无限等待
+                            //obj.wait(5000); //计时等待, 5秒 时间到，自动醒来
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        System.out.println( Thread.currentThread().getName() + "=== 从waiting状态醒来，获取到锁对象，继续执行了");
+                    }
+                }
+            }
+        },"等待线程").start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+//                while (true){   //每隔3秒 唤醒一次
+                    try {
+                        System.out.println( Thread.currentThread().getName() +"‐‐‐‐‐ 等待3秒钟");
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    synchronized (obj){
+                        System.out.println( Thread.currentThread().getName() +"‐‐‐‐‐ 获取到锁对象,调用notify方法，释放锁对象");
+                        obj.notify();
+                    }
+                }
+//            }
+        },"唤醒线程").start();
+    }
+}
+```
+
+通过上述案例我们会发现，一个调用了某个对象的 Object.wait 方法的线程会等待另一个线程调用此对象的
+Object.notify()方法 或 Object.notifyAll()方法。
+
+其实waiting状态并不是一个线程的操作，它体现的是多个线程间的通信，可以理解为多个线程之间的协作关系，
+多个线程会争取锁，同时相互之间又存在协作关系。就好比在公司里你和你的同事们，你们可能存在晋升时的竞
+争，但更多时候你们更多是一起合作以完成某些任务。
+
+
+当多个线程协作时，比如A，B线程，如果A线程在Runnable（可运行）状态中调用了wait()方法那么A线程就进入
+了Waiting（无限等待）状态，同时失去了同步锁。假如这个时候B线程获取到了同步锁，在运行状态中调用了
+notify()方法，那么就会将无限等待的A线程唤醒。注意是唤醒，如果获取到锁对象，那么A线程唤醒后就进入
+Runnable（可运行）状态；如果没有获取锁对象，那么就进入到Blocked（锁阻塞状态）。
+
+Waiting 线程状态图
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B11.png)
+
+## 3.5  补充知识点 
+
+到此为止我们已经对线程状态有了基本的认识，想要有更多的了解，详情可以见下图：  
+
+![](https://coding.net/u/lamber0808/p/Images/git/raw/master/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B12.png)
+
+> 一条有意思的tips:
+> 我们在翻阅API的时候会发现Timed Waiting（计时等待） 与 Waiting（无限等待） 状态联系还是很紧密的，比如Waiting（无限等待） 状态中wait方法是空参的，而timed waiting（计时等待） 中wait方法是带参的。这种带参的方法，其实是一种倒计时操作，相当于我们生活中的小闹钟，我们设定好时间，到时通知，可是如果提前得到（唤醒）通知，那么设定好时间在通知也就显得多此一举了，那么这种设计方案其实是一举两得。如果没有得到（唤醒）通知，那么线程就处于Timed Waiting状态,直到倒计时完毕自动醒来；如果在倒计时期间得到（唤醒）通知，那么线程从Timed Waiting状态立刻唤醒。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
