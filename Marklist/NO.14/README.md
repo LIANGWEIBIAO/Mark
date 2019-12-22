@@ -7248,7 +7248,7 @@ public class Poker {
         System.out.println("底牌："+dipai);  
 	}
 }
-~~~
+``` 
 
 # day14 【List、Set、数据结构、Collections】
 
