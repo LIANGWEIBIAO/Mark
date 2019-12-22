@@ -7161,7 +7161,7 @@ public static void getElement2(Collection<? super Number> coll){}
 
 ## 4.3 代码实现
 
-~~~java
+```java
 import java.util.ArrayList;
 import java.util.Collections;
 
