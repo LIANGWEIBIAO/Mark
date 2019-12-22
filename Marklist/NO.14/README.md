@@ -6021,11 +6021,11 @@ public class Person {
 
 我们可以查看一下源码，学习一下：
 
-~~~java
+```java
 public static boolean equals(Object a, Object b) {  
     return (a == b) || (a != null && a.equals(b));  
 }
-~~~
+```
 
 # 第二章 日期时间类
 
@@ -6356,7 +6356,7 @@ public class SystemDemo {
 
 验证for循环打印数字1-9999所需要使用的时间（毫秒）
 
-~~~java
+```java
 public class SystemTest1 {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
@@ -6367,7 +6367,7 @@ public class SystemTest1 {
         System.out.println("共耗时毫秒：" + (end - start));
     }
 }
-~~~
+```
 
 ## 3.2 arraycopy方法
 
@@ -6409,7 +6409,7 @@ public class Demo11SystemArrayCopy {
 
 由于String类的对象内容不可改变，所以每当进行字符串拼接时，总是会在内存中创建一个新的对象。例如：
 
-~~~java
+```java
 public class StringDemo {
     public static void main(String[] args) {
         String s = "Hello";
@@ -6417,7 +6417,7 @@ public class StringDemo {
         System.out.println(s);
     }
 }
-~~~
+```
 
 在API中对String类有这样的描述：字符串是常量，它们的值在创建后不能被更改。
 
@@ -6539,16 +6539,16 @@ Java提供了两个类型系统，基本类型与引用类型，使用基本类�
 
 基本数值---->包装对象
 
-~~~java
+```java
 Integer i = new Integer(4);//使用构造函数函数
 Integer iii = Integer.valueOf(4);//使用包装类中的valueOf方法
-~~~
+```
 
 包装对象---->基本数值
 
-~~~java
+```java
 int num = i.intValue();
-~~~
+```
 ## 5.3自动装箱与自动拆箱
 
 由于我们经常要做基本类型与包装类之间的转换，从Java 5（JDK 1.5）开始，基本类型与包装类的装箱、拆箱动作可以自动完成。例如：
@@ -6661,7 +6661,7 @@ Collection是所有单列集合的父接口，因此在Collection中定义了单
 
 方法演示：
 
-~~~java
+```java
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -6701,7 +6701,7 @@ public class Demo1Collection {
 		System.out.println(coll.isEmpty());  	
 	}
 }
-~~~
+```
 
 > tips: 有关Collection中的方法可不止上面这些，其他方法可以自行查看API学习。
 
@@ -6726,7 +6726,7 @@ Iterator接口的常用方法如下：
 
 接下来我们通过案例学习如何使用Iterator迭代集合中元素：
 
-~~~java
+```java
 public class IteratorDemo {
   	public static void main(String[] args) {
         // 使用多态方式 创建对象
@@ -6746,7 +6746,7 @@ public class IteratorDemo {
         }
   	}
 }
-~~~
+```
 
 > tips:：在进行集合元素取出时，如果集合中已经没有元素了，还继续使用迭代器的next方法，将会发生java.util.NoSuchElementException没有集合元素的错误。
 
@@ -6766,17 +6766,17 @@ Iterator迭代器对象在遍历集合时，内部采用指针的方式来跟踪
 
 格式：
 
-~~~java
+```java
 for(元素的数据类型  变量 : Collection集合or数组){ 
   	//写操作代码
 }
-~~~
+```
 
 它用于遍历Collection和数组。通常只进行遍历元素，不要在遍历的过程中对集合元素进行增删操作。
 
 #### 练习1：遍历数组
 
-~~~java
+```java
 public class NBForDemo1 {
     public static void main(String[] args) {
 		int[] arr = {3,5,6,87};
@@ -6786,11 +6786,10 @@ public class NBForDemo1 {
 		}
 	}
 }
-~~~
-
+```
 #### 练习2:遍历集合
 
-~~~java
+```java
 public class NBFor {
     public static void main(String[] args) {        
     	Collection<String> coll = new ArrayList<String>();
@@ -6803,7 +6802,7 @@ public class NBFor {
     	}
 	}
 }
-~~~
+```
 
 > tips: 新for循环必须有被遍历的目标。目标只能是Collection或者是数组。新式for仅仅作为遍历操作出现。
 
@@ -6815,7 +6814,7 @@ public class NBFor {
 
 大家观察下面代码：
 
-~~~java
+```java
 public class GenericDemo {
 	public static void main(String[] args) {
 		Collection coll = new ArrayList();
@@ -6830,7 +6829,7 @@ public class GenericDemo {
 		}
 	}
 }
-~~~
+```
 
 程序在运行时发生了问题**java.lang.ClassCastException**。                                                                                             为什么会发生类型转换异常呢？                                                                                                                                       我们来分析下：由于集合中什么类型的元素都可以存储。导致取出时强转引发运行时 ClassCastException。                                                                                                                                                       怎么来解决这个问题呢？                                                                                                                                                           Collection虽然可以存储各种对象，但实际上通常Collection只存储同一类型对象。例如都是存储字符串对象。因此在JDK5之后，新增了**泛型**(**Generic**)语法，让你在设计API时可以指定类或方法支持泛型，这样我们使用API的时候也变得更为简洁，并得到了编译时期的语法检查。
 
@@ -6847,7 +6846,7 @@ public class GenericDemo {
 
 通过我们如下代码体验一下：
 
-~~~java
+```java
 public class GenericDemo2 {
 	public static void main(String[] args) {
         Collection<String> list = new ArrayList<String>();
@@ -6863,7 +6862,7 @@ public class GenericDemo2 {
         }
 	}
 }
-~~~
+```
 
 > tips:泛型是数据类型的一部分，我们将类名与泛型合并一起看做数据类型。
 
@@ -6877,20 +6876,20 @@ public class GenericDemo2 {
 
 定义格式：
 
-~~~
+```
 修饰符 class 类名<代表泛型的变量> {  }
-~~~
+```
 
 例如，API中的ArrayList集合：
 
-~~~java
+```java
 class ArrayList<E>{ 
     public boolean add(E e){ }
 
     public E get(int index){ }
    	....
 }
-~~~
+```
 
 使用泛型： 即什么时候确定泛型。
 
@@ -6900,31 +6899,30 @@ class ArrayList<E>{
 
 此时，变量E的值就是String类型,那么我们的类型就可以理解为：
 
-~~~java 
+```java 
 class ArrayList<String>{ 
      public boolean add(String e){ }
 
      public String get(int index){  }
      ...
 }
-~~~
+```
 
 再例如，`ArrayList<Integer> list = new ArrayList<Integer>();`
 
 此时，变量E的值就是Integer类型,那么我们的类型就可以理解为：
 
-~~~java
+```java
 class ArrayList<Integer> { 
      public boolean add(Integer e) { }
 
      public Integer get(int index) {  }
      ...
 }
-~~~
-
+```
 举例自定义泛型类
 
-~~~java
+```java
 public class MyGenericClass<MVP> {
 	//没有MVP类型，在这里代表 未知的一种数据类型 未来传递什么就是什么类型
 	private MVP mvp;
@@ -6937,11 +6935,11 @@ public class MyGenericClass<MVP> {
         return mvp;
     }
 }
-~~~
+```
 
 使用:
 
-~~~java
+```java
 public class GenericClassDemo {
   	public static void main(String[] args) {		 
          // 创建一个泛型为String的类
@@ -6957,19 +6955,19 @@ public class GenericClassDemo {
          Integer mvp2 = my2.getMVP();
     }
 }
-~~~
+```
 
 ###  含有泛型的方法
 
 定义格式：
 
-~~~
+```
 修饰符 <代表泛型的变量> 返回值类型 方法名(参数){  }
-~~~
+```
 
 例如，
 
-~~~java
+```java
 public class MyGenericMethod {	  
     public <MVP> void show(MVP mvp) {
     	System.out.println(mvp.getClass());
@@ -6979,11 +6977,11 @@ public class MyGenericMethod {
     	return mvp;
     }
 }
-~~~
+```
 
 使用格式：**调用方法时，确定泛型的类型**
 
-~~~java
+```java
 public class GenericMethodDemo {
     public static void main(String[] args) {
         // 创建对象
@@ -6994,25 +6992,25 @@ public class GenericMethodDemo {
         mm.show(12.45);
     }
 }
-~~~
+```
 
 ### 含有泛型的接口
 
 定义格式：
 
-~~~
+```
 修饰符 interface接口名<代表泛型的变量> {  }
-~~~
+```
 
 例如，
 
-~~~java
+```java
 public interface MyGenericInterface<E>{
 	public abstract void add(E e);
 	
 	public abstract E getE();  
 }
-~~~
+```
 
 使用格式：
 
@@ -7020,7 +7018,7 @@ public interface MyGenericInterface<E>{
 
 例如
 
-~~~java
+```java
 public class MyImp1 implements MyGenericInterface<String> {
 	@Override
     public void add(String e) {
@@ -7032,7 +7030,7 @@ public class MyImp1 implements MyGenericInterface<String> {
 		return null;
 	}
 }
-~~~
+```
 
 此时，泛型E的值就是String类型。
 
@@ -7040,7 +7038,7 @@ public class MyImp1 implements MyGenericInterface<String> {
 
  例如
 
-~~~java
+```java
 public class MyImp2<E> implements MyGenericInterface<E> {
 	@Override
 	public void add(E e) {
@@ -7052,11 +7050,11 @@ public class MyImp2<E> implements MyGenericInterface<E> {
 		return null;
 	}
 }
-~~~
+```
 
 确定泛型：
 
-~~~java
+```java
 /*
  * 使用
  */
@@ -7066,7 +7064,7 @@ public class GenericInterface {
         my.add("aa");
     }
 }
-~~~
+```
 
 ## 3.4  泛型通配符
 
@@ -7080,7 +7078,7 @@ public class GenericInterface {
 
 举个例子大家理解使用即可：
 
-~~~java
+```java
 public static void main(String[] args) {
     Collection<Intger> list1 = new ArrayList<Integer>();
     getElement(list1);
@@ -7089,7 +7087,7 @@ public static void main(String[] args) {
 }
 public static void getElement(Collection<?> coll){}
 //？代表可以接收任意类型
-~~~
+```
 
 > tips:泛型不存在继承关系 Collection<Object> list = new ArrayList<String>();这种是错误的。
 
@@ -7109,7 +7107,7 @@ public static void getElement(Collection<?> coll){}
 
 比如：现已知Object类，String 类，Number类，Integer类，其中Number是Integer的父类
 
-~~~java
+```java
 public static void main(String[] args) {
     Collection<Integer> list1 = new ArrayList<Integer>();
     Collection<String> list2 = new ArrayList<String>();
@@ -7131,7 +7129,7 @@ public static void main(String[] args) {
 public static void getElement1(Collection<? extends Number> coll){}
 // 泛型的下限：此时的泛型?，必须是Number类型或者Number类型的父类
 public static void getElement2(Collection<? super Number> coll){}
-~~~
+```
 
 # 第四章 集合综合案例
 
