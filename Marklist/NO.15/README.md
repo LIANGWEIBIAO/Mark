@@ -1,16 +1,15 @@
 - [day01 【MySQL基础】](#day01-MySQL基础)  
 
-# 今日内容
+# day01 【MySQL基础】
 
-1. 数据库的基本概念
-
-2. MySQL数据库软件
-	- 安装
-	- 卸载
-	- 配置
-
-3. SQL
-
+## 今日内容
+- 能够理解数据库的概念
+- 能够安装 MySQL 数据库
+- 能够启动,关闭及登录 MySQL
+- 能够使用 SQL 语句操作数据库
+- 能够使用 SQL 语句操作表结构
+- 能够使用 SQL 语句进行数据的添加修改和删除的操作
+- 能够使用 SQL 语句简单查询数据
 
 ## 数据库的基本概念
 	1. 数据库的英文单词： DataBase 简称 ： DB
@@ -62,7 +61,7 @@
 
 
 
-# SQL
+## SQL
 
 	1.什么是SQL？
 		Structured Query Language：结构化查询语言
@@ -176,7 +175,7 @@
 			* drop table 表名;
 			* drop table  if exists 表名 ;
 
-* 客户端图形化工具：SQLYog
+
 
 ## DML：增删改表中数据
 
@@ -257,6 +256,7 @@
 			* not  或 !
 
 
+## 练习
 ```sql
 -- 增
 INSERT INTO student (id,NAME,age) VALUES (1,"马小花",18);
