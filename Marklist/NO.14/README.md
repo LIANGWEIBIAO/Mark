@@ -12,6 +12,7 @@
 ## 数据库  
 - [mysql](./Marklist/mysql/mysql.md)  
 - [一千行MySQL命令.md](./Marklist/mysql/一千行MySQL命令.md)
+- [经典SQL练习题](https://blog.csdn.net/mrbcy/article/details/68965271);
 - [Redis](Redis.md)
 
 # 网络 
