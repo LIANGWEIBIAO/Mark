@@ -21,7 +21,7 @@
 - [AJAX常见面试题](https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247485060&idx=2&sn=67a00a0eb12169b452cd5a4f01b11634&chksm=ebd74785dca0ce932fe4883fbfc930e0c5896e7e46bdc1ba0c4195e2d3824b597ac3cc399f72&token=1755043505&lang=zh_CN###rd)
 
 ## Redis  
-- [redis入门.md](./Marklist/redis/redis入门.md);
+- [redis入门.md](./Marklist/redis/redis入门.md)
 
 ## 数据库  
 - [mysql](./Marklist/mysql/mysql.md)  

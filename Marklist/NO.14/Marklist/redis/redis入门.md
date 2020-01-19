@@ -1,5 +1,3 @@
-# redis入门
-
 ## 学习内容  
 - redis概念
 
@@ -146,7 +144,7 @@ jedis.close();
 
 
 
-**哈希类型 hash ： map格式 ** 
+**哈希类型 hash ： map格式** 
 - hset
 - hget
 - hgetAll
