@@ -1,0 +1,36 @@
+@import 'https://fonts.googleapis.com/css?family=Rajdhani:700';
+@-webkit-keyframes background-bubble {
+    from {
+        background-position: 0 0%;
+    }
+    to {
+        background-position: 0 -300px;
+    }
+}
+@keyframes background-bubble {
+    from {
+        background-position: 0 0%;
+    }
+    to {
+        background-position: 0 -300px;
+    }
+}
+h1.newYear{
+    position: relative;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 4.3rem;
+    font-family: 'Rajdhani', sans-serif;
+    background: url(http://html5book.ru/wp-content/uploads/2016/08/bubbles.png) repeat #011F42;
+    background-size: 300px auto;
+    -webkit-text-fill-color: transparent;
+    text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-animation: background-bubble 12s infinite linear;
+    animation: background-bubble 12s infinite linear;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+    // let arr = [
+    //     {
+    //         name: "颜色",
+    //         options: ["黑色", "白色", "蓝色"]
+    //     },
+    //     {
+    //         name: "内存",
+    //         options: ["S", "M", "L"]
+    //     }, {
+    //         name: "长度",
+    //         options: ["5分裤", "7分裤"]
+    //     }
+    // ]
+
+
+    // let skus = [{
+    //     ownSpec: ["黑色", "16G"],
+    //     price: 1,
+    //     stock: 0,
+    // }, {
+    //     ownSpec: ["黑色", "32G"],
+    //     price: 1,
+    //     stock: 0,
+    // }, {
+    //     ownSpec: ["白色", "16G"],
+    //     price: 1,
+    //     stock: 0,
+    // }, {
+    //     ownSpec: ["白色", "32G"],
+    //     price: 1,
+    //     stock: 0,
+    // }]
+
+    // 
+    let arr = [["黑色", "白色"], ["S", "M"], ["5分裤", "32G"]]
+    // [["黑色","S"],["黑色","M"],["白色"，"S"],["白色","M"]]
+
+    function doExchange(arr) {
+        let temp = [];
+        for (var i = 0; i < arr[0].length; i++) {
+            for (var j = 0; j < arr[1].length; j++) {
+                temp.push(`${arr[0][i]}-${[arr[1][j]]}`)
+            }
+        }
+        //删除前两个数组
+        arr.splice(0, 2);
+        //添加新组合数组
+        arr.push(temp)
+        if (arr.length > 1) {
+            doExchange(arr);
+        }
+        return arr[0];
+    }
+    
+    let result = doExchange(arr);
+    console.log(result)
+
+
+
+</script>

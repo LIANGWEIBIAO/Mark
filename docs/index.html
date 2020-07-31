@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lwb</title>
+  <link rel="icon" href="https://docsify.js.org/_media/icon.svg">
+  <meta name="keywords" content="lwb的笔记,前端笔记,web笔记,ssyl,cloudlandboy,clboy,java笔记,java,java*" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <style>
+    a{ 
+      text-decoration:none!important;
+    } 
+    .markdown-section{
+      max-width: 1000px;
+      /* margin-left: 100px; */
+    }
+    /* .markdown-section code, .markdown-section pre {
+          background-color: #f9f2f4;
+      }
+      .markdown-section code {
+         color: #c7254e;
+        
+      } */
+  
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      coverpage: true, //启用封面页
+      // loadNavbar: true,//加载自定义导航栏,设置为 true 后会加载 _navbar.md 文件
+      auto2top: true,//切换页面后是否自动跳转到页面顶部。
+      maxLevel: 6,//默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
+      loadSidebar: true,//加载自定义侧边栏，设置为 true 后会加载 _sidebar.md 文件
+      subMaxLevel: 2, //自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能。
+      // themeColor: '#FE4365',
+      name: 'LWB笔记',//文档标题，会显示在侧边栏顶部。
+      repo: 'https://github.com/LIANGWEIBIAO',//配置仓库地址或者 username/repo 的字符串，会在页面右上角渲染一个 GitHub Corner 挂件。
+    }
+  </script>
+  <script src="./assets/jQuery.js"></script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+  <script src="//unpkg.com/vue"></script>
+  <script src="https://cdn.bootcss.com/prism/9000.0.1/components/prism-java.min.js"></script>
+  <script src="https://cdn.bootcss.com/prism/9000.0.1/components/prism-javascript.min.js"></script>
+  <script src="https://cdn.bootcss.com/prism/9000.0.1/components/prism-css.min.js"></script>
+  <!-- <script src="//unpkg.com/prismjs/components/prism-php.js"></script> -->
+  <!-- <script src="//unpkg.com/prismjs/components/prism-python.js"></script> -->
+  <script src="//unpkg.com/docsify-copy-code"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,32 @@
+- ☕️**java**
+  - [Java基础](/java/java基础/_sidebar.md)
+  - [JDBC](/java/jdbc/jdbc.md)
+  - [Maven](/java/maven/_sliderbar.md)
+  - [redis](/java/redis/redis.md)
+  - [Spring](/java/spring/spring.md)
+  - [Elasticsearch](/java/Elasticsearch/Elasticsearch6.md)
+  - [常用注解](/java/annotation/常用注解.md)
+  - [JWT](/java/JWT/JWT.md)
+  - [项目配置](/java/项目配置/项目配置.md)
+- 🌻 **前端**
+  - [Html&Css](/前端/html&css/_sidebar.md)
+  - [JavaScript](/前端/JavaScript/_sidebar.md)
+  - [移动端适配](/前端/移动端适配/_sidebar.md)
+  - [AJAX](/前端/AJAX/_sidebar.md)
+- 💭 **数据库**
+  - [mysql](/mysql/_sidebar.md)
+- 🐇工具
+  - [IDE](/Ide/ide.md)
+  - [Markdown](/Markdown/Markdown.md)
+  - [VirtualBox](/tools/VirtualBox.md)
+  - [Docker](/Docker/Docker.md)
+  - [Git](/git/_sidebar.md)
+- 🐌**其他**
+  - [Linux](/Linux/Linux.md)
+  - [nginx](/nginx/nginx.md)
+  - [视频的基本知识](/直播/视频基本知识.md)
+  - [直播原理](/直播/直播技术原理.md)
+  - [字符集与编码](/其他/字符集与编码/字符集与编码.md)
+  
+ - 🐇[javascript]
+
